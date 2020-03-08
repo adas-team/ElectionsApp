@@ -7,8 +7,6 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "firebase": "^7.10.0",
-    "jquery": "^3.4.1",
-    "mongodb": "^3.4.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
@@ -35,7 +33,7 @@
       "last 1 safari version"
     ]
   },
-	"husky": {
+  "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
