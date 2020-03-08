@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import $ from "jquery";
-let time;
 
 class VotePart extends Component {
 
