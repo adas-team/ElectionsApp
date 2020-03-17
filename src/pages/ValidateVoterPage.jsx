@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import AdaBotStandingImage from "../../assets/AdaBotStanding.png";
+import AdaBotStandingImage from "../assets/AdaBotStanding.png";
 import { Grid, Form, Image, Header, Progress, Button } from "semantic-ui-react";
 import styled from "styled-components";
 
