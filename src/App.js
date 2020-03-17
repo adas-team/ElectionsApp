@@ -10,7 +10,7 @@ function App() {
   return (
       <Switch>
         <Route exact path="/" component={Main} />
-        <Route exact path="/valid" component={Valid} />
+        <Route exact path="/validate" component={Valid} />
         <Route exact path="/vote" component={Vote} />
       </Switch>
   )
