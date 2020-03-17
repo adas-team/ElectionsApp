@@ -19,7 +19,7 @@ class Main extends Component {
                     <h4>WHO ARE WE? Ada's Team! </h4>
                     <h4>WHAT DO WE DO? Promote diversity! </h4>
                     <h4>WHERE DO WE DO IT? In technology!</h4>
-                    <Link to="valid">Valid First</Link>
+                    <Link to="validate">Start</Link>
                 </div>
             </div>
         )
