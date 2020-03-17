@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import VotePart from "../../components/votepart/votepart";
+import VotePart from "../components/votepart/votepart";
 class Vote extends Component {
 
     constructor(){
