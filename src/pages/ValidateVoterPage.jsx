@@ -32,13 +32,31 @@ const GridContainer = styled(Grid)`
 class ValidateVoterPage extends Component {
   constructor(props) {
     super(props);
-    this.state = { email: undefined, adasTeamEvent: undefined };
+    this.state = {
+      email: "",
+      adasTeamEvent: "",
+      agreeToBeHonest: false,
+      errors: { email: "", adasTeamEvent: "" }
+    };
   }
 
-  // TODO: Handle user clicks
-  handleValidation = () => {};
-  handleSubmit = () => {};
-  handleDropdownChange = () => {};
+  handleEmailChange = (e, { value }) => this.setState({ email: value });
+  handleDropdownChange = (e, { value }) =>
+    this.setState({ adasTeamEvent: value });
+  handleCheckboxChange = (e, { checked }) =>
+    this.setState({ agreeToBeHonest: checked });
+
+  handleSubmit = () => {
+    /* Check to see if: 
+    (1) on Ada's Team mailing list; 
+    (2) already voted
+    */
+
+    const { email, adasTeamEvent, agreeToBeHonest } = this.state;
+    // if (email && adasTeamEvent && agreeToBeHonest) {
+
+    // }
+  };
 
   renderHeaderText = () => {
     return (
@@ -55,24 +73,30 @@ class ValidateVoterPage extends Component {
   };
 
   renderEligibleVoterForm = () => {
+    const { email, adasTeamEvent, agreeToBeHonest } = this.state;
+    const isInvalid =
+      !/@ualberta.ca\s*$/.test(email) ||
+      adasTeamEvent === "" ||
+      !agreeToBeHonest;
+
     return (
       <Form size="big">
         <Form.Input
           label="Email"
-          control="input"
+          type="text"
+          onChange={this.handleEmailChange}
           placeholder="ccid@ualberta.ca"
         />
         <Form.Dropdown
-          fluid
           selection
           label="Please select one Ada's Team activity/event that you attended"
-          name="Ada's Team Event"
           options={dummyDropdownOptions}
           placeholder="Please select an option from the dropdown"
           onChange={this.handleDropdownChange}
         />
         <Form.Checkbox
           size="huge"
+          onChange={this.handleCheckboxChange}
           label="I solemnly swear I am being truthful in my answers and understand that I will be put in bad standing (banned) if proven otherwise."
         />
         <Button.Group size="large">
@@ -81,12 +105,12 @@ class ValidateVoterPage extends Component {
           </Link>
           <Button.Or />
           <Button
-            disabled
+            disabled={isInvalid}
             color="blue"
             type="submit"
             onClick={this.handleSubmit}
           >
-            Submit
+            Next
           </Button>
         </Button.Group>
       </Form>
