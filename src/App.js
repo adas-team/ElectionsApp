@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
-import Main from "./pages/HomePage";
-import Valid from "./pages/ValidateVoterPage";
-import Vote from "./pages/VotePage";
+import Main from "./components/pages/HomePage";
+import Valid from "./components/pages/ValidateVoterPage";
+import Vote from "./components/pages/VotePage";
 
 function App() {
   return (

@@ -1,23 +1,18 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import AdaBotStandingImage from "../assets/AdaBotStanding.png";
-import { Grid, Form, Image, Header, Progress, Button } from "semantic-ui-react";
 import styled from "styled-components";
-
-const dummyDropdownOptions = [
-  // TODO: Should retrieve dropdown options from database.
-  // For now, hardcoded.
-  {
-    key: "Tutoring",
-    text: "Tutoring",
-    value: "Tutoring"
-  },
-  {
-    key: "Coffee && Code",
-    text: "Coffee && Code",
-    value: "Coffee && Code"
-  }
-];
+import { adasTeamEventOptions } from "../constants";
+import AdaBotStandingImage from "../../assets/AdaBotStanding.png";
+import {
+  Grid,
+  Form,
+  Image,
+  Header,
+  Progress,
+  Icon,
+  Button
+} from "semantic-ui-react";
+import firebase from "firebase/app";
 
 const ImageContainer = styled(Image)`
   width: 600px;
@@ -34,27 +29,39 @@ class ValidateVoterPage extends Component {
     super(props);
     this.state = {
       email: "",
-      adasTeamEvent: "",
+      adasTeamEvent: [],
       agreeToBeHonest: false
     };
   }
 
   handleEmailChange = (e, { value }) => this.setState({ email: value });
+
   handleDropdownChange = (e, { value }) =>
     this.setState({ adasTeamEvent: value });
+
   handleCheckboxChange = (e, { checked }) =>
     this.setState({ agreeToBeHonest: checked });
 
-  handleSubmit = () => {
-    /* Check to see if: 
-    (1) on Ada's Team mailing list; 
-    (2) already voted
-    */
-
+  handleSubmit = e => {
+    e.preventDefault();
     const { email, adasTeamEvent, agreeToBeHonest } = this.state;
-    // if (email && adasTeamEvent && agreeToBeHonest) {
+    const ccid = email.match(/[^@]+/)[0];
+    if (email && ccid && adasTeamEvent && agreeToBeHonest) {
+      /* TODO: Check to see if: 
+      (1) on Ada's Team mailing list; 
+      (2) already voted
+      */
 
-    // }
+      // Firebase: Add to the voters collection
+      firebase
+        .database()
+        .ref("voters")
+        .push({
+          ccid,
+          email,
+          adasTeamEvent
+        });
+    }
   };
 
   renderHeaderText = () => {
@@ -75,7 +82,7 @@ class ValidateVoterPage extends Component {
     const { email, adasTeamEvent, agreeToBeHonest } = this.state;
     const isInvalid =
       !/@ualberta.ca\s*$/.test(email) ||
-      adasTeamEvent === "" ||
+      adasTeamEvent.length === 0 ||
       !agreeToBeHonest;
 
     return (
@@ -87,10 +94,11 @@ class ValidateVoterPage extends Component {
           placeholder="ccid@ualberta.ca"
         />
         <Form.Dropdown
+          multiple
           selection
-          label="Please select one Ada's Team activity/event that you attended"
-          options={dummyDropdownOptions}
-          placeholder="Please select an option from the dropdown"
+          label="Please select the Ada's Team event(s) that you attended"
+          options={adasTeamEventOptions}
+          placeholder="Please select options from the dropdown"
           onChange={this.handleDropdownChange}
         />
         <Form.Checkbox
@@ -100,16 +108,25 @@ class ValidateVoterPage extends Component {
         />
         <Button.Group size="large">
           <Link to="/">
-            <Button>Back</Button>
+            <Button animated>
+              <Button.Content visible>Back</Button.Content>
+              <Button.Content hidden>
+                <Icon name="arrow left" />
+              </Button.Content>
+            </Button>
           </Link>
           <Button.Or />
           <Button
+            animated
             disabled={isInvalid}
             color="blue"
             type="submit"
             onClick={this.handleSubmit}
           >
-            Next
+            <Button.Content visible>Next</Button.Content>
+            <Button.Content hidden>
+              <Icon name="arrow right" />
+            </Button.Content>
           </Button>
         </Button.Group>
       </Form>
