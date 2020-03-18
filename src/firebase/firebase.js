@@ -1,4 +1,6 @@
-import app from 'firebase/app';
+import app from "firebase/app";
+import "firebase/database";
+import FirebaseContext from "./context";
 const config = {
   apiKey: "AIzaSyATCLnWTkGsmqS1dyC5vdCWfdpk55qnvjw",
   authDomain: "election-6f2a7.firebaseapp.com",
@@ -12,6 +14,9 @@ const config = {
 class Firebase {
   constructor() {
     app.initializeApp(config);
+    this.db = app.database();
   }
 }
+
 export default Firebase;
+export { FirebaseContext };
