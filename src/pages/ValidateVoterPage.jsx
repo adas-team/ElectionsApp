@@ -35,8 +35,7 @@ class ValidateVoterPage extends Component {
     this.state = {
       email: "",
       adasTeamEvent: "",
-      agreeToBeHonest: false,
-      errors: { email: "", adasTeamEvent: "" }
+      agreeToBeHonest: false
     };
   }
 
