@@ -47,19 +47,26 @@ class ValidateVoterPage extends Component {
     const { email, adasTeamEvent, agreeToBeHonest } = this.state;
     const ccid = email.match(/[^@]+/)[0];
     if (email && ccid && adasTeamEvent && agreeToBeHonest) {
-      /* TODO: Check to see if: 
-      (1) on Ada's Team mailing list; 
-      (2) already voted
-      */
+      const voter = { ccid, email, adasTeamEvent };
+      // TODO
+      // (1) Firebase: Retrieve mailing list and check email
 
-      // Firebase: Add to the voters collection
+      // (2) Firebase: Retrieve ccid from DB to block duplicate voters
       firebase
         .database()
-        .ref("voters")
-        .push({
-          ccid,
-          email,
-          adasTeamEvent
+        .ref()
+        .child("voters")
+        .orderByChild("ccid")
+        .equalTo(ccid)
+        .once("value", snapshot => {
+          const hasVotedBefore = snapshot.numChildren();
+          hasVotedBefore
+            ? console.log("Error")
+            : // (3) Firebase: If unique, add to the voters collection
+              firebase
+                .database()
+                .ref("voters")
+                .push(voter);
         });
     }
   };
