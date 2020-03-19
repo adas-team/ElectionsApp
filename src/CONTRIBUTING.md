@@ -10,8 +10,8 @@ To make pull requests properly:
    - `origin` refers to your fork.
    - run command `git remote -vv` and check if the output looks like this:
    ```
-   origin  https://github.com/HelenGezahegn/ElectionsApp.git (fetch)
-   origin  https://github.com/HelenGezahegn/ElectionsApp.git (push)
+   origin          https://github.com/HelenGezahegn/ElectionsApp.git (fetch)
+   origin          https://github.com/HelenGezahegn/ElectionsApp.git (push)
    upstream        https://github.com/adas-team/ElectionsApp.git (fetch)
    upstream        https://github.com/adas-team/ElectionsApp.git (push)
    ```
@@ -40,3 +40,7 @@ You'll notice that all our UI components have been made with `Semantic UI React`
 - To update mailing list -- reference INSTRUCTIONS.md in `src/firebase/mailingList`
 - We don't have login/signup authentication at this time and allow users to write directly into the database. This was defined in the `database.rules.json` file.
 - For firebase, it is already have the firebase config file. If you wanna use it, put "import Firebase, { FirebaseContext } from './components/Firebase';" in your target js file.
+
+### Heroku Deployment
+
+**TODO**
