@@ -1,8 +1,17 @@
+# Ada's Team Elect
+A web application to aid in Ada's Team annual election of the executive team.
+*  **M**inimum **V**iable **P**roduct (MVP) is to automate the voting process and block any ineligible voters/votes.
 
-### `npm start`
+### Workflow
+* **TODO** <br> 
+Add screenshots.
 
-For firebase, it is already have the firebase config file,
+### App Developers
+* **TODO** <br>
+Let's add our names, LinkedIn, Ada's Team position/contribution, and length of commitment.
 
-if wanna use it, put "import Firebase, { FirebaseContext } from './components/Firebase';" in your target js file.
 
-We do not use login signup staff this time, but we allow user to write something into database.
+
+### Want to Contribute?
+Please refer to the `CONTRIBUTING.md` for developer documentation.
+
