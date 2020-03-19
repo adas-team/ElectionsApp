@@ -1,11 +1,10 @@
 const admin = require("firebase-admin");
-const firebaseConfig = require("../config/config");
 const serviceAccount = require("./serviceAccountKey.json");
 const data = require("./mailingList.json");
 const collectionKey = "mailingList"; //name of the collection
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: firebaseConfig.databaseURL
+  databaseURL: "https://election-6f2a7.firebaseio.com"
 });
 const firestore = admin.firestore();
 const settings = { timestampsInSnapshots: true };
