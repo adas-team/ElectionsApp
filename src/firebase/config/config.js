@@ -1,6 +1,3 @@
-import app from "firebase/app";
-import "firebase/database";
-import FirebaseContext from "./context";
 const firebaseConfig = {
   apiKey: "AIzaSyATCLnWTkGsmqS1dyC5vdCWfdpk55qnvjw",
   authDomain: "election-6f2a7.firebaseapp.com",
@@ -11,12 +8,8 @@ const firebaseConfig = {
   appId: "1:751584572617:web:d7ad368cacee6d24b4c918",
   measurementId: "G-Q4G2KRTW5F"
 };
-class Firebase {
-  constructor() {
-    app.initializeApp(firebaseConfig);
-    this.db = app.database();
-  }
-}
 
-export default Firebase;
-export { FirebaseContext };
+/* Sorry for CommonJS import LOL. 
+It wasn't working when I tried to 
+convert to ES so I stopped for now. */
+module.exports = firebaseConfig;
