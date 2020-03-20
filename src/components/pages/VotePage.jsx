@@ -1,4 +1,4 @@
-import React, { Component } from "./node_modules/react";
+import React, { Component } from "react";
 import VotePart from "../VotePart/VotePart";
 
 class Vote extends Component {
