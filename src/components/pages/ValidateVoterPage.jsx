@@ -13,6 +13,7 @@ import {
   Button
 } from "semantic-ui-react";
 import firebase from "firebase/app";
+import "firebase/firestore";
 
 const ImageContainer = styled(Image)`
   width: 600px;
@@ -42,32 +43,74 @@ class ValidateVoterPage extends Component {
   handleCheckboxChange = (e, { checked }) =>
     this.setState({ agreeToBeHonest: checked });
 
+  handleError = error => {
+    switch (error) {
+      case "notOnMailingList":
+        console.log("ERROR: Not on the mailing list");
+        break;
+      case "duplicateVoter":
+        console.log("ERROR: Duplicate voter");
+        break;
+      default:
+        console.log("ERROR");
+    }
+    return false;
+  };
+
+  checkVoterInMailingList = email => {
+    // (Step 1) Retrieve mailing list and check email
+    const isInMailingsList = true; // change to false when other implementation added
+    // firebase
+    //   .firestore()
+    //   .collection("mailingList")
+    //   .get()
+    //   .doc(email)
+    //   .then(docData => {
+    //     if (docData.exists) {
+    //       // document exists (online/offline)
+    //       this.handleError("notOnMailingList");
+    //     } else {
+    //       // document does not exist (only on online)
+    //     }
+    //   })
+    //   .catch(fail => {
+    //     // Either
+    //     // 1. failed to read due to some reason such as permission denied ( online )
+    //     // 2. failed because document does not exists on local storage ( offline )
+    //   });
+    return isInMailingsList;
+  };
+
+  addVoter = (email, voter) => {
+    // (Step 2) Retrieve email from DB to block duplicate voters
+    firebase
+      .database()
+      .ref()
+      .child("voters")
+      .orderByChild("email")
+      .equalTo(email)
+      .once("value", snapshot => {
+        const hasVotedBefore = snapshot.numChildren();
+        hasVotedBefore
+          ? this.handleError("duplicateError")
+          : // (Step 3) If unique, add to the voters collection
+            firebase
+              .database()
+              .ref("voters")
+              .push(voter);
+      });
+  };
+
   handleSubmit = e => {
     e.preventDefault();
     const { email, adasTeamEvent, agreeToBeHonest } = this.state;
     const ccid = email.match(/[^@]+/)[0];
-    if (email && ccid && adasTeamEvent && agreeToBeHonest) {
-      const voter = { ccid, email, adasTeamEvent };
-      // TODO
-      // (1) Firebase: Retrieve mailing list and check email
 
-      // (2) Firebase: Retrieve ccid from DB to block duplicate voters
-      firebase
-        .database()
-        .ref()
-        .child("voters")
-        .orderByChild("email")
-        .equalTo(email)
-        .once("value", snapshot => {
-          const hasVotedBefore = snapshot.numChildren();
-          hasVotedBefore
-            ? console.log("Error")
-            : // (3) Firebase: If unique, add to the voters collection
-              firebase
-                .database()
-                .ref("voters")
-                .push(voter);
-        });
+    if (email && ccid && adasTeamEvent && agreeToBeHonest) {
+      // Check voter eligibility and add accordingly
+      const voter = { ccid, email, adasTeamEvent };
+      const isInMailingList = this.checkVoterInMailingList(email);
+      isInMailingList && this.addVoter(email, voter);
     }
   };
 

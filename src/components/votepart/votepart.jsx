@@ -34,7 +34,7 @@ class VotePart extends Component {
     }
 
     startReading = async() => {
-        let index = 0;
+        // let index = 0; // temporarily commented out
         await setTimeout(() => {
             this.setState({ readDone: true})
             //we can write description or add link button here for change to vote
