@@ -31,6 +31,15 @@ You'll notice that all our UI components have been made with `Semantic UI React`
 
 ### Firebase
 
+#### Update Database Rules
+
+Overall, the `database.rules.json` controls who can read/write/access the realtime database. The way that your data can be accessed is configurable and can be stated in that file (e.g. "indexOn").
+
+After you've made your changes to `database.rules.json`:
+
+- Navigate to the JSON's path.
+- run `firebase deploy --only database` to push the changes up.
+
 **TODO**
 
 - Terminology
