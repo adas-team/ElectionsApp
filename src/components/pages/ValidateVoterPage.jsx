@@ -25,6 +25,21 @@ const GridContainer = styled(Grid)`
   height: 100%;
 `;
 
+const errors = {
+  NOT_ON_MAILING_LIST: "The voter is not on the mailing list."
+};
+
+const onError = error => {
+  const { NOT_ON_MAILING_LIST } = errors;
+  switch (error) {
+    case NOT_ON_MAILING_LIST:
+      console.log("ERROR:", NOT_ON_MAILING_LIST);
+      break;
+    default:
+      console.log("ERROR");
+  }
+};
+
 class ValidateVoterPage extends Component {
   constructor(props) {
     super(props);
@@ -43,46 +58,37 @@ class ValidateVoterPage extends Component {
   handleCheckboxChange = (e, { checked }) =>
     this.setState({ agreeToBeHonest: checked });
 
-  handleError = error => {
-    switch (error) {
-      case "notOnMailingList":
-        console.log("ERROR: Not on the mailing list");
-        break;
-      case "duplicateVoter":
-        console.log("ERROR: Duplicate voter");
-        break;
-      default:
-        console.log("ERROR");
-    }
-    return false;
+  validateAndAddVoter = voter => {
+    // (Step 1) Retrieve mailing list from cloud firestore and check email
+    const { email } = voter;
+    const mailingListRef = firebase
+      .firestore()
+      .collection("filteredMailingList")
+      .doc(email);
+
+    mailingListRef
+      .get()
+      .then(docData => {
+        if (docData.exists) {
+          // document exists (online/offline)
+          this.addVoter(voter);
+        } else {
+          // document does not exist (only on online)
+          onError(errors.NOT_ON_MAILING_LIST);
+        }
+      })
+      .catch(fail => {
+        console.log("ERROR: Promise failed");
+        // Either
+        // 1. failed to read due to some reason such as permission denied ( online )
+        // 2. failed because document does not exists on local storage ( offline )
+      });
   };
 
-  checkVoterInMailingList = email => {
-    // (Step 1) Retrieve mailing list and check email
-    const isInMailingList = true; // change to false when other implementation added
-    // firebase
-    //   .firestore()
-    //   .collection("mailingList")
-    //   .get()
-    //   .doc(email)
-    //   .then(docData => {
-    //     if (docData.exists) {
-    //       // document exists (online/offline)
-    //       this.handleError("notOnMailingList");
-    //     } else {
-    //       // document does not exist (only on online)
-    //     }
-    //   })
-    //   .catch(fail => {
-    //     // Either
-    //     // 1. failed to read due to some reason such as permission denied ( online )
-    //     // 2. failed because document does not exists on local storage ( offline )
-    //   });
-    return isInMailingList;
-  };
-
-  addVoter = (email, voter) => {
-    // (Step 2) Retrieve email from DB to block duplicate voters
+  addVoter = voter => {
+    // (Step 2) Retrieve email from realtime DB to block duplicate voters
+    const { email } = voter;
+    const votersRef = firebase.database().ref("voters");
     firebase
       .database()
       .ref()
@@ -91,13 +97,16 @@ class ValidateVoterPage extends Component {
       .equalTo(email)
       .once("value", snapshot => {
         const hasVotedBefore = snapshot.numChildren();
-        hasVotedBefore
-          ? this.handleError("duplicateError")
-          : // (Step 3) If unique, add to the voters collection
-            firebase
-              .database()
-              .ref("voters")
-              .push(voter);
+        if (hasVotedBefore) {
+          // If want to revote, allow them to proceed by replacing their entry 
+          const voterKey = Object.keys(snapshot.val())[0];
+          firebase
+            .database()
+            .ref("voters/" + voterKey)
+            .set(voter);
+        } else {
+          votersRef.push(voter);
+        }
       });
   };
 
@@ -109,8 +118,7 @@ class ValidateVoterPage extends Component {
     if (email && ccid && adasTeamEvent && agreeToBeHonest) {
       // Check voter eligibility and add accordingly
       const voter = { ccid, email, adasTeamEvent };
-      const isInMailingList = this.checkVoterInMailingList(email);
-      isInMailingList && this.addVoter(email, voter);
+      this.validateAndAddVoter(voter);
     }
   };
 

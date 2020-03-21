@@ -9,12 +9,13 @@ admin.initializeApp({
 const firestore = admin.firestore();
 const settings = { timestampsInSnapshots: true };
 firestore.settings(settings);
+
 if (data && typeof data === "object") {
-  Object.keys(data).forEach(docKey => {
+  Object.keys(data[0]).forEach(docKey => {
     firestore
       .collection(collectionKey)
       .doc(docKey)
-      .set(data[docKey])
+      .set(data[0][docKey])
       .then(res => {
         console.log("Document " + docKey + " successfully written!");
       })
