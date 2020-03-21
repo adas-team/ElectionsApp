@@ -59,7 +59,7 @@ class ValidateVoterPage extends Component {
 
   checkVoterInMailingList = email => {
     // (Step 1) Retrieve mailing list and check email
-    const isInMailingsList = true; // change to false when other implementation added
+    const isInMailingList = true; // change to false when other implementation added
     // firebase
     //   .firestore()
     //   .collection("mailingList")
@@ -78,7 +78,7 @@ class ValidateVoterPage extends Component {
     //     // 1. failed to read due to some reason such as permission denied ( online )
     //     // 2. failed because document does not exists on local storage ( offline )
     //   });
-    return isInMailingsList;
+    return isInMailingList;
   };
 
   addVoter = (email, voter) => {
