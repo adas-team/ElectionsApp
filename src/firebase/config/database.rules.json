@@ -3,7 +3,7 @@
     ".read": true,
     ".write": true,
     "voters": {
-      ".indexOn": "ccid"
+      ".indexOn": "email"
     }
   }
 }

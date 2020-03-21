@@ -56,8 +56,8 @@ class ValidateVoterPage extends Component {
         .database()
         .ref()
         .child("voters")
-        .orderByChild("ccid")
-        .equalTo(ccid)
+        .orderByChild("email")
+        .equalTo(email)
         .once("value", snapshot => {
           const hasVotedBefore = snapshot.numChildren();
           hasVotedBefore
@@ -88,9 +88,7 @@ class ValidateVoterPage extends Component {
   renderEligibleVoterForm = () => {
     const { email, adasTeamEvent, agreeToBeHonest } = this.state;
     const isInvalid =
-      !/@ualberta.ca\s*$/.test(email) ||
-      adasTeamEvent.length === 0 ||
-      !agreeToBeHonest;
+      email === "" || adasTeamEvent.length === 0 || !agreeToBeHonest;
 
     return (
       <Form size="big">
