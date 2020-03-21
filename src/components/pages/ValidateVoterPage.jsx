@@ -131,7 +131,9 @@ class ValidateVoterPage extends Component {
   renderEligibleVoterForm = () => {
     const { email, adasTeamEvent, agreeToBeHonest } = this.state;
     const isInvalid =
-      email === "" || adasTeamEvent.length === 0 || !agreeToBeHonest;
+      !/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email) ||
+      adasTeamEvent.length === 0 ||
+      !agreeToBeHonest;
 
     return (
       <Form size="big">
