@@ -1,7 +1,7 @@
 const admin = require("firebase-admin");
 const serviceAccount = require("./serviceAccountKey.json");
-const data = require("./mailingList.json");
-const collectionKey = "mailingList"; //name of the collection
+const data = require("./filteredMailingList.json");
+const collectionKey = "filteredMailingList"; //name of the collection
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://election-6f2a7.firebaseio.com"
