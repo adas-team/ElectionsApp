@@ -22,7 +22,7 @@ const ImageContainer = styled(Image)`
 `;
 
 const GridContainer = styled(Grid)`
-  height: 100%;
+  height: 90%;
 `;
 
 const VALID_PASS_PATH = "/validpass";
