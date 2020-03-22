@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Main from "./HomePage";
+import Main from "../pages/HomePage";
 
 class Vote extends Component {
   constructor() {
