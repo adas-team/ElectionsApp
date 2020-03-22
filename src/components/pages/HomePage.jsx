@@ -27,8 +27,9 @@ const InfoText = style.h3`
 `;
 
 const SegmentStyled = style(Segment)`
-  margin-top: 20px !important;
-  margin-bottom: 0 !important;
+  margin-top: 40px !important;
+  padding-top: 20px !important;
+  margin-bottom: -50px !important;
   min-width: 836.656px;  
 `;
 
