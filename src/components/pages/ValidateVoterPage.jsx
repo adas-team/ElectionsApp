@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import styled from "styled-components";
 import { adasTeamEventOptions } from "../constants";
 import AdaBotStandingImage from "../../assets/AdaBotStanding.png";
@@ -25,6 +25,9 @@ const GridContainer = styled(Grid)`
   height: 100%;
 `;
 
+const VALID_PASS_PATH = "/validpass";
+const VALID_FAIL_PATH = "/validfail";
+
 const errors = {
   NOT_ON_MAILING_LIST: "The voter is not on the mailing list."
 };
@@ -46,7 +49,9 @@ class ValidateVoterPage extends Component {
     this.state = {
       email: "",
       adasTeamEvent: [],
-      agreeToBeHonest: false
+      agreeToBeHonest: false,
+      ineligibleSubmitted: false,
+      redirectAfterSubmitTo: ""
     };
   }
 
@@ -75,6 +80,7 @@ class ValidateVoterPage extends Component {
         } else {
           // document does not exist (only on online)
           onError(errors.NOT_ON_MAILING_LIST);
+          this.setState({ redirectAfterSubmitTo: VALID_FAIL_PATH });
         }
       })
       .catch(fail => {
@@ -98,7 +104,7 @@ class ValidateVoterPage extends Component {
       .once("value", snapshot => {
         const hasVotedBefore = snapshot.numChildren();
         if (hasVotedBefore) {
-          // If want to revote, allow them to proceed by replacing their entry 
+          // If want to revote, allow them to proceed by replacing their entry
           const voterKey = Object.keys(snapshot.val())[0];
           firebase
             .database()
@@ -108,6 +114,7 @@ class ValidateVoterPage extends Component {
           votersRef.push(voter);
         }
       });
+    this.setState({ redirectAfterSubmitTo: VALID_PASS_PATH });
   };
 
   handleSubmit = e => {
@@ -192,6 +199,10 @@ class ValidateVoterPage extends Component {
   };
 
   render() {
+    const { redirectAfterSubmitTo } = this.state;
+    if (redirectAfterSubmitTo !== "") {
+      return <Redirect to={redirectAfterSubmitTo} />;
+    }
     return (
       <GridContainer verticalAlign="middle" centered>
         <ImageContainer src={AdaBotStandingImage} />

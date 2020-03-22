@@ -3,8 +3,8 @@ import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import Main from "./components/pages/HomePage";
 import Valid from "./components/pages/ValidateVoterPage";
-import ValidPass from "./components/pages/EligebleVoteScreen";
-import ValidFail from "./components/pages/IneligebleVoteScreen";
+import ValidPass from "./components/pages/EligibleVoterScreen";
+import ValidFail from "./components/pages/IneligibleVoterScreen";
 
 function App() {
   return (

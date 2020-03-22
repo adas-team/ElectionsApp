@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Main from "./components/pages/HomePage";
+import Main from "./HomePage";
 
 class Vote extends Component {
   constructor() {
@@ -18,9 +18,12 @@ class Vote extends Component {
     return (
       <div className="container">
         <div className="jumbotron">
-          <h1>Oooooops, seems your account didn't pass the validation. You can valid again!</h1>
+          <h1>
+            Oooooops, seems your account didn't pass the validation. You can
+            valid again!
+          </h1>
           {this.state.startVote ? (
-            <Main/>
+            <Main />
           ) : (
             <button onClick={this.startVote}>Back to main page!</button>
           )}
