@@ -96,4 +96,67 @@ const adasTeamEventOptions = [
   }
 ];
 
-export { adasTeamEventOptions };
+const resultCards = [
+  {
+    avatar: "/images/avatar/large/helen.jpg",
+    date: "Joined in 2013",
+    header: "Helen",
+    description: "Primary Contact"
+  },
+  {
+    avatar: "/images/avatar/large/matthew.png",
+    date: "Joined in 2013",
+    header: "Matthew",
+    description: "Primary Contact"
+  },
+  {
+    avatar: "/images/avatar/large/molly.png",
+    date: "Joined in 2013",
+    header: "Molly",
+    description: "Primary Contact"
+  },
+  {
+    avatar: "/images/avatar/large/helen.jpg",
+    date: "Joined in 2013",
+    header: "Helen",
+    description: "Primary Contact"
+  },
+  {
+    avatar: "/images/avatar/large/matthew.png",
+    date: "Joined in 2013",
+    header: "Matthew",
+    description: "Primary Contact"
+  },
+  {
+    avatar: "/images/avatar/large/molly.png",
+    date: "Joined in 2013",
+    header: "Molly",
+    description: "Primary Contact"
+  },
+  {
+    avatar: "/images/avatar/large/molly.png",
+    date: "Joined in 2013",
+    header: "Molly",
+    description: "Primary Contact"
+  },
+  {
+    avatar: "/images/avatar/large/helen.jpg",
+    date: "Joined in 2013",
+    header: "Helen",
+    description: "Primary Contact"
+  },
+  {
+    avatar: "/images/avatar/large/matthew.png",
+    date: "Joined in 2013",
+    header: "Matthew",
+    description: "Primary Contact"
+  },
+  {
+    avatar: "/images/avatar/large/molly.png",
+    date: "Joined in 2013",
+    header: "Molly",
+    description: "Primary Contact"
+  }
+];
+
+export { adasTeamEventOptions, resultCards };
