@@ -16,7 +16,9 @@ const Subheader = style.h2`
 
 const PlaceholderContainer = style(Placeholder)`
   max-width: 500px !important;
+  height: 400px !important;
 `;
+
 class Results extends Component {
   constructor() {
     super();
