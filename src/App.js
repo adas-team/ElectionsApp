@@ -3,9 +3,9 @@ import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
 import Main from "./components/pages/HomePage";
-import Valid from "./components/pages/ValidateVoterPage";
-import ValidPass from "./components/pages/EligibleVoterScreen";
-import ValidFail from "./components/pages/IneligibleVoterScreen";
+import Valid from "./components/ValidateVoter/ValidateVoterPage";
+import VotePart from "./components/votepart/votepart";
+import Results from "./components/pages/Results";
 
 function App() {
   return (
@@ -14,8 +14,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={Main} />
         <Route exact path="/validate" component={Valid} />
-        <Route exact path="/validpass" component={ValidPass} />
-        <Route exact path="/validfail" component={ValidFail} />
+        <Route exact path="/vote" component={VotePart} />
+        <Route exact path="/results" component={Results} />
       </Switch>
     </Fragment>
   );

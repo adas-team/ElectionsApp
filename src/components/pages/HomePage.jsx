@@ -78,13 +78,7 @@ class HomePage extends Component {
             <InfoText>{beforeYouBegin}</InfoText>
             <InfoText>{checkOutCandidates}</InfoText>
             <Link to="/validate">
-              <Button
-                onClick={this.handleButtonClick}
-                fluid
-                attached="bottom"
-                color="blue"
-                size="massive"
-              >
+              <Button fluid attached="bottom" color="blue" size="massive">
                 Start
               </Button>
             </Link>

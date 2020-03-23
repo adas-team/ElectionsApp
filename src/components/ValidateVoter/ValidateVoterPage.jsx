@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import LoadEligibility from "./LoadEligibility";
 import { adasTeamEventOptions } from "../constants";
 import AdaBotStandingImage from "../../assets/AdaBotStanding.png";
 import {
@@ -25,9 +26,6 @@ const GridContainer = styled(Grid)`
   height: 90%;
 `;
 
-const VALID_PASS_PATH = "/validpass";
-const VALID_FAIL_PATH = "/validfail";
-
 const errors = {
   NOT_ON_MAILING_LIST: "The voter is not on the mailing list."
 };
@@ -50,6 +48,8 @@ class ValidateVoterPage extends Component {
       email: "",
       adasTeamEvent: [],
       agreeToBeHonest: false,
+      redirect: false,
+      eligible: undefined,
       ineligibleSubmitted: false,
       redirectAfterSubmitTo: ""
     };
@@ -80,7 +80,7 @@ class ValidateVoterPage extends Component {
         } else {
           // document does not exist (only on online)
           onError(errors.NOT_ON_MAILING_LIST);
-          this.setState({ redirectAfterSubmitTo: VALID_FAIL_PATH });
+          this.setState({ eligible: false, redirect: true });
         }
       })
       .catch(fail => {
@@ -114,7 +114,7 @@ class ValidateVoterPage extends Component {
           votersRef.push(voter);
         }
       });
-    this.setState({ redirectAfterSubmitTo: VALID_PASS_PATH });
+    this.setState({ eligible: true, redirect: true });
   };
 
   handleSubmit = e => {
@@ -199,15 +199,15 @@ class ValidateVoterPage extends Component {
   };
 
   render() {
-    const { redirectAfterSubmitTo } = this.state;
-    if (redirectAfterSubmitTo !== "") {
-      return <Redirect to={redirectAfterSubmitTo} />;
+    const { redirect, eligible } = this.state;
+    if (redirect) {
+      return <LoadEligibility eligible={eligible} />;
     }
     return (
       <GridContainer verticalAlign="middle" centered>
         <ImageContainer src={AdaBotStandingImage} />
         <Grid.Column width={6}>
-          <Progress color="blue" percent={25}></Progress>
+          <Progress color="blue" percent={15}></Progress>
           {this.renderHeaderText()}
           {this.renderEligibleVoterForm()}
         </Grid.Column>
