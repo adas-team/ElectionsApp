@@ -4,8 +4,8 @@ import { Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
 import Main from "./components/pages/HomePage";
 import Valid from "./components/ValidateVoter/ValidateVoterPage";
-import ValidPass from "./components/ValidateVoter/EligibleVoterScreen";
-import ValidFail from "./components/ValidateVoter/IneligibleVoterScreen";
+import VotePart from "./components/votepart/votepart";
+import Results from "./components/pages/Results";
 
 function App() {
   return (
@@ -14,8 +14,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={Main} />
         <Route exact path="/validate" component={Valid} />
-        <Route exact path="/validpass" component={ValidPass} />
-        <Route exact path="/validfail" component={ValidFail} />
+        <Route exact path="/vote" component={VotePart} />
+        <Route exact path="/results" component={Results} />
       </Switch>
     </Fragment>
   );
