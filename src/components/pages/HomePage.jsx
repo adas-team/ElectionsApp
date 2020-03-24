@@ -1,36 +1,44 @@
-import { Image, Grid, Label, Segment, Button } from "semantic-ui-react";
-import AdaBotHandsUpImage from "../../assets/AdaBotHandsUp.png";
+import { Grid, Label, Segment, Button } from "semantic-ui-react";
+import AdaBotFromRight from "../../assets/AdaBotFromRight.png";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import style from "styled-components";
 
-const ImageStyled = style.div`
-  z-index: -1;
-  min-width: 834.656px;
-  max-height: 547px;
-  position: fixed !important;
-  overflow: hidden !important; 
+const TextContainer = style.div`
+  text-align: center; 
+  padding: 80px !important;
+  margin-top: -90px !important;
+  padding-bottom: 50px !important;
+
+  .welcome {
+    font-size: 60px;
+  }
+
+  .subheader {
+    font-size: 36px;
+  }
+
+  .info {
+    font-size: 20px;
+  }
 `;
 
-const WelcomeMessage = style.h1`
-  font-size: 80px !important;
-  text-align: center;
+const StyledSegment = style(Segment)`
+  float: right;  
+  width: 70% !important; 
+  margin-bottom: 100px !important;
+  margin-right: 60px !important;
 `;
 
-const Subheader = style.h2`
-  text-align: center;
-`;
-
-const InfoText = style.h3`
-  text-align: center;
-  font-size: 19px;
-`;
-
-const SegmentStyled = style(Segment)`
-  margin-top: 40px !important;
-  padding-top: 20px !important;
-  margin-bottom: -50px !important;
-  min-width: 836.656px;  
+const GridContainer = style(Grid)`
+  height: 95%;
+  width: 100%;
+  background-image: url(${AdaBotFromRight});
+  background-position: left bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 30%; 
+  overflow: hidden !important;
 `;
 
 const covidAcknowledgment = `During this pandemic, we hope you and your loved ones 
@@ -61,33 +69,29 @@ class HomePage extends Component {
 
   render() {
     return (
-      <Grid centered columns={3}>
+      <GridContainer verticalAlign="middle" columns={1}>
         <Grid.Column>
-          <SegmentStyled attached>
+          <StyledSegment>
             <Label as="a" color="blue" size="massive" ribbon>
               2020
             </Label>
-            <WelcomeMessage>
-              Welcome to <br />
-              Ada's Team Elections!
-            </WelcomeMessage>
-            <Subheader>
-              We appreciate you all coming out to participate!
-            </Subheader>
-            <InfoText>{covidAcknowledgment}</InfoText>
-            <InfoText>{beforeYouBegin}</InfoText>
-            <InfoText>{checkOutCandidates}</InfoText>
+            <TextContainer>
+              <h1 class="welcome">Welcome to Ada's Team Elections!</h1>
+              <h2 class="subheader">
+                We appreciate you all coming out to participate!
+              </h2>
+              <h3 class="info">{covidAcknowledgment}</h3>
+              <h3 class="info">{beforeYouBegin}</h3>
+              <h3 class="info">{checkOutCandidates}</h3>
+            </TextContainer>
             <Link to="/validate">
-              <Button fluid attached="bottom" color="blue" size="massive">
+              <Button fluid color="blue" size="massive">
                 Start
               </Button>
             </Link>
-          </SegmentStyled>
-          <ImageStyled>
-            <Image attached src={AdaBotHandsUpImage} />
-          </ImageStyled>
+          </StyledSegment>
         </Grid.Column>
-      </Grid>
+      </GridContainer>
     );
   }
 }
