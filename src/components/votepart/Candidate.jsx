@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, Image, Checkbox } from "semantic-ui-react";
+import { Card, Image, Radio } from "semantic-ui-react";
 
 class Candidate extends Component {
   constructor(props) {
@@ -19,25 +19,30 @@ class Candidate extends Component {
   };
 
   render() {
-    // TODO: Add this.props.years as label
-    const { image, name, preferences } = this.props;
+    // TODO: image, preferences, and speech props
+    const { name } = this.props;
     const { color, selected } = this.state;
     return (
       <Card color={color}>
         <Card.Content>
-          <Image floated="right" size="mini" src={image} />
+          <Image floated="right" size="mini" />
           <Card.Header>{name}</Card.Header>
           <Card.Meta>
             Preferences:
             <ol>
-              <li>{preferences[0]}</li>
+              {/* TODO */}
+              {/* <li>{preferences[0]}</li>
               <li>{preferences[1]}</li>
-              <li>{preferences[2]}</li>
+              <li>{preferences[2]}</li> */}
             </ol>
           </Card.Meta>
         </Card.Content>
         <Card.Content extra>
-          <Checkbox radio onChange={this.handleSelect} checked={selected} />
+          <Radio
+            value={name}
+            onChange={this.handleSelect}
+            checked={selected}
+          ></Radio>
         </Card.Content>
       </Card>
     );
