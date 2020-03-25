@@ -1,106 +1,59 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { getCandidateList } from "../candidateHelper";
+// import { Link } from "react-router-dom";
+// import { Button, Card, Image } from "semantic-ui-react";
 
 class VotePart extends Component {
-
-    constructor(props){
-        super(props);
-        this.state = {
-            level: 1,
-            score: 0,
-            currentParaNum: 0,
-            maxNumOfCan: 4,
-            currPara: "It is the current position A",
-            currParaArray: [],
-            length: 0,
-            readDone: false,
-            answerred: false,
-            paragraphs: [
-                "Position A",
-                "Position B",
-                "Position C",
-                "Position D",
-            ],
-            questions: ["Who you wanna vote?"],
-            choices: [["AAA", "BBB", "CCC", "DDD"]],
-            answers: ["AAA"],
-            youtAnswer: null
-        };
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      votes: {},
+      candidates: {}
     };
+  }
 
-    componentDidMount = async() => {
-        this.startReading()
-    }
+  componentDidMount() {
+    this.initVote();
+    this.setCandidateList();
+  }
 
-    startReading = async() => {
-        // let index = 0; // temporarily commented out
-        await setTimeout(() => {
-            this.setState({ readDone: true})
-            //we can write description or add link button here for change to vote
-        }, 1000)//it is the time for auto change to the vote
-    };
+  initVote = () => {
+    // Initialize user's vote to have all positions set to empty strings
+    // The empty strings will eventually contain the selected candidate's name
+    const positions = this.getPositions();
+    let votes = {};
+    positions.forEach(function(currPosition) {
+      votes = {
+        ...votes,
+        [currPosition]: ""
+      };
+    });
+  };
 
-    checkAnswer = async(e) => {
-        this.setState({ answerred: true})
-    }
+  getPositions = () => {
+    const candidates = getCandidateList();
+    return Object.keys(candidates);
+  };
 
-    changeQuestion = async () => {//still need debug
-        await this.setState({
-            currentParaNum: this.state.currentParaNum + 1,
-            currPara: this.state.paragraphs[this.state.currentParaNum],
-            readDone: false,
-            answerred: false
-        });
-        this.startReading();
-    }
+  setCandidateList = () => {
+    const candidates = getCandidateList();
+    this.setState({ candidates });
+  };
 
-    render(){
-        return(
-            <div>
-                {this.state.readDone
-                ?
-                    this.state.answerred
-                    ?
-                        this.state.currentParaNum < this.state.maxNumOfCan
-                        ?
-                        <button onClick={this.changeQuestion}>Next VOTE </button>
-                        :
-                        <div>
-                            <h2>You have finish all the VOTE!</h2>
-                            <Link to="/user">Go Back Home</Link>
-                        </div>
-                    :
-                    <div>
-                        {/* TODO : update the database and use <h3>{this.state.questions[this.state.currentParaNum]}</h3> */}
-                        <h3>{this.state.questions[0]}</h3>
-                        {/* TODO : update the database and use this.state.choices[this.state.currentParaNum].map(choice => ( */}
-                        {this.state.choices[0].map(choice => (
-                            <div>
-                                <input type="radio" value={choice} defaultChecked={false} onClick={this.checkAnswer} />
-                                {choice}
-                            </div>
+  handleSelection = card => {
+    const { position, candidateName } = card;
+    const { votes } = this.state;
+    this.setState({
+      votes: {
+        ...votes,
+        [position]: [candidateName]
+      }
+    });
+  };
 
-                        ))}
-                    </div>
-                :
-                <div>
-                    {this.state.currParaArray
-                    ?
-                        <div className="row" style={{paddingLeft:30, fontSize: 20}}>
-                        {this.state.currParaArray.map( word => (
-                            <div className={word}>&nbsp;{word}</div>
-                        ))}
-                        </div>
-                    :
-                        <p>wait for a sec ...</p>
-                    }
-                </div>
-                }
-                <br/>The process: {this.state.currentParaNum + 1} / {this.state.maxNumOfCan + 1}
-            </div>
-        )
-    }
+  render() {
+    return <div>VotePart</div>;
+  }
 }
 
 export default VotePart;
