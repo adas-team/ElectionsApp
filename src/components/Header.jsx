@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Menu } from "semantic-ui-react";
+import { Menu, Icon } from "semantic-ui-react";
 import { Redirect } from "react-router-dom";
 import AdaBotHead from "../assets/AdaBotHead.png";
 
@@ -63,6 +63,14 @@ class Header extends Component {
           onClick={this.handleItemClick}
         >
           Results
+        </Menu.Item>
+        <Menu.Item
+          position="right"
+          href="https://github.com/adas-team/ElectionsApp"
+          target="_blank"
+        >
+          {/* <img src={AdaBotHead} alt="Ada's Bot Head" /> */}
+          <Icon name="github" size="large" />
         </Menu.Item>
       </Menu>
     );
