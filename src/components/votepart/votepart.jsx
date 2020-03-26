@@ -1,9 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import style from "styled-components";
 import Position from "./Position";
-import Candidate from "./Candidate";
+import ListCandidates from "./ListCandidates";
 import { getPositions, getCandidateList } from "../helper";
-import { Form, Card } from "semantic-ui-react";
 
 const VoteHeader = style.h1`
     font-size: 80px !important;
@@ -14,6 +13,9 @@ const Subheader = style.h2`
     text-align: center;
 `;
 
+const Container = style.div`
+  padding-left: 2rem;
+`;
 class VotePart extends Component {
   constructor(props) {
     super(props);
@@ -64,36 +66,21 @@ class VotePart extends Component {
     if (positions.length) {
       return positions.map(currPosition => [
         <Position key={currPosition} name={currPosition} />,
-        <Form.Group>
-          <Card.Group onChange={this.handleSelection}>
-            {this.renderCandidates(currPosition)}
-          </Card.Group>
-        </Form.Group>
+        <ListCandidates position={currPosition} />
       ]);
-    }
-  };
-
-  renderCandidates = position => {
-    const { candidates } = this.state;
-    if (candidates[position]) {
-      const candidate = candidates[position];
-
-      return Object.keys(candidate).map(candidateName => (
-        <Candidate key={candidateName} name={candidateName} />
-      ));
     }
   };
 
   render() {
     return (
-      <Form>
+      <Fragment>
         <VoteHeader>Vote</VoteHeader>
         <Subheader>
           If you leave this page before submitting, your vote will not be
           counted.
         </Subheader>
-        <div>{this.renderPositions()}</div>
-      </Form>
+        <Container>{this.renderPositions()}</Container>
+      </Fragment>
     );
   }
 }

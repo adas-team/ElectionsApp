@@ -1,48 +1,61 @@
 import React, { Component } from "react";
-import { Card, Image, Radio } from "semantic-ui-react";
+import style from "styled-components";
+import img from "../../assets/AdaBotHead.png";
+import { Card, Image, Form } from "semantic-ui-react";
+
+const Header = style.h5`
+  padding-top: 10px;
+`;
+
+const PreferencesContainer = style.ol`
+  margin-top: -1rem;
+  padding-left: 1.5rem;
+`;
+
+const RadioButton = style(Form.Radio)`
+  text-align: center;
+`;
 
 class Candidate extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      color: null,
-      selected: false
+      color: null
     };
   }
 
-  handleSelect = (e, { checked }) => {
-    const color = checked ? "green" : null;
-    this.setState({
-      color,
-      selected: checked
-    });
+  handleSelect = (e, { value }) => {
+    const { onSelect, candidateName } = this.props;
+    onSelect(candidateName);
   };
 
   render() {
     // TODO: image, preferences, and speech props
-    const { name } = this.props;
-    const { color, selected } = this.state;
+    const { candidateName, currSelection } = this.props;
+    const name = candidateName.replace(/([A-Z])/g, " $1").trim();
+    const { color } = this.state;
+
     return (
       <Card color={color}>
         <Card.Content>
-          <Image floated="right" size="mini" />
+          <Image floated="right" size="small" src={img} />
           <Card.Header>{name}</Card.Header>
           <Card.Meta>
-            Preferences:
-            <ol>
+            <Header>Preferences:</Header>
+            <PreferencesContainer>
               {/* TODO */}
-              {/* <li>{preferences[0]}</li>
-              <li>{preferences[1]}</li>
-              <li>{preferences[2]}</li> */}
-            </ol>
+              <li>Position 1</li>
+              <li>Position 2</li>
+              <li>Position 3</li>
+            </PreferencesContainer>
           </Card.Meta>
         </Card.Content>
         <Card.Content extra>
-          <Radio
-            value={name}
+          <RadioButton
+            name="radioGroup"
             onChange={this.handleSelect}
-            checked={selected}
-          ></Radio>
+            checked={candidateName === currSelection}
+          />
         </Card.Content>
       </Card>
     );
