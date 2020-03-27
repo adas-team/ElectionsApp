@@ -6,18 +6,15 @@ import { getPositions, getCandidateList } from "../helper";
 import { Button } from "semantic-ui-react";
 
 const VoteHeader = style.h1`
-    font-size: 80px !important;
-    text-align: center;
+  font-size: 80px !important;
+  text-align: center;
 `;
-
 const Subheader = style.h2`
-    text-align: center;
+  text-align: center;
 `;
-
 const Container = style.div`
   padding-left: 2rem;
 `;
-
 const SubmitButton = style(Button)`
   align-self: center;
 `;
@@ -38,8 +35,8 @@ class VotePart extends Component {
   }
 
   initVote = async () => {
-    // Initialize user's vote to have all positions set to empty strings
-    // The empty strings will eventually contain the selected candidate's name
+    // Initialize user’s vote to have all positions set to empty strings
+    // The empty strings will eventually contain the selected candidate’s name
     const positions = await getPositions();
     let votes = {};
     positions.forEach(function(currPosition) {
@@ -77,7 +74,18 @@ class VotePart extends Component {
     }
   };
 
+  validVote = () => {
+    const { votes } = this.state;
+    let valid = Object.keys(votes).every(function(position) {
+      const currVote = votes[position];
+      return currVote.length > 1;
+    });
+
+    return valid;
+  };
+
   render() {
+    const validVote = this.validVote();
     return (
       <Fragment>
         <VoteHeader>Vote</VoteHeader>
@@ -86,7 +94,7 @@ class VotePart extends Component {
           counted.
         </Subheader>
         <Container>{this.renderPositions()}</Container>
-        <SubmitButton fluid size="massive" color="blue">
+        <SubmitButton disabled={!validVote} fluid size="massive" color="blue">
           Submit
         </SubmitButton>
       </Fragment>
