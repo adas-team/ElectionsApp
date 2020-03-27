@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
 import Main from "./components/pages/HomePage";
 import Valid from "./components/ValidateVoter/ValidateVoterPage";
-import VotePart from "./components/votepart/votepart";
+import VotePart from "./components/VotePart/Vote";
 import Results from "./components/pages/Results";
 
 function App() {

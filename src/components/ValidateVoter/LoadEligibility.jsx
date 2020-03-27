@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import style from "styled-components";
-import VotePart from "../votepart/votepart";
+import VotePart from "../VotePart/Vote";
 import Results from "../pages/Results";
 import AdaBotHeadImage from "../../assets/AdaBotHead.png";
 import {
