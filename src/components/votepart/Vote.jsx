@@ -4,6 +4,8 @@ import Position from "./Position";
 import ListCandidates from "./ListCandidates";
 import { getPositions, getCandidateList } from "../helper";
 import { Button } from "semantic-ui-react";
+import firebase from "firebase/app";
+import "firebase/firestore";
 
 const VoteHeader = style.h1`
   font-size: 80px !important;
@@ -19,7 +21,7 @@ const SubmitButton = style(Button)`
   align-self: center;
 `;
 
-class VotePart extends Component {
+class Vote extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -88,6 +90,36 @@ class VotePart extends Component {
     return valid;
   };
 
+  handleSubmit = () => {
+    const { voter } = this.props;
+
+    if (!voter) {
+      console.log("ERROR: Voter did not validate");
+      return 1;
+    }
+
+    const email = voter["email"];
+    firebase
+      .database()
+      .ref()
+      .child("voters")
+      .orderByChild("email")
+      .equalTo(email)
+      .once("value", snapshot => {
+        const validatedVoter = snapshot.numChildren();
+        if (validatedVoter) {
+          // If voter is within the voters database, update voter with their votes
+          const { votes } = this.state;
+          const voterWithVotes = { ...voter, votes };
+          const voterKey = Object.keys(snapshot.val())[0];
+          firebase
+            .database()
+            .ref("voters/" + voterKey)
+            .set(voterWithVotes);
+        }
+      });
+  };
+
   render() {
     const validVote = this.validVote();
     return (
@@ -98,7 +130,13 @@ class VotePart extends Component {
           counted.
         </Subheader>
         <Container>{this.renderPositions()}</Container>
-        <SubmitButton disabled={!validVote} fluid size="massive" color="blue">
+        <SubmitButton
+          fluid
+          disabled={!validVote}
+          size="massive"
+          color="blue"
+          onClick={this.handleSubmit}
+        >
           Submit
         </SubmitButton>
       </Fragment>
@@ -106,4 +144,4 @@ class VotePart extends Component {
   }
 }
 
-export default VotePart;
+export default Vote;

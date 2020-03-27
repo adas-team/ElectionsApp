@@ -51,7 +51,8 @@ class ValidateVoterPage extends Component {
       redirect: false,
       eligible: undefined,
       ineligibleSubmitted: false,
-      redirectAfterSubmitTo: ""
+      redirectAfterSubmitTo: "",
+      voter: undefined
     };
   }
 
@@ -92,7 +93,7 @@ class ValidateVoterPage extends Component {
   };
 
   addVoter = voter => {
-    // (Step 2) Retrieve email from realtime DB to block duplicate voters
+    // (Step 2) Retrieve email from realtime DB to allow revotes (replace old vote)
     const { email } = voter;
     const votersRef = firebase.database().ref("voters");
     firebase
@@ -114,7 +115,7 @@ class ValidateVoterPage extends Component {
           votersRef.push(voter);
         }
       });
-    this.setState({ eligible: true, redirect: true });
+    this.setState({ eligible: true, redirect: true, voter });
   };
 
   handleSubmit = e => {
@@ -199,9 +200,9 @@ class ValidateVoterPage extends Component {
   };
 
   render() {
-    const { redirect, eligible } = this.state;
+    const { redirect, eligible, voter } = this.state;
     if (redirect) {
-      return <LoadEligibility eligible={eligible} />;
+      return <LoadEligibility voter={voter} eligible={eligible} />;
     }
     return (
       <GridContainer verticalAlign="middle" centered>
