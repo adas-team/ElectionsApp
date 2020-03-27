@@ -3,6 +3,7 @@ import style from "styled-components";
 import Position from "./Position";
 import ListCandidates from "./ListCandidates";
 import { getPositions, getCandidateList } from "../helper";
+import { Button } from "semantic-ui-react";
 
 const VoteHeader = style.h1`
     font-size: 80px !important;
@@ -16,6 +17,11 @@ const Subheader = style.h2`
 const Container = style.div`
   padding-left: 2rem;
 `;
+
+const SubmitButton = style(Button)`
+  align-self: center;
+`;
+
 class VotePart extends Component {
   constructor(props) {
     super(props);
@@ -50,13 +56,13 @@ class VotePart extends Component {
     this.setState({ candidates });
   };
 
-  handleSelection = card => {
+  updateVote = card => {
     const { position, candidateName } = card;
     const { votes } = this.state;
     this.setState({
       votes: {
         ...votes,
-        [position]: [candidateName]
+        [position]: candidateName
       }
     });
   };
@@ -66,7 +72,7 @@ class VotePart extends Component {
     if (positions.length) {
       return positions.map(currPosition => [
         <Position key={currPosition} name={currPosition} />,
-        <ListCandidates position={currPosition} />
+        <ListCandidates updateVote={this.updateVote} position={currPosition} />
       ]);
     }
   };
@@ -80,6 +86,9 @@ class VotePart extends Component {
           counted.
         </Subheader>
         <Container>{this.renderPositions()}</Container>
+        <SubmitButton fluid size="massive" color="blue">
+          Submit
+        </SubmitButton>
       </Fragment>
     );
   }
