@@ -22,7 +22,9 @@ class ListCandidates extends Component {
   };
 
   onSelect = name => {
+    const { updateVote, position } = this.props;
     this.setState({ currSelection: name });
+    updateVote({ position, candidateName: name });
   };
 
   renderCandidates = position => {
