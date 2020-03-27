@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import style from "styled-components";
-import VotePart from "../VotePart/Vote";
+import Vote from "../VotePart/Vote";
 import Results from "../pages/Results";
 import AdaBotHeadImage from "../../assets/AdaBotHead.png";
 import {
@@ -85,9 +85,9 @@ class LoadEligibility extends Component {
       loading
     } = this.state;
 
-    const { eligible } = this.props;
+    const { eligible, voter } = this.props;
     if (redirect) {
-      return eligible ? <VotePart /> : <Results />;
+      return eligible ? <Vote voter={voter} /> : <Results />;
     }
 
     return (
