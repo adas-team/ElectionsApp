@@ -69,7 +69,11 @@ class VotePart extends Component {
     if (positions.length) {
       return positions.map(currPosition => [
         <Position key={currPosition} name={currPosition} />,
-        <ListCandidates updateVote={this.updateVote} position={currPosition} />
+        <ListCandidates
+          key={"candidatesFor" + currPosition}
+          updateVote={this.updateVote}
+          position={currPosition}
+        />
       ]);
     }
   };
