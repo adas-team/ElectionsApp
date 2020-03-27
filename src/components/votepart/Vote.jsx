@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import style from "styled-components";
 import Position from "./Position";
+import Results from "../pages/Results";
 import ListCandidates from "./ListCandidates";
 import { getPositions, getCandidateList } from "../helper";
 import { Button } from "semantic-ui-react";
@@ -27,7 +28,8 @@ class Vote extends Component {
     this.state = {
       votes: {},
       positions: {},
-      candidates: {}
+      candidates: {},
+      redirect: false
     };
   }
 
@@ -118,10 +120,15 @@ class Vote extends Component {
             .set(voterWithVotes);
         }
       });
+    this.setState({ redirect: true });
   };
 
   render() {
     const validVote = this.validVote();
+    const { redirect } = this.state;
+    if (redirect) {
+      return <Results />;
+    }
     return (
       <Fragment>
         <VoteHeader>Vote</VoteHeader>
