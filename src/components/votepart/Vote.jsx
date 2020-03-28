@@ -4,7 +4,14 @@ import Position from "./Position";
 import VoteDone from "./VoteDone";
 import ListCandidates from "./ListCandidates";
 import { getPositions, getCandidateList } from "../helper";
-import { Grid, Button, Progress, Divider } from "semantic-ui-react";
+import {
+  Grid,
+  Button,
+  Progress,
+  Divider,
+  Loader,
+  Dimmer
+} from "semantic-ui-react";
 import firebase from "firebase/app";
 import "firebase/firestore";
 
@@ -38,13 +45,17 @@ class Vote extends Component {
       votes: {},
       positions: {},
       candidates: {},
-      redirect: false
+      redirect: false,
+      loading: true
     };
   }
 
   componentDidMount() {
     this.initVote();
     this.setCandidateList();
+    setTimeout(() => {
+      this.setState({ loading: false });
+    }, 2000);
   }
 
   initVote = async () => {
@@ -155,12 +166,21 @@ class Vote extends Component {
     });
   };
 
+  renderLoader = () => {
+    return (
+      <Dimmer page active inverted>
+        <Loader size="massive">Loading</Loader>
+      </Dimmer>
+    );
+  };
+
   render() {
     const validVote = this.validVote();
-    const { redirect } = this.state;
+    const { redirect, loading } = this.state;
     if (redirect) {
       return <VoteDone />;
     }
+
     return (
       <Grid centered>
         <Grid.Column width={10}>
@@ -171,16 +191,20 @@ class Vote extends Component {
           </Subheader>
           <ProgressBar color="blue" percent={75}></ProgressBar>
           <Divider />
-          {this.renderPositions()}
-          <SubmitButton
-            fluid
-            size="massive"
-            disabled={!validVote}
-            color="blue"
-            onClick={this.handleSubmit}
-          >
-            Submit
-          </SubmitButton>
+          {loading
+            ? this.renderLoader()
+            : [
+                this.renderPositions(),
+                <SubmitButton
+                  fluid
+                  size="massive"
+                  disabled={!validVote}
+                  color="blue"
+                  onClick={this.handleSubmit}
+                >
+                  Submit
+                </SubmitButton>
+              ]}
         </Grid.Column>
       </Grid>
     );
