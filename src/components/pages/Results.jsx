@@ -46,7 +46,7 @@ class Results extends Component {
         </Subheader>
         <Divider />
 
-        <Card.Group doubling itemsPerRow={5} stackable>
+        <Card.Group itemsPerRow={5} stackable>
           {_.map(resultCards, card => (
             <Card key={card.header}>
               {loading ? (
