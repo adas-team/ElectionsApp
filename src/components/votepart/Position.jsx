@@ -1,16 +1,17 @@
-import React, { Fragment } from "react";
+import React from "react";
+import { positionDesc } from "../constants";
+import { Popup } from "semantic-ui-react";
 import style from "styled-components";
 
-const Description = style.h3`
-  margin-top: -0.5rem;
+const PopupMessage = style(Popup)`
+  font-size: 16px !important;
+  max-width: 62.5% !important; 
 `;
-
 const Position = ({ name }) => {
   return (
-    <Fragment>
-      <h1>{name}</h1>
-      <Description>Position description goes here.</Description>
-    </Fragment>
+    <PopupMessage wide="very" trigger={<h1>{name}</h1>} position="top left">
+      {positionDesc[0][name]}
+    </PopupMessage>
   );
 };
 
