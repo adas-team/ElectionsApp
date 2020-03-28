@@ -208,7 +208,7 @@ class ValidateVoterPage extends Component {
       <GridContainer verticalAlign="middle" centered>
         <ImageContainer src={AdaBotStandingImage} />
         <Grid.Column width={6}>
-          <Progress color="blue" percent={15}></Progress>
+          <Progress color="blue" percent={25}></Progress>
           {this.renderHeaderText()}
           {this.renderEligibleVoterForm()}
         </Grid.Column>

@@ -94,7 +94,7 @@ class LoadEligibility extends Component {
       <GridContainer verticalAlign="middle" centered columns={1}>
         <Grid.Column width={5}>
           <Image size="huge" src={AdaBotHeadImage} alt="Ada Bot Head" />
-          <Progress color="blue" percent={30}></Progress>
+          <Progress color="blue" percent={50}></Progress>
           <Message size="massive" color={messageBgColor} icon>
             <Icon name={iconName} loading={loading} />
             <Message.Content>

@@ -4,7 +4,7 @@ import Position from "./Position";
 import Results from "../pages/Results";
 import ListCandidates from "./ListCandidates";
 import { getPositions, getCandidateList } from "../helper";
-import { Button } from "semantic-ui-react";
+import { Grid, Button, Progress, Divider } from "semantic-ui-react";
 import firebase from "firebase/app";
 import "firebase/firestore";
 
@@ -12,14 +12,23 @@ const VoteHeader = style.h1`
   font-size: 80px !important;
   text-align: center;
 `;
+
 const Subheader = style.h2`
   text-align: center;
+  margin-top: 0.5rem !important;
 `;
-const Container = style.div`
-  padding-left: 2rem;
+
+const ProgressBar = style(Progress)`
+  margin-top: 1.8rem !important;
 `;
+
+const DividerPadded = style(Divider)`
+  margin-top: 3rem !important;
+`;
+
 const SubmitButton = style(Button)`
   align-self: center;
+  margin-top: 3rem !important;
 `;
 
 class Vote extends Component {
@@ -77,7 +86,8 @@ class Vote extends Component {
           key={"candidatesFor" + currPosition}
           updateVote={this.updateVote}
           position={currPosition}
-        />
+        />,
+        <DividerPadded />
       ]);
     }
   };
@@ -152,23 +162,27 @@ class Vote extends Component {
       return <Results />;
     }
     return (
-      <Fragment>
-        <VoteHeader>Vote</VoteHeader>
-        <Subheader>
-          If you leave this page before submitting, your vote will not be
-          counted.
-        </Subheader>
-        <Container>{this.renderPositions()}</Container>
-        <SubmitButton
-          fluid
-          disabled={!validVote}
-          size="massive"
-          color="blue"
-          onClick={this.handleSubmit}
-        >
-          Submit
-        </SubmitButton>
-      </Fragment>
+      <Grid centered>
+        <Grid.Column width={10}>
+          <VoteHeader>Vote</VoteHeader>
+          <Subheader>
+            If you leave this page before submitting, your vote will not be
+            counted.
+          </Subheader>
+          <ProgressBar color="blue" percent={75}></ProgressBar>
+          <Divider />
+          {this.renderPositions()}
+          <SubmitButton
+            fluid
+            size="massive"
+            disabled={!validVote}
+            color="blue"
+            onClick={this.handleSubmit}
+          >
+            Submit
+          </SubmitButton>
+        </Grid.Column>
+      </Grid>
     );
   }
 }

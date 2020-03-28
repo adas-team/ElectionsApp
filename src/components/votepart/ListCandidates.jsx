@@ -48,7 +48,9 @@ class ListCandidates extends Component {
     return (
       <Form>
         <Form.Group grouped widths="equal">
-          <Card.Group>{this.renderCandidates(position)}</Card.Group>
+          <Card.Group itemsPerRow={5}>
+            {this.renderCandidates(position)}
+          </Card.Group>
         </Form.Group>
       </Form>
     );

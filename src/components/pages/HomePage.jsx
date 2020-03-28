@@ -44,7 +44,7 @@ const GridContainer = style(Grid)`
 const covidAcknowledgment = `During this pandemic, we hope you and your loved ones 
 are all safe, healthy, and you are taking great care of yourself mentally 
 and physically. We are priviledged to be living in a first-world country 
-that has the resources and capacity to mitigrate the risk of COVID-19. 
+that has the resources and capacity to mitigate the risks of COVID-19. 
 With combined effort, time, and patience, things will be back to normal 
 relatively soon. With that being said, we thank you for taking the time 
 to help us run as smoothly as possible during this sensitive time.`;
