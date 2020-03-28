@@ -1,7 +1,7 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import style from "styled-components";
 import Position from "./Position";
-import Results from "../pages/Results";
+import VoteDone from "./VoteDone";
 import ListCandidates from "./ListCandidates";
 import { getPositions, getCandidateList } from "../helper";
 import { Grid, Button, Progress, Divider } from "semantic-ui-react";
@@ -159,7 +159,7 @@ class Vote extends Component {
     const validVote = this.validVote();
     const { redirect } = this.state;
     if (redirect) {
-      return <Results />;
+      return <VoteDone />;
     }
     return (
       <Grid centered>
