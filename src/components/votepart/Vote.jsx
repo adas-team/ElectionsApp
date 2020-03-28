@@ -94,7 +94,6 @@ class Vote extends Component {
 
   handleSubmit = () => {
     const { voter } = this.props;
-
     if (!voter) {
       console.log("ERROR: Voter did not validate");
       return 1;
@@ -102,7 +101,6 @@ class Vote extends Component {
 
     this.addVote();
     this.updateVoteCount();
-
     this.setState({ redirect: true });
   };
 
