@@ -100,7 +100,16 @@ class Vote extends Component {
       return 1;
     }
 
+    this.addVote();
+    this.updateVoteCount();
+
+    this.setState({ redirect: true });
+  };
+
+  addVote = () => {
+    const { voter } = this.props;
     const email = voter["email"];
+
     firebase
       .database()
       .ref()
@@ -120,7 +129,22 @@ class Vote extends Component {
             .set(voterWithVotes);
         }
       });
-    this.setState({ redirect: true });
+  };
+
+  updateVoteCount = async () => {
+    const { votes } = this.state;
+    const increment = firebase.firestore.FieldValue.increment(1);
+
+    await Object.keys(votes).forEach(position => {
+      let updateVountCount = {};
+      const candidateName = votes[position];
+      updateVountCount[`${candidateName}.numOfVotes`] = increment;
+      firebase
+        .firestore()
+        .collection("candidateList")
+        .doc(position)
+        .update(updateVountCount);
+    });
   };
 
   render() {
