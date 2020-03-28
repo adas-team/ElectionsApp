@@ -94,13 +94,20 @@ class Vote extends Component {
 
   handleSubmit = () => {
     const { voter } = this.props;
-
     if (!voter) {
       console.log("ERROR: Voter did not validate");
       return 1;
     }
 
+    this.addVote();
+    this.updateVoteCount();
+    this.setState({ redirect: true });
+  };
+
+  addVote = () => {
+    const { voter } = this.props;
     const email = voter["email"];
+
     firebase
       .database()
       .ref()
@@ -120,7 +127,22 @@ class Vote extends Component {
             .set(voterWithVotes);
         }
       });
-    this.setState({ redirect: true });
+  };
+
+  updateVoteCount = async () => {
+    const { votes } = this.state;
+    const increment = firebase.firestore.FieldValue.increment(1);
+
+    await Object.keys(votes).forEach(position => {
+      let vountCount = {};
+      const candidateName = votes[position];
+      vountCount[`${candidateName}.numOfVotes`] = increment;
+      firebase
+        .firestore()
+        .collection("candidateList")
+        .doc(position)
+        .update(vountCount);
+    });
   };
 
   render() {
