@@ -21,6 +21,12 @@ const PlaceholderContainer = style(Placeholder)`
   height: 400px !important;
 `;
 
+const resultsPending =
+  "We're still counting. Come back soon to see the new executive team for 2020-21!";
+
+const resultsComputed =
+  "Thank you all for coming out! This is our new executive team for 2020-21.";
+
 class Results extends Component {
   constructor() {
     super();
@@ -102,7 +108,7 @@ class Results extends Component {
   renderPlaceholders = () => {
     const { loading, winners } = this.state;
     return (
-      <Card.Group itemsPerRow={4} stackable>
+      <Card.Group itemsPerRow={5} stackable>
         {Object.keys(winners)
           .reverse()
           .map(position => (
@@ -112,7 +118,7 @@ class Results extends Component {
                   <Placeholder.Image square />
                 </PlaceholderContainer>
               ) : (
-                <Image size="massive" src={PlaceholderImg} />
+                <Image src={PlaceholderImg} />
               )}
 
               <Card.Content>
@@ -140,13 +146,11 @@ class Results extends Component {
   };
 
   render() {
+    const { loading } = this.state;
     return (
       <Fragment>
         <ResultsHeader>Results</ResultsHeader>
-        <Subheader>
-          We're still counting. Come back soon to see the new executive team for
-          2020-21!
-        </Subheader>
+        <Subheader>{loading ? resultsPending : resultsComputed}</Subheader>
         <Divider />
         {this.renderPlaceholders()}
       </Fragment>
