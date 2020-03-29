@@ -1,9 +1,8 @@
-import _ from "lodash";
-import { resultCards } from "../constants";
 import style from "styled-components";
 import { getPositions, getCandidateList } from "../helper";
 import React, { Component, Fragment } from "react";
 import { Card, Divider, Image, Placeholder } from "semantic-ui-react";
+import PlaceholderImg from "../../assets/Daniel.jpg";
 import firebase from "firebase/app";
 import "firebase/firestore";
 
@@ -22,12 +21,19 @@ const PlaceholderContainer = style(Placeholder)`
   height: 400px !important;
 `;
 
+const Container = style.div`
+  display: flex !important;
+  font-size: 18px !important;
+  justify-content: center !important;
+`;
+
 class Results extends Component {
   constructor() {
     super();
     this.state = {
-      loading: true,
-      candidateList: {}
+      loading: false,
+      candidateList: {},
+      winners: {}
     };
   }
 
@@ -35,26 +41,45 @@ class Results extends Component {
     // Initialize results array with positions as keys
     const positions = await getPositions();
     const candidateList = await getCandidateList();
-    this.setState({ results: positions, candidateList });
+    const winners = await this.computeWinners();
+    this.setState({ results: positions, candidateList, winners });
   }
 
-  getWinners = () => {
+  computeWinners = async () => {
     const { candidateList } = this.state;
-    const winners = Object.keys(candidateList).map(currPosition => {
+    Object.keys(candidateList).map(currPosition => {
       const currCandidates = candidateList[currPosition];
       const winnerForPosition = this.getWinnerForPosition(currCandidates);
       this.addWinner(currPosition, winnerForPosition);
       return { [currPosition]: winnerForPosition };
     });
+    const winners = await this.getWinners();
     return winners;
   };
 
   addWinner = async (position, winner) => {
-    firebase
+    await firebase
       .firestore()
       .collection("winners2020")
       .doc(position)
       .set({ winner });
+  };
+
+  getWinners = async () => {
+    const snapshot = await firebase
+      .firestore()
+      .collection("winners2020")
+      .get();
+
+    let winners = {};
+    snapshot.forEach(function(doc) {
+      const position = doc.id;
+      const candidatesForPosition = doc.data();
+      // for testing: console.log(position, " => ", candidatesForPosition);
+      winners = { ...winners, [position]: candidatesForPosition };
+    });
+
+    return winners;
   };
 
   getWinnerForPosition = candidates => {
@@ -73,47 +98,54 @@ class Results extends Component {
     return winner;
   };
 
-  renderPlaceholders = loading => {
-    return (
-      <Card.Group itemsPerRow={5} stackable>
-        {_.map(resultCards, card => (
-          <Card key={card.header}>
-            {loading ? (
-              <PlaceholderContainer>
-                <Placeholder.Image square />
-              </PlaceholderContainer>
-            ) : (
-              <Image src={card.avatar} />
-            )}
+  getWinner = (position, winners) => {
+    if (winners[position].length > 2) {
+      return "Placeholder Winner";
+    }
+    return winners[position]["winner"][0]["email"];
+  };
 
-            <Card.Content>
+  renderPlaceholders = () => {
+    const { loading, winners } = this.state;
+    return (
+      <Card.Group itemsPerRow={4} stackable>
+        {Object.keys(winners)
+          .reverse()
+          .map(position => (
+            <Card>
               {loading ? (
-                <Placeholder>
-                  <Placeholder.Header>
-                    <Placeholder.Line length="very short" />
-                    <Placeholder.Line length="medium" />
-                  </Placeholder.Header>
-                  <Placeholder.Paragraph>
-                    <Placeholder.Line length="short" />
-                  </Placeholder.Paragraph>
-                </Placeholder>
+                <PlaceholderContainer>
+                  <Placeholder.Image square />
+                </PlaceholderContainer>
               ) : (
-                <Fragment>
-                  <Card.Header>{card.header}</Card.Header>
-                  <Card.Meta>{card.date}</Card.Meta>
-                  <Card.Description>{card.description}</Card.Description>
-                </Fragment>
+                <Image size="massive" src={PlaceholderImg} />
               )}
-            </Card.Content>
-          </Card>
-        ))}
+
+              <Card.Content>
+                {loading ? (
+                  <Placeholder>
+                    <Placeholder.Header>
+                      <Placeholder.Line length="very short" />
+                      <Placeholder.Line length="medium" />
+                    </Placeholder.Header>
+                    <Placeholder.Paragraph>
+                      <Placeholder.Line length="short" />
+                    </Placeholder.Paragraph>
+                  </Placeholder>
+                ) : (
+                  <Fragment>
+                    <Card.Header>{position}</Card.Header>
+                    <Card.Meta>{this.getWinner(position, winners)}</Card.Meta>
+                  </Fragment>
+                )}
+              </Card.Content>
+            </Card>
+          ))}
       </Card.Group>
     );
   };
 
   render() {
-    const { loading } = this.state;
-    const winners = this.getWinners();
     return (
       <Fragment>
         <ResultsHeader>Results</ResultsHeader>
@@ -122,7 +154,7 @@ class Results extends Component {
           2020-21!
         </Subheader>
         <Divider />
-        {this.renderPlaceholders(loading, winners)}
+        <Container>{this.renderPlaceholders()}</Container>
       </Fragment>
     );
   }
