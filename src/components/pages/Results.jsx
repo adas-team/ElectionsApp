@@ -21,12 +21,6 @@ const PlaceholderContainer = style(Placeholder)`
   height: 400px !important;
 `;
 
-const Container = style.div`
-  display: flex !important;
-  font-size: 18px !important;
-  justify-content: center !important;
-`;
-
 class Results extends Component {
   constructor() {
     super();
@@ -154,7 +148,7 @@ class Results extends Component {
           2020-21!
         </Subheader>
         <Divider />
-        <Container>{this.renderPlaceholders()}</Container>
+        {this.renderPlaceholders()}
       </Fragment>
     );
   }
