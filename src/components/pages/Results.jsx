@@ -21,6 +21,12 @@ const PlaceholderContainer = style(Placeholder)`
   height: 400px !important;
 `;
 
+const Container = style.div`
+  display: flex !important;
+  font-size: 18px !important;
+  justify-content: center !important;
+`;
+
 class Results extends Component {
   constructor() {
     super();
