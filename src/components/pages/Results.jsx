@@ -1,6 +1,6 @@
+import React, { Component, Fragment } from "react";
 import style from "styled-components";
 import { getPositions, getCandidateList } from "../helper";
-import React, { Component, Fragment } from "react";
 import { Card, Divider, Image, Placeholder } from "semantic-ui-react";
 import PlaceholderImg from "../../assets/Daniel.jpg";
 import firebase from "firebase/app";
@@ -31,7 +31,7 @@ class Results extends Component {
   constructor() {
     super();
     this.state = {
-      loading: false,
+      loading: true,
       candidateList: {},
       winners: {}
     };
