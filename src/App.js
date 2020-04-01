@@ -6,6 +6,7 @@ import Main from "./components/pages/HomePage";
 import Valid from "./components/ValidateVoter/ValidateVoterPage";
 import VotePart from "./components/VotePart/Vote";
 import Results from "./components/pages/Results";
+import CandidatePage from "./components/pages/CandidatesPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/validate" component={Valid} />
         <Route exact path="/vote" component={VotePart} />
         <Route exact path="/results" component={Results} />
+        <Route exact path="/candidates" component={CandidatePage} />
       </Switch>
     </Fragment>
   );
