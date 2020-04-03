@@ -1,8 +1,9 @@
-import { Grid, Label, Segment, Button } from "semantic-ui-react";
+import { Grid, Label, Segment, Button, Message } from "semantic-ui-react";
 import AdaBotFromRight from "../../assets/AdaBotFromRight.png";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import style from "styled-components";
+import { isMobile } from "react-device-detect";
 
 const TextContainer = style.div`
   text-align: center; 
@@ -41,6 +42,10 @@ const GridContainer = style(Grid)`
   overflow: hidden !important;
 `;
 
+const MobileMessage = style(Message)`
+  margin-left: 20px !important;
+`;
+
 const covidAcknowledgment = `During this pandemic, we hope you and your loved ones 
 are all safe, healthy, and you are taking great care of yourself mentally 
 and physically. We are priviledged to be living in a first-world country 
@@ -63,26 +68,51 @@ class HomePage extends Component {
   constructor() {
     super();
     this.state = {
-      visible: true
+      visible: true,
+      mobileMessageVisible: false
     };
   }
+
+  componentDidMount() {
+    if (isMobile) {
+      this.setState({ mobileMessageVisible: true });
+    }
+  }
+
+  handleMessageDismiss = () => {
+    this.setState({ mobileMessageVisible: false });
+  };
+
+  renderMobileMessage = () => {
+    const { mobileMessageVisible } = this.state;
+    return mobileMessageVisible ? (
+      <MobileMessage
+        negative
+        attached="top"
+        onDismiss={this.handleMessageDismiss}
+        header="Are you on a mobile device?"
+        content="This voting app was designed to be used on a computer, not your mobile. Please switch to your computer now for the best experience."
+      />
+    ) : null;
+  };
 
   render() {
     return (
       <GridContainer verticalAlign="middle" columns={1}>
         <Grid.Column>
-          <StyledSegment>
+          {this.renderMobileMessage()}
+          <StyledSegment stacked="true">
             <Label as="a" color="blue" size="massive" ribbon>
               2020
             </Label>
             <TextContainer>
-              <h1 class="welcome">Welcome to Ada's Team Elections!</h1>
-              <h2 class="subheader">
+              <h1 className="welcome">Welcome to Ada's Team Elections!</h1>
+              <h2 className="subheader">
                 We appreciate you all coming out to participate!
               </h2>
-              <h3 class="info">{covidAcknowledgment}</h3>
-              <h3 class="info">{beforeYouBegin}</h3>
-              <h3 class="info">{checkOutCandidates}</h3>
+              <h3 className="info">{covidAcknowledgment}</h3>
+              <h3 className="info">{beforeYouBegin}</h3>
+              <h3 className="info">{checkOutCandidates}</h3>
             </TextContainer>
             <Link to="/validate">
               <Button fluid color="blue" size="massive">
