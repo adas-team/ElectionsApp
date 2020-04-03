@@ -36,10 +36,8 @@ const GridContainer = style(Grid)`
   width: 100%;
   background-image: url(${AdaBotFromRight});
   background-position: left bottom;
-  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 30%; 
-  overflow: hidden !important;
+  background-size: 30%;  
 `;
 
 const MobileMessage = style(Message)`
@@ -101,7 +99,7 @@ class HomePage extends Component {
       <GridContainer verticalAlign="middle" columns={1}>
         <Grid.Column>
           {this.renderMobileMessage()}
-          <StyledSegment stacked="true">
+          <StyledSegment>
             <Label as="a" color="blue" size="massive" ribbon>
               2020
             </Label>
