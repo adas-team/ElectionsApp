@@ -187,6 +187,13 @@ const positionDesc = [
 ];
 
 const candidates = {
+  "Helen Gezahegn": {
+    email: "gezahegn@ualberta.ca",
+    name: "Helen Gezahegn",
+    speech: "",
+    photoSrc: "/candidatePhotos/HelenGezahegn.jpg",
+    preferences: ["President", "VP Conference Relations", "VP Conference Finance"]
+  },
   "Katherine Patenio": {
     email: "patenio@ualberta.ca",
     name: "Katherine Patenio",
@@ -259,7 +266,7 @@ const candidates = {
       "VP Finance"
     ]
   },
-  "JuSong Baek": {
+  "Ju Song Baek": {
     email: "jusong@ualberta.ca",
     name: "JuSong Baek",
     speech:
@@ -267,7 +274,7 @@ const candidates = {
     photoSrc: "candidatePhotos/JuSongBaek.jpg",
     preferences: ["VP Digital Media", "VP Communications"]
   },
-  "Amrees Almonte (Am)": {
+  "Amrees Almonte": {
     email: "almonte@ualberta.ca",
     name: "Amrees Almonte (Am)",
     speech:
