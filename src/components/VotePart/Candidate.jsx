@@ -16,6 +16,11 @@ const RadioButton = style(Form.Radio)`
   text-align: center;
 `;
 
+const ImageResized = style(Image)`
+  width: 310px;
+  height: 300px;
+`;
+
 class Candidate extends Component {
   constructor(props) {
     super(props);
@@ -45,8 +50,8 @@ class Candidate extends Component {
 
     return (
       <Card color={color}>
+        <ImageResized src={photoSrc} />
         <Card.Content>
-          {/* <Image floated="right" size="small" src={photoSrc} /> */}
           <Card.Header>{name}</Card.Header>
           <Card.Meta>
             <Header>Preferences:</Header>
