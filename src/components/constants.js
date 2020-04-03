@@ -234,7 +234,7 @@ const candidates = {
     speech:
       "My name is Riona Wiberg and I’m really excited to be running for an executive position for Ada’s Team. I am just finishing up my 3rd year here at the U of A and have been watching Ada’s Team from the sidelines ever since I transferred into computer science.\n\nI found myself drawn to this club because being a woman in computer science can feel very isolating but I love that Ada’s Team is making an active effort to make computer science students from all walks of life feel welcome here at the university. All of this influenced my choice to run for an executive position because I am passionate about inclusivity in computer science and would love to work towards making the U of A’s computer science program more accessible and less intimidating for all people.\n\nI can make an excellent addition to your executive team because I have really strong leadership and communication skills. I also have 2 years of experience organizing and hosting outreach events with TeamUP Science, a club on campus that encourages underprivileged youth to consider a future in STEM . This prior experience in event planning will lead me to success in an executive position in Ada’s Team.\n\nLast but not least, I can and will bribe the voters by exchanging photos of my cats for votes (DM me for details).",
     photoSrc: "/candidatePhotos/RionaWiberg.jpg",
-    preferences: ["VP Campus Outreach", "VP Communications", "VP Admin"],
+    preferences: ["VP Campus Outreach", "VP Communications", "VP Academic"],
   },
   "Amanda Nguyen": {
     email: "amanda6@ualberta.ca",
