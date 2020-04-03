@@ -9,7 +9,7 @@ const Header = style.h5`
 
 const PreferencesContainer = style.ol`
   margin-top: -1rem;
-  padding-left: 1.5rem;
+  padding-left: 1.0rem;
 `;
 
 const RadioButton = style(Form.Radio)`
@@ -17,15 +17,16 @@ const RadioButton = style(Form.Radio)`
 `;
 
 const ImageResized = style(Image)`
-  width: 310px;
-  height: 300px;
+  max-width: 250px;
+  min-height: 125px;
+  max-height: 180px;
 `;
 
 class Candidate extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      color: null
+      color: null,
     };
   }
 
@@ -34,7 +35,7 @@ class Candidate extends Component {
     onSelect(candidateName);
   };
 
-  getCandidateDetails = name => {
+  getCandidateDetails = (name) => {
     const candidateInfo = candidates[name];
     console.log(candidateInfo);
     return candidateInfo;
@@ -57,7 +58,7 @@ class Candidate extends Component {
             <Header>Preferences:</Header>
             <PreferencesContainer>
               {preferences
-                ? preferences.map(position => <li>{position}</li>)
+                ? preferences.map((position) => <li>{position}</li>)
                 : null}
             </PreferencesContainer>
           </Card.Meta>
