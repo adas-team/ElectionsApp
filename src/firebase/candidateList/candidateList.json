@@ -2,16 +2,19 @@
   {
     "President": {
       "EishaAhmed": {
+        "name": "Eisha Ahmed",
         "email": "eisha@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "ChelseaHong": {
+        "name": "Chelsea Hong",
         "email": "chelsea4@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "HelenGezahegn": {
+        "name": "Helen Gezahegn",
         "email": "gezahegn@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
@@ -19,26 +22,31 @@
     },
     "Administration": {
       "AmandaNguyen": {
+        "name": "Amanda Nguyen",
         "email": "amanda6@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "AmreesAlmonte": {
+        "name": "Amrees Almonte",
         "email": "almonte@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "LidiaAtaupillco": {
+        "name": "Lidia Ataupillco",
         "email": "ataupill@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "KatherinePatenio": {
+        "name": "Katherine Patenio",
         "email": "patenio@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "MonicaBui": {
+        "name": "Monica Bui",
         "email": "bui1@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
@@ -46,21 +54,25 @@
     },
     "Academic": {
       "AmandaNguyen": {
+        "name": "Amanda Nguyen",
         "email": "amanda6@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "AmreesAlmonte": {
+        "name": "Amrees Almonte",
         "email": "almonte@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "XinyueXiang": {
+        "name": "Xinyue Xiang",
         "email": "xxiang2@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "RionaWiberg": {
+        "name": "Riona Wiberg",
         "email": "riona@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
@@ -68,21 +80,25 @@
     },
     "Finance": {
       "AmandaNguyen": {
+        "name": "Amanda Nguyen",
         "email": "amanda6@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "AmyXiang": {
+        "name": "Amy Xiang",
         "email": "yangyi1@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "EishaAhmed": {
+        "name": "Eisha Ahmed",
         "email": "eisha@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "IanSengWok": {
+        "name": "Ian Seng Wok",
         "email": "wok@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
@@ -90,48 +106,51 @@
     },
     "Digital-Media": {
       "JuSongBaek": {
+        "name": "JuSong Baek",
         "email": "jusong@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "DianeBoytang": {
+        "name": "Diane Boytang",
         "email": "boytang@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       }
     },
     "Communications": {
-      "AnastasiaBorissova": {
-        "email": "aborisso@ualberta.ca",
-        "speech": "",
-        "numOfVotes": 0
-      },
       "CelinaSheng": {
+        "name": "Celina Sheng",
         "email": "csheng2@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "JuSongBaek": {
+        "name": "JuSong Baek",
         "email": "jusong@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "RionaWiberg": {
+        "name": "Riona Wiberg",
         "email": "riona@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "DianeBoytang": {
+        "name": "Diane Boytang",
         "email": "boytang@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "MonicaBui": {
+        "name": "Monica Bui",
         "email": "bui1@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "PayasSingh": {
+        "name": "Payas Singh",
         "email": "payas@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
@@ -139,26 +158,31 @@
     },
     "Campus-Outreach": {
       "LidiaAtaupillco": {
+        "name": "Lidia Ataupillco",
         "email": "ataupill@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "DorsaNahid": {
+        "name": "Dorsa Nahid",
         "email": "dorsa@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "XinyueXiang": {
+        "name": "Xinyue Xiang",
         "email": "xxiang2@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "RionaWiberg": {
+        "name": "Riona Wiberg",
         "email": "riona@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "PayasSingh": {
+        "name": "Payas Singh",
         "email": "payas@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
@@ -166,26 +190,31 @@
     },
     "Industry-Outreach": {
       "LidiaAtaupillco": {
+        "name": "Lidia Ataupillco",
         "email": "ataupill@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "DorsaNahid": {
+        "name": "Dorsa Nahid",
         "email": "dorsa@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "EishaAhmed": {
+        "name": "Eisha Ahmed",
         "email": "eisha@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "ZubierHagi": {
+        "name": "Zubier Hagi",
         "email": "hagi@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "MonicaBui": {
+        "name": "Monica Bui",
         "email": "bui1@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
@@ -193,21 +222,25 @@
     },
     "Conference-Operations": {
       "AmyXiang": {
+        "name": "Amy Xiang",
         "email": "yangyi1@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "ZubierHagi": {
+        "name": "Zubier Hagi",
         "email": "hagi@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "DianeBoytang": {
+        "name": "Diane Boytang",
         "email": "boytang@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "ChelseaHong": {
+        "name": "Chelsea Hong",
         "email": "chelsea4@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
@@ -215,26 +248,31 @@
     },
     "Conference-Relations": {
       "KatherinePatenio": {
+        "name": "Katherine Patenio",
         "email": "patenio@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "CelinaSheng": {
+        "name": "Celina Sheng",
         "email": "csheng2@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "ZubierHagi": {
+        "name": "Zubier Hagi",
         "email": "hagi@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "ChelseaHong": {
+        "name": "Chelsea Hong",
         "email": "chelsea4@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "HelenGezahegn": {
+        "name": "Helen Gezahegn",
         "email": "gezahegn@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
@@ -242,21 +280,25 @@
     },
     "Conference-Finance": {
       "AmyXiang": {
+        "name": "Amy Xiang",
         "email": "yangyi1@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "XinyueXiang": {
+        "name": "Xinyue Xiang",
         "email": "xxiang2@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "CelinaSheng": {
+        "name": "Celina Sheng",
         "email": "csheng2@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
       "HelenGezahegn": {
+        "name": "Helen Gezahegn",
         "email": "gezahegn@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
