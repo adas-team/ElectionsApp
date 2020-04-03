@@ -364,7 +364,7 @@ const candidates = {
     name: "Ian Seng Wok",
     speech:
       "Good afternoon everyone, I am Ian and I would like to have your support to be elected as Vice President of Finance at Ada’s Team. I am a four-year computer science major student and I am currently working as a student coop developer at RBC headquarter. I believe that the VP Finance position requires a person who is well equipped with strong organizational, communication and leadership skills. I have always desired to be in an environment that allows me to utilize and sharpen my skills attained and acquired previously as a student leader at the University of Alberta and volunteer positions. During the last year fall semester, I have worked as a program coordinator at the residence. As I got to work closely with everyone on the team, I have observed and learned some knowledge in budget planning and financial documentation, which I think will be helpful for me to prepare myself for this position. If I am elected, I’d also like to explore more sponsorship as well as collaborations with the external community such as RBC bank as I have learned that RBC Early talent acquisition team has been constantly looking to collaborate with different universities. Finally, I would love to be part of Ada’s team in my last year of university in order to give back to the community and be your VP Finance. Thank you so much for your support.",
-    photoSrc: "candidatePhotos/IanSengWok.jpg",
+    photoSrc: "candidatePhotos/IanSengWok.png",
     preferences: ["VP Finance"],
   },
 };
