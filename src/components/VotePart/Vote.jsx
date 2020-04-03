@@ -186,6 +186,9 @@ class Vote extends Component {
         <Grid.Column width={10}>
           <VoteHeader>Vote</VoteHeader>
           <Subheader>
+            Hover over the position name to get its description.
+          </Subheader>
+          <Subheader>
             If you leave this page before submitting, your vote will not be
             counted.
           </Subheader>
