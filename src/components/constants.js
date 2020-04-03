@@ -2,98 +2,98 @@ const adasTeamEventOptions = [
   {
     key: "Autumn Feast",
     text: "Autumn Feast",
-    value: "Autumn Feast"
+    value: "Autumn Feast",
   },
   {
     key: "Intuit Office Tour",
     text: "Intuit Office Tour",
-    value: "Intuit Office Tour"
+    value: "Intuit Office Tour",
   },
   {
     key: "Halloween Trivia",
     text: "Halloween Trivia (with UACS)",
-    value: "Halloween Trivia"
+    value: "Halloween Trivia",
   },
   {
     key: "Scotiabank Sponsor Announcement",
     text: "Scotiabank Sponsor Announcement",
-    value: "Scotiabank Sponsor Announcement"
+    value: "Scotiabank Sponsor Announcement",
   },
   {
     key: "Tutoring/Office Hours",
     text: "Tutoring/Office Hours",
-    value: "Tutoring/Office Hours"
+    value: "Tutoring/Office Hours",
   },
   {
     key: "Coffee && Code",
     text: "Coffee && Code (with Computronix and other companies)",
-    value: "Coffee && Code"
+    value: "Coffee && Code",
   },
   {
     key: "Conference",
     text: "Conference (such as GHC or CAN-CWiC)",
-    value: "Conference"
+    value: "Conference",
   },
   {
     key: "Thank You Panels",
     text: "Thank You Panels",
-    value: "Thank You Panels"
+    value: "Thank You Panels",
   },
   {
     key: "Networking Workshop",
     text: "Networking Workshop",
-    value: "Networking Workshop"
+    value: "Networking Workshop",
   },
   {
     key: "Git Workshop",
     text: "Git Workshop",
-    value: "Git Workshop"
+    value: "Git Workshop",
   },
   {
     key: "Python Workshop",
     text: "Python Workshop",
-    value: "Python Workshop"
+    value: "Python Workshop",
   },
   {
     key: "Virtual: Accessibility Workshop",
     text: "Virtual: Accessibility Workshop",
-    value: "Virtual: Accessibility Workshop"
+    value: "Virtual: Accessibility Workshop",
   },
   {
     key: "HackED: Cybersecurity Workshop",
     text: "HackED: Cybersecurity Workshop",
-    value: "HackED: Cybersecurity Workshop"
+    value: "HackED: Cybersecurity Workshop",
   },
   {
     key: "Science FUNDay",
     text: "Science FUNDay",
-    value: "Science FUNDay"
+    value: "Science FUNDay",
   },
   {
     key: "WISEST Conference",
     text: "WISEST Conference (such as CHOICES or SET)",
-    value: "WISEST Conference"
+    value: "WISEST Conference",
   },
   {
     key: "Millenium Conference",
     text: "Millenium Conference",
-    value: "Millenium Conference"
+    value: "Millenium Conference",
   },
   {
     key: "YEGTech Open House",
     text: "YEGTech Open House",
-    value: "YEGTech Open House"
+    value: "YEGTech Open House",
   },
   {
     key: "Ada's Team Taking Over Startup Edmonton",
     text: "Ada's Team Taking Over Startup Edmonton",
-    value: "Ada's Team Taking Over Startup Edmonton"
+    value: "Ada's Team Taking Over Startup Edmonton",
   },
   {
     key: "None, but I look forward to!",
     text: "None, but I look forward to!",
-    value: "None, but I look forward to!"
-  }
+    value: "None, but I look forward to!",
+  },
 ];
 
 const resultCards = [
@@ -101,62 +101,62 @@ const resultCards = [
     avatar: "/images/avatar/large/helen.jpg",
     date: "Joined in 2013",
     header: "Helen",
-    description: "Primary Contact"
+    description: "Primary Contact",
   },
   {
     avatar: "/images/avatar/large/matthew.png",
     date: "Joined in 2013",
     header: "Matthew",
-    description: "Primary Contact"
+    description: "Primary Contact",
   },
   {
     avatar: "/images/avatar/large/molly.png",
     date: "Joined in 2013",
     header: "Molly",
-    description: "Primary Contact"
+    description: "Primary Contact",
   },
   {
     avatar: "/images/avatar/large/helen.jpg",
     date: "Joined in 2013",
     header: "Helen",
-    description: "Primary Contact"
+    description: "Primary Contact",
   },
   {
     avatar: "/images/avatar/large/matthew.png",
     date: "Joined in 2013",
     header: "Matthew",
-    description: "Primary Contact"
+    description: "Primary Contact",
   },
   {
     avatar: "/images/avatar/large/molly.png",
     date: "Joined in 2013",
     header: "Molly",
-    description: "Primary Contact"
+    description: "Primary Contact",
   },
   {
     avatar: "/images/avatar/large/molly.png",
     date: "Joined in 2013",
     header: "Molly",
-    description: "Primary Contact"
+    description: "Primary Contact",
   },
   {
     avatar: "/images/avatar/large/helen.jpg",
     date: "Joined in 2013",
     header: "Helen",
-    description: "Primary Contact"
+    description: "Primary Contact",
   },
   {
     avatar: "/images/avatar/large/matthew.png",
     date: "Joined in 2013",
     header: "Matthew",
-    description: "Primary Contact"
+    description: "Primary Contact",
   },
   {
     avatar: "/images/avatar/large/molly.png",
     date: "Joined in 2013",
     header: "Molly",
-    description: "Primary Contact"
-  }
+    description: "Primary Contact",
+  },
 ];
 
 const positionDesc = [
@@ -182,17 +182,27 @@ const positionDesc = [
     "Conference-Relations":
       "They would be responsible for determining what the Department would like to see from Ada's Team, collaborating with the Chair of the Department and any Faculty Advisors regarding the best way to put forth efforts, bringing any promotional materials from the University of Alberta to the conference to put in swag bags (e.g. postcards, pens, etc.), hosting University of Alberta events at the conference (e.g. panels, tech talks, research posters, etc.), and being the first point of contact for Faculty who want to send student representatives to the conference. Must be available from May to August.",
     "Conference-Finance":
-      "They would be responsible for applying for grants, talking to professors regarding fundraising for conferences, and handling reimbursements for students attending conferences. Must be available from May to August."
-  }
+      "They would be responsible for applying for grants, talking to professors regarding fundraising for conferences, and handling reimbursements for students attending conferences. Must be available from May to August.",
+  },
 ];
 
 const candidates = {
   "Helen Gezahegn": {
     email: "gezahegn@ualberta.ca",
     name: "Helen Gezahegn",
-    speech: "",
+    speech: `Hello everyone! My name is Helen, I’m in my fourth year of computing science, and the positions I’m running for in order of preference are President, VP Conference Relations, and VP Conference Finance. 
+
+    First off, I just want to say Ada’s Team is literally my life and anyone that knows me well know that I live and breathe this student group. It’s everything that I stand for in being a diverse individual and an ally In tech especially as I feel like a lot of people don’t even realize their potential as I certainly didn’t when I first joined CS.  This is why I’m so passionate about creating spaces and opportunities for everyone to understand their power and facilitate the advancement of their careers.
+    
+    I’ve been involved with Ada’s Team for 3 years and an exec for 2. The past two years, I’ve been on the conference team and in total have sent 51 people to 6 conferences for more than $40K. And in saying that, I’m trying to communicate that I’m accustomed to high responsibility and pressures. I mean, just this year we sent 24 people to 2 conferences and I organized this during my Intuit internship and taking a full course load. So when I say Ada’s Team is my priority, it really is and that’s because the group’s mission is important and can have a huge impact on you. I want to empower you and help you build your confidence. I want to take you around the world, connect you with big tech companies whether it be through conferences, hackathons, etc that may have been inaccessible to you before. Also, I want you to have a strong network and sense of community at school.
+    
+    All in all, that’s why I’m running for president and why it’s my preference. I’d appreciate your vote. Thank you! `,
     photoSrc: "/candidatePhotos/HelenGezahegn.jpg",
-    preferences: ["President", "VP Conference Relations", "VP Conference Finance"]
+    preferences: [
+      "President",
+      "VP Conference Relations",
+      "VP Conference Finance",
+    ],
   },
   "Katherine Patenio": {
     email: "patenio@ualberta.ca",
@@ -200,7 +210,7 @@ const candidates = {
     speech:
       "Hi everyone! My name is Katherine Patenio, and I am currently VP Conference Internal at Ada’s Team. I am running for VP Admin and VP Conference Relations (new name for my current role).\n\nFor those who don’t know me, I am an undergrad CS student minoring in French, and I’ve been an exec since November 2018. Ever since I’ve joined Ada’s Team, I made new friends, learned new skills, and finally found a sense of belonging in CS; in fact, I consider Ada’s Team to be my second family. My main reason for being an exec is to give back to the community that has helped me become who I am today.\n\nI’ve worked with the Conference Team to interview and fund more than 20 students to attend the CAN-CWiC and GHC conferences. Aside from my Conference duties, I represented Ada’s Team in various events and even organized a couple myself, including a successful Intuit office visit a few months ago.\n\nAs VP Admin, I want to try out a new role with new responsibilities. I want our future execs' voices to be heard. I’m also a firm believer in giving people a chance; by being involved in the Election Committee, I can do what needs to be done in order to give others the opportunity to develop themselves and be better leaders.\n\nAs for VP Conference Relations, a lot of my experience transfers over to this role. I’ve already gone through the process of conference planning. I’ve seen what works and what doesn’t; I hope I can also use this knowledge to advise new Conference execs.\n\nOverall, I hope to continue my role as an exec (either as VP Admin or VP Conference Relations); it would mean a lot to me if I could still give back to the community that I call family. Thank you for your time, and I hope you consider me for either position!",
     photoSrc: "/candidatePhotos/KatherineMaePatenio.jpg",
-    preferences: ["VP Admin", "VP Conference Relations"]
+    preferences: ["VP Admin", "VP Conference Relations"],
   },
   "Monica Bui": {
     email: "bui1@ualberta.ca",
@@ -208,7 +218,7 @@ const candidates = {
     speech:
       "Hey! I’m Monica a 3rd year CS student running for Conference Relations, VP Communications, and Admin respectively. Just a disclaimer before I start is that you should NOT vote for me if you know me as a person, you should be voting for the best people who could do the job well for Ada’s Team and its mission. I’m so excited to see so many old and new faces running for roles and everyone speaking today is fully capable of doing the job so please take a chance to vote for them!\n\nAnyways back to my actual speech. My journey in Ada’s Team has definitely been a wild ride. I first started hosting office hours way back in late 2017 when the office space was just starting to open their doors up more throughout the day, then it turned into going to GHC, and now fast forward today I got to meet so many new and amazing people from all different backgrounds, it's definitely been an exhilarating experience. I think many execs are surprised that I’m running and to be frank I’ve always been adamant on helping Ada’s Team from the OUTSIDE IN, through office hours and volunteering. But now after going through research, internships, many outside projects, and various industry events and especially going into my last year in uni, I really want to share this wealth of knowledge to the rest of the student body and it’d be totally selfish of me to keep that all to myself. I think my main goal is to help jumpstart the community through sharing my experiences to help better enable students to chase after these amazing tech opportunities. I see that the best way to do that is through helping Ada’s team from the INSIDE OUT instead.\n\nThanks for listening in on my speech and I hope you take the chance to vote for the best person for the position. Best of luck to everyone :)",
     photoSrc: "candidatePhotos/MonicaBui.jpg",
-    preferences: ["VP Conference Relations", "VP Communications", "VP Admin"]
+    preferences: ["VP Conference Relations", "VP Communications", "VP Admin"],
   },
   "Lidia Ataupillco": {
     email: "ataupill@ualberta.ca",
@@ -216,7 +226,7 @@ const candidates = {
     speech:
       "Hello everybody,\nMy name is Lidia Ataupillco. I am in my 3rd year of computing Science. This year I was VP Admin at Ada’s Team where I was responsible for tutoring and room sitting hours.\n\nMy journey with Ada’s Team has been amazing. We have collaborated together in the success of events and our main goal to support diversity in computing, games, and technology at UofA. This club provides us with so many resources from being able to attend Conferences to tutoring. For me, Ada’s Team is like a family in which we all of us support each other and strive for the best, and that’s why I want to continue being part of it.\n\nThe positions I am running for are VP Industry Outreach and VP Admin. I believe I am a good candidate for Industry Outreach because I’m good at networking and connecting with companies. I also enjoy organizing events. In fact, I coordinated the Github Workshop along with another exec. That shows that I’m able to collaborate in groups which we’ll be an important skill when working with the VP Campus Outreach. In addition, this past year I’ve developed the necessary skills that would help me succeed and improve in my role as VP Admin for another year.\n\nThank you so much for your attention and support!!! Have an excellent day!\nLidia Ataupillco",
     photoSrc: "candidatePhotos/LidiaAtaupillcoRamos.jpg",
-    preferences: ["VP Industry Outreach", "VP Campus Outreach", "VP Admin"]
+    preferences: ["VP Industry Outreach", "VP Campus Outreach", "VP Admin"],
   },
   "Riona Wiberg": {
     email: "riona@ualberta.ca",
@@ -224,7 +234,7 @@ const candidates = {
     speech:
       "My name is Riona Wiberg and I’m really excited to be running for an executive position for Ada’s Team. I am just finishing up my 3rd year here at the U of A and have been watching Ada’s Team from the sidelines ever since I transferred into computer science.\n\nI found myself drawn to this club because being a woman in computer science can feel very isolating but I love that Ada’s Team is making an active effort to make computer science students from all walks of life feel welcome here at the university. All of this influenced my choice to run for an executive position because I am passionate about inclusivity in computer science and would love to work towards making the U of A’s computer science program more accessible and less intimidating for all people.\n\nI can make an excellent addition to your executive team because I have really strong leadership and communication skills. I also have 2 years of experience organizing and hosting outreach events with TeamUP Science, a club on campus that encourages underprivileged youth to consider a future in STEM . This prior experience in event planning will lead me to success in an executive position in Ada’s Team.\n\nLast but not least, I can and will bribe the voters by exchanging photos of my cats for votes (DM me for details).",
     photoSrc: "/candidatePhotos/RionaWiberg.jpg",
-    preferences: ["VP Campus Outreach", "VP Communications", "VP Admin"]
+    preferences: ["VP Campus Outreach", "VP Communications", "VP Admin"],
   },
   "Amanda Nguyen": {
     email: "amanda6@ualberta.ca",
@@ -232,7 +242,7 @@ const candidates = {
     speech:
       "Hi everyone! I’m Amanda and an upcoming fourth year com sci student and I’m running for VP Finance, Administration and Academics. I’ve been with Ada’s team since the Fall semester and have met and tutored so many people from the club. I have nothing but great experiences with Ada’s Team and I volunteered for various events such as AutumnFest and the GitHub workshop. This club has been one that I’ve been looking for throughout my university degree and is one that I would love to put my efforts into. I have experience working with teams and the most important thing I value is communication between all team members. I always make sure that the people I’m working with feel like their voice is valued. On my own, I bring the best quality of work and have it done a few days earlier than usual. I am a very technical person that keeps track of all the little details.\nThis translates to my academic life such as keeping my assignments and code clean with lots of comments for my team members and my personal life such as having my own Excel sheet to keep track of my own finances and an additional app which is why VP Finance is my first choice. I would love to be able to bring the skills I know surrounding tracking and money for Ada’s Team but also learn additional skills on what it would be like to work for a bigger club. I always tell people that Ada’s Team has changed my life. I want to be able to give back to this club that has done so much for me and the best way I know how is to be a part of team that is just as passionate as I am.",
     photoSrc: "/candidatePhotos/AmandaNguyen.jpg",
-    preferences: ["VP Finance", "VP Academic", "VP Admin"]
+    preferences: ["VP Finance", "VP Academic", "VP Admin"],
   },
   "Chelsea Hong": {
     email: "chelsea4@ualberta.ca",
@@ -243,8 +253,8 @@ const candidates = {
     preferences: [
       "VP Conference Relations",
       "President",
-      "VP Conference Operations"
-    ]
+      "VP Conference Operations",
+    ],
   },
   "Eisha Ahmed": {
     email: "eisha@ualberta.ca",
@@ -252,7 +262,7 @@ const candidates = {
     speech:
       "Dear Ada's Team members,\n\nAda's Team to me is like a home away from home. I joined in my second year as a tutor and this past year I served as VP Outreach External, now renamed VP Industry Outreach. I organized March Coffee && Code, helped organize the Git workshop, and am currently spearheading the Mentorship Program. During my time on the executive committee, I learned so much about how the team operates, and I made many friendships. It took time, but I eventually learned more and more about my role and how to better serve the team. When I felt bored from school or wanted to procrastinate, I would drop by the Ada's Base and hang around in the wonderful community. I grew to care about Ada's Team such that the team's concerns were my concerns, and the team's success was my success.\n\nMy wish is to serve you again from what I have learned as an executive member, and learn more to excel at my position. Ada's Team is an important part of my identity, and I am proud to be part of such an amazing group.\n\nThank you for being a member!",
     photoSrc: "candidatePhotos/EishaAhmed.jpg",
-    preferences: ["VP Industry Outreach", "President", "VP Finance"]
+    preferences: ["VP Industry Outreach", "President", "VP Finance"],
   },
   "Amy Xiang": {
     email: "yangyi1@ualberta.ca",
@@ -263,8 +273,8 @@ const candidates = {
     preferences: [
       "VP Conference Finance",
       "VP Conference Operations",
-      "VP Finance"
-    ]
+      "VP Finance",
+    ],
   },
   "Ju Song Baek": {
     email: "jusong@ualberta.ca",
@@ -272,7 +282,7 @@ const candidates = {
     speech:
       "Hi everyone! My name Is JuSong Baek and I’m a fourth-year computing science student, and I am delighted to say that I am running for VP Digital Media and VP Communications! For those who don’t know, I had the privilege of being an executive as VP Promotions in 2019-2020. Throughout the fall and winter semester, I continued to learn and grow so much in Ada’s Team. I was astounded by the number of things we all achieved, from providing countless tutoring sessions and workshops, to sending countless students internationally to Grace Hopper Celebration and CAN-CWIC, among many other incredible achievements.\n\nTherefore, as VP Digital Media, I am willing to continue designing intricate posters and cards, as well as maintaining all social media accounts to reach out to even more students. As someone who is passionate designing and creating media, I want to facilitate student’s reach to staff and industry members through aesthetically pleasing and effective designs. I am cognizant that social media continues to be an everlasting tool to network and connect with others. As such, with my keen photography and video editing skills, I am determined to attract more students, staff, and industry members in our space.\n\nI will never forget everyone in Ada’s Team who took their time to help others. Now, I am pleased to have been part of this as an executive team and use my skills to help students the same way I was helped as an Ada’s Team participant. As someone who highly values diversity and inclusivity, I really felt that I was part of something big, and intimate at the same time. Ada’s Team continues to grow and become even more diverse than ever before - I do not see it stopping anytime soon. I hope to continue providing help for all students, and closely following Ada’s Team’s spirit.",
     photoSrc: "candidatePhotos/JuSongBaek.jpg",
-    preferences: ["VP Digital Media", "VP Communications"]
+    preferences: ["VP Digital Media", "VP Communications"],
   },
   "Amrees Almonte": {
     email: "almonte@ualberta.ca",
@@ -280,7 +290,7 @@ const candidates = {
     speech:
       "Hi my name is Amrees or everyone just knows me by Am and I’m a computing science student at the University of Alberta. I joined Ada’s Team September of last year and I can honestly say it has made my life better. Before I joined Ada’s Team my regular school days consisted of going to class and going home. In Ada’s Team I was able to find people who I can call my friends and a safe space where I can be myself. Now my regular school days consist of going to class, tutoring for Ada’s Team, and hanging out at Ada’s Base with my new friends.\n\nMy favorite part about Ada’s Team aside from the people is being a volunteer tutor. I was able to meet so many people and help them through tutoring, now I want to do more by being your VP academics and advocate for students’ academic experience. Ada’s Team has been one of the biggest positive changes in my life and I hope I can do the same for others.",
     photoSrc: "candidatePhotos/AmreesAlmonte.jpg",
-    preferences: ["VP Academic", "VP Admin"]
+    preferences: ["VP Academic", "VP Admin"],
   },
   "Dorsa Nahid": {
     email: "dorsa@ualberta.ca",
@@ -291,7 +301,7 @@ const candidates = {
       As your future VP Industry Outreach, my focus is to create opportunities and give you access to tech companies you wouldn’t have had outside of Ada’s Team. I will facilitate your networking with different companies, employers, HR, and mentors. I will fearlessly reach out to companies so you can elevate. This club is here for you, so let us provide you with the best opportunities! 
       `,
     photoSrc: "candidatePhotos/DorsaNahid.jpg",
-    preferences: ["VP Industry Outreach", "VP Campus Outreach"]
+    preferences: ["VP Industry Outreach", "VP Campus Outreach"],
   },
   "Payas Singh": {
     email: "payas@ualberta.ca",
@@ -302,8 +312,8 @@ const candidates = {
     preferences: [
       "VP Campus Outreach",
       "VP Communications",
-      "VP Conference Operations"
-    ]
+      "VP Conference Operations",
+    ],
   },
   "Celina Sheng": {
     email: "csheng2@ualberta.ca",
@@ -314,20 +324,20 @@ const candidates = {
     preferences: [
       "VP Communications",
       "VP Conference Finance",
-      "VP Conference Relations"
-    ]
+      "VP Conference Relations",
+    ],
   },
   "Diane Boytang": {
     email: "boytang@ualberta.ca",
     name: "Diane Boytang",
     speech:
       "Hi, I'm Diane and I'm going into my last year of CS at the U of A. I'm running for the positions of Conference External, Communications, and Digital Media but the main position I am interested in is Digital Media. I used to be an Ada's Team exec, in the 2018/2019 academic year, but I did not run for exec in 2019/2020 due to other responsibilities I had which were taking up most of my time. However, I now have plenty of time to dedicate to Ada's Team so I have decided to run again this year. \n\nThere are many reasons why Ada's Team is important to me. First, I have met many of my friends at university through Ada's Team. Ada's Team has given me the opportunity to travel to so many different places and attend conferences which have made me feel empowered as a woman in computing science and I want to help others feel the same way. Finally, people from Ada's Team have always been there for me. Recently I went through a very difficult time in my life and I tried to cope with this by shutting myself off from my friends, but everyone in Ada's Team was still there to support me. Ada's Team really means the world to me which is why I am so passionate about being an exec and giving back by volunteering my time. \n\nI am primarily running for VP Digital Media because it is most similar to my previous exec position which was VP Promotions and I have all the necessary skills to do well in this position. During my past time as VP Promotions the Ada's Team Instagram account doubled in followers. The main reason why I am passionate about this role is because I understand the potential social media has to make a positive impact on people's lives, and in the past my favourite thing about being an exec was that I was able to spread Ada's Team's values of inclusitivity and diversity through social media. Furthermore, I have lots of experience doing visual design, including being hired as an independent contractor to do UI design for a project for the National Research Council of Canada. This translates into strong skills when it comes to designing advertising for Ada's Team events, such as posters. \n\nThank you all for your time and I hope you will consider voting for me for an executive position.",
-    photoSrc: "candidatePhotos/DianeBoytang.jpg",
+    photoSrc: "candidatePhotos/DianeBoytang.png",
     preferences: [
       "VP Digital Media",
       "VP Communications",
-      "VP Conference Operations"
-    ]
+      "VP Conference Operations",
+    ],
   },
   "Zubier Hagi": {
     email: "hagi@ualberta.ca",
@@ -338,8 +348,8 @@ const candidates = {
     preferences: [
       "VP Conference Relations",
       "VP Industry Outreach",
-      "VP Conference Operations"
-    ]
+      "VP Conference Operations",
+    ],
   },
   "Xinyue Xiang": {
     email: "xxiang2@ualberta.ca",
@@ -347,7 +357,7 @@ const candidates = {
     speech:
       "Hello! Everyone! I am Rex Xiang, a third year Computer Science student. I worked for Ada’s Team since February 2018 and my past position is VP Events and Outreach Internal. This year I am going to run for VP Academic and Campus Outreach. The main reasons for voting me are: first, I am the scholar of Peter laughed leadership college, I have good skills in leadership and collaboration. Also, I was involved with my college’s mentorship program, so I know how to help our Ada’s Team mentorship program next year. If necessary, I will ask my college for collaboration and support us! Second, I am good in academic, we are using the elections app today, I am the second contributor of this app. I will be the ideal candidate of managing the tutor program and also since lots of my Chinese are good in Programming, as the commit, I will ask them to get more involved with Ada’s. Third, I am good  in campus outreach, I have good connection with WISEST program leader, I just connected with one founder of them and she is my mentor of the leadership college. Also, I am one of the three beginning members of iGeek, I have good connection with the current president, we can have collaboration in the future. Please vote me! Vote Rex! Thank you!",
     photoSrc: "candidatePhotos/XinyueXiang.jpg",
-    preferences: ["VP Academic", "VP Campus Outreach", "VP Conference Finance"]
+    preferences: ["VP Academic", "VP Campus Outreach", "VP Conference Finance"],
   },
   "Ian Seng Wok": {
     email: "wok@ualberta.ca",
@@ -355,8 +365,8 @@ const candidates = {
     speech:
       "Good afternoon everyone, I am Ian and I would like to have your support to be elected as Vice President of Finance at Ada’s Team. I am a four-year computer science major student and I am currently working as a student coop developer at RBC headquarter. I believe that the VP Finance position requires a person who is well equipped with strong organizational, communication and leadership skills. I have always desired to be in an environment that allows me to utilize and sharpen my skills attained and acquired previously as a student leader at the University of Alberta and volunteer positions. During the last year fall semester, I have worked as a program coordinator at the residence. As I got to work closely with everyone on the team, I have observed and learned some knowledge in budget planning and financial documentation, which I think will be helpful for me to prepare myself for this position. If I am elected, I’d also like to explore more sponsorship as well as collaborations with the external community such as RBC bank as I have learned that RBC Early talent acquisition team has been constantly looking to collaborate with different universities. Finally, I would love to be part of Ada’s team in my last year of university in order to give back to the community and be your VP Finance. Thank you so much for your support.",
     photoSrc: "candidatePhotos/IanSengWok.jpg",
-    preferences: ["VP Finance"]
-  }
+    preferences: ["VP Finance"],
+  },
 };
 
 export { adasTeamEventOptions, resultCards, positionDesc, candidates };
