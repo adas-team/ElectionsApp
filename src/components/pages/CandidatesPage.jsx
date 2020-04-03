@@ -33,10 +33,9 @@ const CandidatePage = () => {
       <Item.Group divided stackable="true">
         {candidates ? (
           Object.keys(candidates).map(currCandidate => (
-            <Item>
+            <Item key={currCandidate}>
               <Item.Image
                 centered
-                rounded="true"
                 size="medium"
                 src={candidates[currCandidate].photoSrc}
               />
