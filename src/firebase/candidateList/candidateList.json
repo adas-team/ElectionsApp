@@ -143,15 +143,15 @@
         "speech": "",
         "numOfVotes": 0
       },
-      "MonicaBui": {
-        "name": "Monica Bui",
-        "email": "bui1@ualberta.ca",
-        "speech": "",
-        "numOfVotes": 0
-      },
       "PayasSingh": {
         "name": "Payas Singh",
         "email": "payas@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "MonicaBui": {
+        "name": "Monica Bui",
+        "email": "bui1@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       }
@@ -212,12 +212,6 @@
         "email": "hagi@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
-      },
-      "MonicaBui": {
-        "name": "Monica Bui",
-        "email": "bui1@ualberta.ca",
-        "speech": "",
-        "numOfVotes": 0
       }
     },
     "Conference-Operations": {
@@ -274,6 +268,12 @@
       "HelenGezahegn": {
         "name": "Helen Gezahegn",
         "email": "gezahegn@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "MonicaBui": {
+        "name": "Monica Bui",
+        "email": "bui1@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import style from "styled-components";
-import img from "../../assets/AdaBotHead.png";
+import { candidates } from "../constants";
 import { Card, Image, Form } from "semantic-ui-react";
 
 const Header = style.h5`
@@ -29,24 +29,31 @@ class Candidate extends Component {
     onSelect(candidateName);
   };
 
+  getCandidateDetails = name => {
+    const candidateInfo = candidates[name];
+    console.log(candidateInfo);
+    return candidateInfo;
+  };
+
   render() {
-    // TODO: image, preferences, and speech props
     const { candidateName, currSelection } = this.props;
     const name = candidateName.replace(/([A-Z])/g, " $1").trim();
+    const candidateInfo = this.getCandidateDetails(name);
+    const { photoSrc, preferences } = candidateInfo || {};
+
     const { color } = this.state;
 
     return (
       <Card color={color}>
         <Card.Content>
-          <Image floated="right" size="small" src={img} />
+          {/* <Image floated="right" size="small" src={photoSrc} /> */}
           <Card.Header>{name}</Card.Header>
           <Card.Meta>
             <Header>Preferences:</Header>
             <PreferencesContainer>
-              {/* TODO */}
-              <li>Position 1</li>
-              <li>Position 2</li>
-              <li>Position 3</li>
+              {preferences
+                ? preferences.map(position => <li>{position}</li>)
+                : null}
             </PreferencesContainer>
           </Card.Meta>
         </Card.Content>
