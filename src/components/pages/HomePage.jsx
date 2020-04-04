@@ -112,11 +112,11 @@ class HomePage extends Component {
               <h3 className="info">{beforeYouBegin}</h3>
               <h3 className="info">{checkOutCandidates}</h3>
             </TextContainer>
-            <Link to="/validate">
-              <Button disabled={true} fluid color="blue" size="massive">
-                Start
-              </Button>
-            </Link>
+            {/* <Link to="/validate"> */}
+            <Button disabled={true} fluid color="blue" size="massive">
+              Start
+            </Button>
+            {/* </Link> */}
           </StyledSegment>
         </Grid.Column>
       </GridContainer>
