@@ -2,13 +2,16 @@ import React, { Component } from "react";
 import Candidate from "./Candidate";
 import { getCandidateList } from "../helper";
 import { Form, Card } from "semantic-ui-react";
+import { reelectedCandidates } from "../constants";
+
+let COUNTER = 0;
 
 class ListCandidates extends Component {
   constructor(props) {
     super(props);
     this.state = {
       candidates: {},
-      currSelection: ""
+      currSelection: "",
     };
   }
 
@@ -21,23 +24,32 @@ class ListCandidates extends Component {
     this.setState({ candidates });
   };
 
-  onSelect = name => {
+  onSelect = (name) => {
     const { updateVote, position } = this.props;
     this.setState({ currSelection: name });
     updateVote({ position, candidateName: name });
   };
 
-  renderCandidates = position => {
-    const { candidates, currSelection } = this.state;
-    if (candidates[position]) {
-      const currCandidates = candidates[position];
-      return Object.keys(currCandidates).map(candidateName => (
+  renderCandidates = (position) => {
+    const { reelect } = this.props;
+    const { candidates } = this.state;
+    let currCandidates;
+    if (reelect) {
+      currCandidates = reelectedCandidates;
+    } else if (candidates[position]) {
+      currCandidates = candidates[position];
+    }
+
+    const { currSelection } = this.state;
+    if (currCandidates) {
+      return Object.keys(currCandidates).map((candidateName) => (
         <Candidate
           position={position}
-          key={candidateName}
+          key={`${candidateName}${COUNTER++}`}
           candidateName={candidateName}
           currSelection={currSelection}
           onSelect={this.onSelect}
+          reelect={reelect}
         />
       ));
     }
@@ -48,7 +60,7 @@ class ListCandidates extends Component {
     return (
       <Form>
         <Form.Group grouped widths="equal">
-          <Card.Group stackable itemsPerRow={5}>
+          <Card.Group stackable itemsPerRow={3}>
             {this.renderCandidates(position)}
           </Card.Group>
         </Form.Group>

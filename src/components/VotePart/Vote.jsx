@@ -10,10 +10,11 @@ import {
   Progress,
   Divider,
   Loader,
-  Dimmer
+  Dimmer,
 } from "semantic-ui-react";
 import firebase from "firebase/app";
 import "firebase/firestore";
+import { reelectedPositions } from "../constants";
 
 const VoteHeader = style.h1`
   font-size: 80px !important;
@@ -38,6 +39,8 @@ const SubmitButton = style(Button)`
   margin-top: 3rem !important;
 `;
 
+let KEY_COUNTER = 0;
+
 class Vote extends Component {
   constructor(props) {
     super(props);
@@ -46,7 +49,8 @@ class Vote extends Component {
       positions: {},
       candidates: {},
       redirect: false,
-      loading: true
+      loading: true,
+      reelect: true,
     };
   }
 
@@ -63,10 +67,10 @@ class Vote extends Component {
     // The empty strings will eventually contain the selected candidate’s name
     const positions = await getPositions();
     let votes = {};
-    positions.forEach(function(currPosition) {
+    positions.forEach(function (currPosition) {
       votes = {
         ...votes,
-        [currPosition]: ""
+        [currPosition]: "",
       };
     });
     this.setState({ votes, positions });
@@ -77,26 +81,32 @@ class Vote extends Component {
     this.setState({ candidates });
   };
 
-  updateVote = card => {
+  updateVote = (card) => {
     const { position, candidateName } = card;
     const { votes } = this.state;
     this.setState({
       votes: {
         ...votes,
-        [position]: candidateName
-      }
+        [position]: candidateName,
+      },
     });
   };
 
   renderPositions = () => {
-    const { positions } = this.state;
-    if (positions.length) {
-      return positions.map(currPosition => [
+    const { positions, reelect } = this.state;
+    const positionHasCandidates = reelect
+      ? reelectedPositions.length
+      : positions.length;
+
+    if (positionHasCandidates) {
+      const allPositions = reelect ? reelectedPositions : positions;
+      return allPositions.map((currPosition) => [
         <Position key={currPosition} name={currPosition} />,
         <ListCandidates
-          key={"candidatesFor" + currPosition}
+          key={`candidatesFor${currPosition}:${KEY_COUNTER++}`}
           updateVote={this.updateVote}
           position={currPosition}
+          reelect={reelect}
         />,
         <DividerPadded />
       ]);
@@ -105,7 +115,7 @@ class Vote extends Component {
 
   validVote = () => {
     const { votes } = this.state;
-    let valid = Object.keys(votes).every(function(position) {
+    let valid = Object.keys(votes).every(function (position) {
       const currVote = votes[position];
       return currVote.length > 1;
     });
@@ -135,7 +145,7 @@ class Vote extends Component {
       .child("voters")
       .orderByChild("email")
       .equalTo(email)
-      .once("value", snapshot => {
+      .once("value", (snapshot) => {
         const validatedVoter = snapshot.numChildren();
         if (validatedVoter) {
           // If voter is within the voters database, update voter with their votes
@@ -154,7 +164,7 @@ class Vote extends Component {
     const { votes } = this.state;
     const increment = firebase.firestore.FieldValue.increment(1);
 
-    await Object.keys(votes).forEach(position => {
+    await Object.keys(votes).forEach((position) => {
       let vountCount = {};
       const candidateName = votes[position];
       vountCount[`${candidateName}.numOfVotes`] = increment;
@@ -206,7 +216,7 @@ class Vote extends Component {
                   onClick={this.handleSubmit}
                 >
                   Submit
-                </SubmitButton>
+                </SubmitButton>,
               ]}
         </Grid.Column>
       </Grid>

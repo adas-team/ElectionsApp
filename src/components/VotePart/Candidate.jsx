@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import style from "styled-components";
 import { candidates } from "../constants";
-import { Card, Image, Form } from "semantic-ui-react";
+import { Card, Image, Form, Rating } from "semantic-ui-react";
 
 const Header = style.h5`
   padding-top: 10px;
@@ -16,17 +16,21 @@ const RadioButton = style(Form.Radio)`
   text-align: center;
 `;
 
-const ImageResized = style(Image)`
-  max-width: 250px;
-  min-height: 125px;
-  max-height: 180px;
-`;
+// const RatingCentered = style(Rating)`
+
+// `;
+
+const VOTE_METHOD = {
+  RADIO: "radio",
+  RATE: "rate",
+};
 
 class Candidate extends Component {
   constructor(props) {
     super(props);
     this.state = {
       color: null,
+      voteMethod: VOTE_METHOD.RATE,
     };
   }
 
@@ -35,40 +39,66 @@ class Candidate extends Component {
     onSelect(candidateName);
   };
 
+  handleRate = (e, { rating }) => {};
+
   getCandidateDetails = (name) => {
+    console.log(candidates[name]);
     const candidateInfo = candidates[name];
-    console.log(candidateInfo);
     return candidateInfo;
   };
 
-  render() {
-    const { candidateName, currSelection } = this.props;
-    const name = candidateName.replace(/([A-Z])/g, " $1").trim();
-    const candidateInfo = this.getCandidateDetails(name);
-    const { photoSrc, preferences } = candidateInfo || {};
+  renderRadioMethod = (candidateName, currSelection) => {
+    return (
+      <RadioButton
+        name="radioGroup"
+        onChange={this.handleSelect}
+        checked={candidateName === currSelection}
+      />
+    );
+  };
 
-    const { color } = this.state;
+  renderRateMethod = () => {
+    return (
+      <Rating
+        icon="star"
+        onRate={this.handleRate}
+        size="massive"
+        clearable={true}
+        defaultRating={0}
+        maxRating={3}
+      />
+    );
+  };
+
+  render() {
+    const { candidateName, currSelection, reelect } = this.props;
+    const name = candidateName.replace(/([A-Z])/g, " $1").trim();
+    const candidateInfo = this.getCandidateDetails(
+      reelect ? candidateName : name
+    );
+    const { photoSrc, preferences } = candidateInfo || {};
+    const { color, voteMethod } = this.state;
 
     return (
-      <Card color={color}>
-        <ImageResized src={photoSrc} />
+      <Card centered={true} color={color}>
+        <Image fluid={true} src={photoSrc} />
         <Card.Content>
-          <Card.Header>{name}</Card.Header>
-          <Card.Meta>
-            <Header>Preferences:</Header>
-            <PreferencesContainer>
-              {preferences
-                ? preferences.map((position) => <li>{position}</li>)
-                : null}
-            </PreferencesContainer>
-          </Card.Meta>
+          <Card.Header textAlign={true}>{name}</Card.Header>
+          {!reelect ? (
+            <Card.Meta>
+              <Header>Preferences:</Header>
+              <PreferencesContainer>
+                {preferences
+                  ? preferences.map((position) => <li>{position}</li>)
+                  : null}
+              </PreferencesContainer>
+            </Card.Meta>
+          ) : null}
         </Card.Content>
         <Card.Content extra>
-          <RadioButton
-            name="radioGroup"
-            onChange={this.handleSelect}
-            checked={candidateName === currSelection}
-          />
+          {voteMethod === VOTE_METHOD.RATE
+            ? this.renderRateMethod(candidateName, currSelection)
+            : this.renderRadioMethod(candidateName, currSelection)}
         </Card.Content>
       </Card>
     );

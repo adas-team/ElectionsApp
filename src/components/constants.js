@@ -96,69 +96,6 @@ const adasTeamEventOptions = [
   },
 ];
 
-const resultCards = [
-  {
-    avatar: "/images/avatar/large/helen.jpg",
-    date: "Joined in 2013",
-    header: "Helen",
-    description: "Primary Contact",
-  },
-  {
-    avatar: "/images/avatar/large/matthew.png",
-    date: "Joined in 2013",
-    header: "Matthew",
-    description: "Primary Contact",
-  },
-  {
-    avatar: "/images/avatar/large/molly.png",
-    date: "Joined in 2013",
-    header: "Molly",
-    description: "Primary Contact",
-  },
-  {
-    avatar: "/images/avatar/large/helen.jpg",
-    date: "Joined in 2013",
-    header: "Helen",
-    description: "Primary Contact",
-  },
-  {
-    avatar: "/images/avatar/large/matthew.png",
-    date: "Joined in 2013",
-    header: "Matthew",
-    description: "Primary Contact",
-  },
-  {
-    avatar: "/images/avatar/large/molly.png",
-    date: "Joined in 2013",
-    header: "Molly",
-    description: "Primary Contact",
-  },
-  {
-    avatar: "/images/avatar/large/molly.png",
-    date: "Joined in 2013",
-    header: "Molly",
-    description: "Primary Contact",
-  },
-  {
-    avatar: "/images/avatar/large/helen.jpg",
-    date: "Joined in 2013",
-    header: "Helen",
-    description: "Primary Contact",
-  },
-  {
-    avatar: "/images/avatar/large/matthew.png",
-    date: "Joined in 2013",
-    header: "Matthew",
-    description: "Primary Contact",
-  },
-  {
-    avatar: "/images/avatar/large/molly.png",
-    date: "Joined in 2013",
-    header: "Molly",
-    description: "Primary Contact",
-  },
-];
-
 const positionDesc = [
   {
     President:
@@ -369,4 +306,47 @@ const candidates = {
   },
 };
 
-export { adasTeamEventOptions, resultCards, positionDesc, candidates };
+const reelectedPositions = ["Communications"];
+
+const reelectedCandidates = {
+  "Riona Wiberg": {
+    email: "riona@ualberta.ca",
+    name: "Riona Wiberg",
+    speech:
+      "My name is Riona Wiberg and I’m really excited to be running for an executive position for Ada’s Team. I am just finishing up my 3rd year here at the U of A and have been watching Ada’s Team from the sidelines ever since I transferred into computer science.\n\nI found myself drawn to this club because being a woman in computer science can feel very isolating but I love that Ada’s Team is making an active effort to make computer science students from all walks of life feel welcome here at the university. All of this influenced my choice to run for an executive position because I am passionate about inclusivity in computer science and would love to work towards making the U of A’s computer science program more accessible and less intimidating for all people.\n\nI can make an excellent addition to your executive team because I have really strong leadership and communication skills. I also have 2 years of experience organizing and hosting outreach events with TeamUP Science, a club on campus that encourages underprivileged youth to consider a future in STEM . This prior experience in event planning will lead me to success in an executive position in Ada’s Team.\n\nLast but not least, I can and will bribe the voters by exchanging photos of my cats for votes (DM me for details).",
+    photoSrc: "/candidatePhotos/RionaWiberg.jpg",
+    preferences: ["VP Campus Outreach", "VP Communications", "VP Academic"],
+  },
+  "Diane Boytang": {
+    email: "boytang@ualberta.ca",
+    name: "Diane Boytang",
+    speech:
+      "Hi, I'm Diane and I'm going into my last year of CS at the U of A. I'm running for the positions of Conference External, Communications, and Digital Media but the main position I am interested in is Digital Media. I used to be an Ada's Team exec, in the 2018/2019 academic year, but I did not run for exec in 2019/2020 due to other responsibilities I had which were taking up most of my time. However, I now have plenty of time to dedicate to Ada's Team so I have decided to run again this year. \n\nThere are many reasons why Ada's Team is important to me. First, I have met many of my friends at university through Ada's Team. Ada's Team has given me the opportunity to travel to so many different places and attend conferences which have made me feel empowered as a woman in computing science and I want to help others feel the same way. Finally, people from Ada's Team have always been there for me. Recently I went through a very difficult time in my life and I tried to cope with this by shutting myself off from my friends, but everyone in Ada's Team was still there to support me. Ada's Team really means the world to me which is why I am so passionate about being an exec and giving back by volunteering my time. \n\nI am primarily running for VP Digital Media because it is most similar to my previous exec position which was VP Promotions and I have all the necessary skills to do well in this position. During my past time as VP Promotions the Ada's Team Instagram account doubled in followers. The main reason why I am passionate about this role is because I understand the potential social media has to make a positive impact on people's lives, and in the past my favourite thing about being an exec was that I was able to spread Ada's Team's values of inclusitivity and diversity through social media. Furthermore, I have lots of experience doing visual design, including being hired as an independent contractor to do UI design for a project for the National Research Council of Canada. This translates into strong skills when it comes to designing advertising for Ada's Team events, such as posters. \n\nThank you all for your time and I hope you will consider voting for me for an executive position.",
+    photoSrc: "candidatePhotos/DianeBoytang.png",
+    preferences: [
+      "VP Digital Media",
+      "VP Communications",
+      "VP Conference Operations",
+    ],
+  },
+  "Celina Sheng": {
+    email: "csheng2@ualberta.ca",
+    name: "Celina Sheng",
+    speech:
+      "Hi, my name is Celina and I will be going into my third year in the fall. I am running for VP communications. I really enjoy being part of the CS community because there are a lot of clubs and groups to take part in, such as UACS, the programming club, and Ada's team.\n\nI think Ada's team is great for sending out CS related events. I've seen various emails about scholarships, start-up workshops, information sessions with companies like Intuit, activities from other CS related clubs, and more. I want to help out Ada's team to make sure we can keep on showing students their opportunities so that they can get experiences outside of their academics.\n\nThe reason why I think I'm fit for VP communications is because I like sending out emails and organizing them. If I get this position, I will have a new way to chill out from studying.",
+    photoSrc: "candidatePhotos/CelinaSheng.png",
+    preferences: [
+      "VP Communications",
+      "VP Conference Finance",
+      "VP Conference Relations",
+    ],
+  },
+};
+
+export {
+  adasTeamEventOptions,
+  positionDesc,
+  candidates,
+  reelectedPositions,
+  reelectedCandidates,
+};

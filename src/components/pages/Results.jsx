@@ -33,7 +33,7 @@ class Results extends Component {
     this.state = {
       loading: true,
       candidateList: {},
-      winners: {}
+      winners: {},
     };
   }
 
@@ -47,7 +47,7 @@ class Results extends Component {
 
   computeWinners = async () => {
     const { candidateList } = this.state;
-    Object.keys(candidateList).map(currPosition => {
+    Object.keys(candidateList).map((currPosition) => {
       const currCandidates = candidateList[currPosition];
       const winnerForPosition = this.getWinnerForPosition(currCandidates);
       this.addWinner(currPosition, winnerForPosition);
@@ -66,13 +66,10 @@ class Results extends Component {
   };
 
   getWinners = async () => {
-    const snapshot = await firebase
-      .firestore()
-      .collection("winners2020")
-      .get();
+    const snapshot = await firebase.firestore().collection("winners2020").get();
 
     let winners = {};
-    snapshot.forEach(function(doc) {
+    snapshot.forEach(function (doc) {
       const position = doc.id;
       const candidatesForPosition = doc.data();
       // for testing: console.log(position, " => ", candidatesForPosition);
@@ -82,10 +79,10 @@ class Results extends Component {
     return winners;
   };
 
-  getWinnerForPosition = candidates => {
+  getWinnerForPosition = (candidates) => {
     let max = 0;
     let winner = [];
-    Object.values(candidates).forEach(currCandidate => {
+    Object.values(candidates).forEach((currCandidate) => {
       if (currCandidate["numOfVotes"] > max) {
         max = currCandidate["numOfVotes"];
         winner = [currCandidate];
@@ -108,10 +105,10 @@ class Results extends Component {
   renderPlaceholders = () => {
     const { loading, winners } = this.state;
     return (
-      <Card.Group itemsPerRow={5} stackable>
+      <Card.Group itemsPerRow={4} stackable>
         {Object.keys(winners)
           .reverse()
-          .map(position => (
+          .map((position) => (
             <Card>
               {loading ? (
                 <PlaceholderContainer>
