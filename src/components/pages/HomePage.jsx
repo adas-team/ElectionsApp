@@ -67,7 +67,7 @@ class HomePage extends Component {
     super();
     this.state = {
       visible: true,
-      mobileMessageVisible: false
+      mobileMessageVisible: false,
     };
   }
 
@@ -113,7 +113,7 @@ class HomePage extends Component {
               <h3 className="info">{checkOutCandidates}</h3>
             </TextContainer>
             <Link to="/validate">
-              <Button fluid color="blue" size="massive">
+              <Button disabled={true} fluid color="blue" size="massive">
                 Start
               </Button>
             </Link>
