@@ -96,12 +96,22 @@ class Vote extends Component {
   };
 
   updateVote = (card) => {
-    const { position, candidateName } = card;
-    const { votes } = this.state;
+    const { position, candidateName, candidateRanking } = card;
+    const { votes, reelect } = this.state;
+    const currVote = reelect
+      ? {
+          [position]: {
+            ...votes[position],
+            [candidateRanking]: candidateName,
+          },
+        }
+      : {
+          [position]: candidateName,
+        };
     this.setState({
       votes: {
         ...votes,
-        [position]: candidateName,
+        ...currVote,
       },
     });
   };
@@ -114,7 +124,7 @@ class Vote extends Component {
 
     if (positionHasCandidates) {
       const allPositions = reelect ? reelectedPositions : positions;
-      return allPositions.map((currPosition) => [
+      return allPositions.map((currPosition, i) => [
         <Position key={currPosition} name={currPosition} />,
         <ListCandidates
           key={"candidatesFor" + currPosition}
@@ -123,7 +133,7 @@ class Vote extends Component {
           reelect={reelect}
           voteMethod={voteMethod}
         />,
-        <DividerPadded />
+        <DividerPadded key={"positionForCandidate" + i} />,
       ]);
     }
   };
@@ -176,16 +186,17 @@ class Vote extends Component {
   };
 
   updateVoteCount = async () => {
-    const { votes } = this.state;
+    const { votes, reelect } = this.state;
     const increment = firebase.firestore.FieldValue.increment(1);
 
     await Object.keys(votes).forEach((position) => {
       let vountCount = {};
       const candidateName = votes[position];
+      const collectionName = reelect ? "reelectionList" : "candidateList";
       vountCount[`${candidateName}.numOfVotes`] = increment;
       firebase
         .firestore()
-        .collection("candidateList")
+        .collection(collectionName)
         .doc(position)
         .update(vountCount);
     });
@@ -201,10 +212,12 @@ class Vote extends Component {
 
   render() {
     const validVote = this.validVote();
-    const { redirect, loading } = this.state;
+    const { redirect, loading, votes } = this.state;
     if (redirect) {
       return <VoteDone />;
     }
+
+    console.log(votes);
 
     return (
       <Grid centered>
@@ -225,6 +238,7 @@ class Vote extends Component {
                 this.renderPositions(),
                 <SubmitButton
                   fluid
+                  key="submit"
                   size="massive"
                   disabled={!validVote}
                   color="blue"
