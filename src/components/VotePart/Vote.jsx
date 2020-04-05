@@ -114,7 +114,7 @@ class Vote extends Component {
 
     if (positionHasCandidates) {
       const allPositions = reelect ? reelectedPositions : positions;
-      return allPositions.map((currPosition) => [
+      return allPositions.map((currPosition, i) => [
         <Position key={currPosition} name={currPosition} />,
         <ListCandidates
           key={"candidatesFor" + currPosition}
@@ -123,7 +123,7 @@ class Vote extends Component {
           reelect={reelect}
           voteMethod={voteMethod}
         />,
-        <DividerPadded />
+        <DividerPadded key={"positionForCandidate" + i} />,
       ]);
     }
   };
@@ -225,6 +225,7 @@ class Vote extends Component {
                 this.renderPositions(),
                 <SubmitButton
                   fluid
+                  key="submit"
                   size="massive"
                   disabled={!validVote}
                   color="blue"
