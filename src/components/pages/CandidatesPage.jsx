@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import style from "styled-components";
 import { Item, Divider } from "semantic-ui-react";
-import { candidates } from "../constants";
+import { candidates, reelectedCandidates } from "../constants";
 
 const CandidatesHeader = style.h1`
   font-size: 80px !important;
@@ -22,7 +22,11 @@ const CandidateSpeech = style.h3`
     font-weight: lighter;
 `;
 
+const REELECT = true;
+
 const CandidatePage = () => {
+  const showCandidates = REELECT ? reelectedCandidates : candidates;
+
   return (
     <Fragment>
       <CandidatesHeader>Candidates</CandidatesHeader>
@@ -31,13 +35,13 @@ const CandidatePage = () => {
       </Subheader>
       <Divider />
       <Item.Group divided stackable="true">
-        {candidates ? (
-          Object.keys(candidates).map(currCandidate => (
+        {showCandidates ? (
+          Object.keys(showCandidates).map((currCandidate) => (
             <Item key={currCandidate}>
               <Item.Image
                 centered
                 size="medium"
-                src={candidates[currCandidate].photoSrc}
+                src={showCandidates[currCandidate].photoSrc}
               />
               <Item.Content verticalAlign="top">
                 <CandidateName>{candidates[currCandidate].name}</CandidateName>

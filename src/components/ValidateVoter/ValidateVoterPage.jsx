@@ -118,7 +118,6 @@ class ValidateVoterPage extends Component {
 
     // Set eligible to false if user did not attend any Ada's Team events
     const { adasTeamEvent } = voter;
-    console.log(adasTeamEvent);
     const eligible =
       adasTeamEvent.length === 1 &&
       adasTeamEvent[0] === "None, but I look forward to!"

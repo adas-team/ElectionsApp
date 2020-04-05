@@ -37,7 +37,6 @@ class Candidate extends Component {
 
   getCandidateDetails = (name) => {
     const candidateInfo = candidates[name];
-    console.log(candidateInfo);
     return candidateInfo;
   };
 
