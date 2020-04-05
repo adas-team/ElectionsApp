@@ -257,7 +257,7 @@ const candidates = {
     name: "Celina Sheng",
     speech:
       "Hi, my name is Celina and I will be going into my third year in the fall. I am running for VP communications. I really enjoy being part of the CS community because there are a lot of clubs and groups to take part in, such as UACS, the programming club, and Ada's team.\n\nI think Ada's team is great for sending out CS related events. I've seen various emails about scholarships, start-up workshops, information sessions with companies like Intuit, activities from other CS related clubs, and more. I want to help out Ada's team to make sure we can keep on showing students their opportunities so that they can get experiences outside of their academics.\n\nThe reason why I think I'm fit for VP communications is because I like sending out emails and organizing them. If I get this position, I will have a new way to chill out from studying.",
-    photoSrc: "candidatePhotos/CelinaSheng.jpg",
+    photoSrc: "candidatePhotos/CelinaSheng.png",
     preferences: [
       "VP Communications",
       "VP Conference Finance",
@@ -334,7 +334,7 @@ const reelectedCandidates = {
     name: "Celina Sheng",
     speech:
       "Hi, my name is Celina and I will be going into my third year in the fall. I am running for VP communications. I really enjoy being part of the CS community because there are a lot of clubs and groups to take part in, such as UACS, the programming club, and Ada's team.\n\nI think Ada's team is great for sending out CS related events. I've seen various emails about scholarships, start-up workshops, information sessions with companies like Intuit, activities from other CS related clubs, and more. I want to help out Ada's team to make sure we can keep on showing students their opportunities so that they can get experiences outside of their academics.\n\nThe reason why I think I'm fit for VP communications is because I like sending out emails and organizing them. If I get this position, I will have a new way to chill out from studying.",
-    photoSrc: "candidatePhotos/CelinaSheng.jpg",
+    photoSrc: "candidatePhotos/CelinaSheng.png",
     preferences: [
       "VP Communications",
       "VP Conference Finance",
