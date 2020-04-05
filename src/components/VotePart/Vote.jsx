@@ -96,12 +96,22 @@ class Vote extends Component {
   };
 
   updateVote = (card) => {
-    const { position, candidateName } = card;
-    const { votes } = this.state;
+    const { position, candidateName, candidateRanking } = card;
+    const { votes, reelect } = this.state;
+    const currVote = reelect
+      ? {
+          [position]: {
+            ...votes[position],
+            [candidateRanking]: candidateName,
+          },
+        }
+      : {
+          [position]: candidateName,
+        };
     this.setState({
       votes: {
         ...votes,
-        [position]: candidateName,
+        ...currVote,
       },
     });
   };
@@ -201,10 +211,12 @@ class Vote extends Component {
 
   render() {
     const validVote = this.validVote();
-    const { redirect, loading } = this.state;
+    const { redirect, loading, votes } = this.state;
     if (redirect) {
       return <VoteDone />;
     }
+
+    console.log(votes);
 
     return (
       <Grid centered>
