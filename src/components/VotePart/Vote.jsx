@@ -186,16 +186,17 @@ class Vote extends Component {
   };
 
   updateVoteCount = async () => {
-    const { votes } = this.state;
+    const { votes, reelect } = this.state;
     const increment = firebase.firestore.FieldValue.increment(1);
 
     await Object.keys(votes).forEach((position) => {
       let vountCount = {};
       const candidateName = votes[position];
+      const collectionName = reelect ? "reelectionList" : "candidateList";
       vountCount[`${candidateName}.numOfVotes`] = increment;
       firebase
         .firestore()
-        .collection("candidateList")
+        .collection(collectionName)
         .doc(position)
         .update(vountCount);
     });
