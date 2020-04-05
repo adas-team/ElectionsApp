@@ -16,22 +16,34 @@ const RadioButton = style(Form.Radio)`
   text-align: center;
 `;
 
+const ImageResized = style.div`
+  max-width: 510px;
+  max-height: 510px;
+  min-width: 302px;
+  min-height: 301px;
+`;
+
 // const RatingCentered = style(Rating)`
 
 // `;
-
-const VOTE_METHOD = {
-  RADIO: "radio",
-  RATE: "rate",
-};
 
 class Candidate extends Component {
   constructor(props) {
     super(props);
     this.state = {
       color: null,
-      voteMethod: VOTE_METHOD.RATE,
+      rate: {},
+      voteMethod: null,
     };
+  }
+
+  componentDidMount() {
+    const { candidateName } = this.props;
+    this.setState({
+      rate: {
+        [candidateName]: null,
+      },
+    });
   }
 
   handleSelect = (e, { value }) => {
@@ -39,10 +51,18 @@ class Candidate extends Component {
     onSelect(candidateName);
   };
 
-  handleRate = (e, { rating }) => {};
+  handleRate = (e, { rating }) => {
+    const { onSelect, candidateName } = this.props;
+    const currRate = {
+      [candidateName]: rating,
+    };
+    this.setState({
+      rate: currRate,
+    });
+    onSelect(currRate);
+  };
 
   getCandidateDetails = (name) => {
-    console.log(candidates[name]);
     const candidateInfo = candidates[name];
     return candidateInfo;
   };
@@ -63,27 +83,28 @@ class Candidate extends Component {
         icon="star"
         onRate={this.handleRate}
         size="massive"
-        clearable={true}
-        defaultRating={0}
+        // defaultRating={0}
         maxRating={3}
       />
     );
   };
 
   render() {
-    const { candidateName, currSelection, reelect } = this.props;
+    const { candidateName, currSelection, reelect, voteMethod } = this.props;
     const name = candidateName.replace(/([A-Z])/g, " $1").trim();
     const candidateInfo = this.getCandidateDetails(
       reelect ? candidateName : name
     );
     const { photoSrc, preferences } = candidateInfo || {};
-    const { color, voteMethod } = this.state;
+    const { color } = this.state;
 
     return (
       <Card centered={true} color={color}>
-        <Image fluid={true} src={photoSrc} />
+        <ImageResized>
+          <Image size="massive" src={photoSrc} />
+        </ImageResized>
         <Card.Content>
-          <Card.Header textAlign={true}>{name}</Card.Header>
+          <Card.Header>{name}</Card.Header>
           {!reelect ? (
             <Card.Meta>
               <Header>Preferences:</Header>
@@ -96,7 +117,7 @@ class Candidate extends Component {
           ) : null}
         </Card.Content>
         <Card.Content extra>
-          {voteMethod === VOTE_METHOD.RATE
+          {voteMethod === "rate"
             ? this.renderRateMethod(candidateName, currSelection)
             : this.renderRadioMethod(candidateName, currSelection)}
         </Card.Content>

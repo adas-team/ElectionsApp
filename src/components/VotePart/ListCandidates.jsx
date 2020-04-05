@@ -25,13 +25,18 @@ class ListCandidates extends Component {
   };
 
   onSelect = (name) => {
-    const { updateVote, position } = this.props;
+    const { updateVote, position, reelect } = this.props;
+    // const currVote = reelect ?
     this.setState({ currSelection: name });
-    updateVote({ position, candidateName: name });
+    const candidateName = Object.keys(name);
+    const candidateRating = Object.values(name);
+    reelect
+      ? updateVote({ position, candidateName, candidateRating })
+      : updateVote({ position, candidateName: name });
   };
 
   renderCandidates = (position) => {
-    const { reelect } = this.props;
+    const { reelect, voteMethod } = this.props;
     const { candidates } = this.state;
     let currCandidates;
     if (reelect) {
@@ -50,6 +55,7 @@ class ListCandidates extends Component {
           currSelection={currSelection}
           onSelect={this.onSelect}
           reelect={reelect}
+          voteMethod={voteMethod}
         />
       ));
     }

@@ -16,6 +16,11 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import { reelectedPositions } from "../constants";
 
+const VOTE_METHOD = {
+  RADIO: "radio",
+  RATE: "rate",
+};
+
 const VoteHeader = style.h1`
   font-size: 80px !important;
   text-align: center;
@@ -51,6 +56,7 @@ class Vote extends Component {
       redirect: false,
       loading: true,
       reelect: true,
+      voteMethod: VOTE_METHOD.RATE,
     };
   }
 
@@ -65,13 +71,24 @@ class Vote extends Component {
   initVote = async () => {
     // Initialize user’s vote to have all positions set to empty strings
     // The empty strings will eventually contain the selected candidate’s name
-    const positions = await getPositions();
+    const { reelect } = this.state;
+    const positions = reelect ? reelectedPositions : await getPositions();
+
     let votes = {};
     positions.forEach(function (currPosition) {
-      votes = {
-        ...votes,
-        [currPosition]: "",
-      };
+      reelect
+        ? (votes = {
+            ...votes,
+            [currPosition]: {
+              1: null,
+              2: null,
+              3: null,
+            },
+          })
+        : (votes = {
+            ...votes,
+            [currPosition]: "",
+          });
     });
     this.setState({ votes, positions });
   };
@@ -82,18 +99,27 @@ class Vote extends Component {
   };
 
   updateVote = (card) => {
-    const { position, candidateName } = card;
-    const { votes } = this.state;
+    const { position, candidateName, candidateRating } = card;
+    const { votes, reelect } = this.state;
+    const temp = votes[position][candidateRating];
+    const currVote = reelect
+      ? {
+          [position]: {
+            [candidateRating]: [...candidateName],
+          },
+        }
+      : {
+          [position]: candidateName,
+        };
     this.setState({
       votes: {
-        ...votes,
-        [position]: candidateName,
+        [position]: { ...votes[position], ...currVote },
       },
     });
   };
 
   renderPositions = () => {
-    const { positions, reelect } = this.state;
+    const { positions, reelect, voteMethod } = this.state;
     const positionHasCandidates = reelect
       ? reelectedPositions.length
       : positions.length;
@@ -107,19 +133,30 @@ class Vote extends Component {
           updateVote={this.updateVote}
           position={currPosition}
           reelect={reelect}
+          voteMethod={voteMethod}
         />,
-        <DividerPadded />
+        <DividerPadded />,
       ]);
     }
   };
 
-  validVote = () => {
+  validRadioVote = () => {
     const { votes } = this.state;
     let valid = Object.keys(votes).every(function (position) {
       const currVote = votes[position];
       return currVote.length > 1;
     });
 
+    return valid;
+  };
+
+  validRateVote = () => {
+    const { votes } = this.state;
+    let valid = Object.keys(votes).every(function (position) {
+      const currVote = votes[position];
+      // console.log(currVote);
+      return currVote;
+    });
     return valid;
   };
 
@@ -185,12 +222,15 @@ class Vote extends Component {
   };
 
   render() {
-    const validVote = this.validVote();
-    const { redirect, loading } = this.state;
+    const { redirect, loading, reelect } = this.state;
+    const validRadioVote = reelect
+      ? this.validRateVote()
+      : this.validRadioVote();
     if (redirect) {
       return <VoteDone />;
     }
 
+    console.log(this.state.votes);
     return (
       <Grid centered>
         <Grid.Column width={10}>
@@ -211,7 +251,7 @@ class Vote extends Component {
                 <SubmitButton
                   fluid
                   size="massive"
-                  disabled={!validVote}
+                  disabled={!validRadioVote}
                   color="blue"
                   onClick={this.handleSubmit}
                 >
