@@ -23,9 +23,11 @@ class ListCandidates extends Component {
   };
 
   onSelect = (name) => {
-    const { updateVote, position } = this.props;
+    const { updateVote, position, reelect } = this.props;
+    const candidateName = reelect ? Object.keys(name) : name;
+    const candidateRanking = reelect ? Object.values(name) : null;
     this.setState({ currSelection: name });
-    updateVote({ position, candidateName: name });
+    updateVote({ position, candidateName, candidateRanking });
   };
 
   renderCandidates = (position) => {
