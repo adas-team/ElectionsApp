@@ -34,22 +34,26 @@ const CandidatePage = () => {
       <Divider />
       <Item.Group divided stackable="true">
         {showCandidates ? (
-          Object.keys(showCandidates).map((currCandidate) => (
-            <Item key={currCandidate}>
-              <Item.Image
-                centered
-                size="medium"
-                src={showCandidates[currCandidate].photoSrc}
-              />
-              <Item.Content verticalAlign="top">
-                <CandidateName>{candidates[currCandidate].name}</CandidateName>
-                <CandidateSpeech>
-                  {candidates[currCandidate].speech}
-                </CandidateSpeech>
-              </Item.Content>
-              <Divider />
-            </Item>
-          ))
+          Object.keys(showCandidates).map((currCandidate) =>
+            candidates[currCandidate].name === "Abstain" ? null : (
+              <Item key={currCandidate}>
+                <Item.Image
+                  centered
+                  size="medium"
+                  src={showCandidates[currCandidate].photoSrc}
+                />
+                <Item.Content verticalAlign="top">
+                  <CandidateName>
+                    {candidates[currCandidate].name}
+                  </CandidateName>
+                  <CandidateSpeech>
+                    {candidates[currCandidate].speech}
+                  </CandidateSpeech>
+                </Item.Content>
+                <Divider />
+              </Item>
+            )
+          )
         ) : (
           <Subheader>Coming soon!</Subheader>
         )}
