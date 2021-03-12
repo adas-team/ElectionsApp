@@ -54,7 +54,7 @@ class Vote extends Component {
       redirect: false,
       loading: true,
       reelect: REELECT,
-      voteMethod: VOTE_METHOD.RATE
+      voteMethod: VOTE_METHOD.RADIO
     };
   }
 
