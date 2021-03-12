@@ -41,17 +41,20 @@ class ListCandidates extends Component {
     }
 
     if (currCandidates) {
-      return Object.keys(currCandidates).map((candidateName) => (
-        <Candidate
-          position={position}
-          key={candidateName}
-          candidateName={candidateName}
-          currSelection={currSelection}
-          onSelect={this.onSelect}
-          reelect={reelect}
-          voteMethod={voteMethod}
-        />
-      ));
+      return Object.keys(currCandidates)
+        .sort()
+        .reverse()
+        .map((candidateName) => (
+          <Candidate
+            position={position}
+            key={candidateName}
+            candidateName={candidateName}
+            currSelection={currSelection}
+            onSelect={this.onSelect}
+            reelect={reelect}
+            voteMethod={voteMethod}
+          />
+        ));
     }
   };
 
