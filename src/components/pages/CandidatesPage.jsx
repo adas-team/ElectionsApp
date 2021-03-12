@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import style from "styled-components";
 import { Item, Divider } from "semantic-ui-react";
-import { candidates, reelectedCandidates } from "../constants";
+import { candidates, REELECT, reelectedCandidates } from "../constants";
 
 const CandidatesHeader = style.h1`
   font-size: 80px !important;
@@ -21,8 +21,6 @@ const CandidateSpeech = style.h3`
     font-size: 20px;
     font-weight: lighter;
 `;
-
-const REELECT = true;
 
 const CandidatePage = () => {
   const showCandidates = REELECT ? reelectedCandidates : candidates;

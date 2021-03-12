@@ -4,7 +4,7 @@ import Position from "./Position";
 import VoteDone from "./VoteDone";
 import ListCandidates from "./ListCandidates";
 import { getPositions, getCandidateList } from "../helper";
-import { reelectedPositions } from "../constants";
+import { REELECT, reelectedPositions } from "../constants";
 import {
   Grid,
   Button,
@@ -53,7 +53,7 @@ class Vote extends Component {
       candidates: {},
       redirect: false,
       loading: true,
-      reelect: true,
+      reelect: REELECT,
       voteMethod: VOTE_METHOD.RATE,
     };
   }
