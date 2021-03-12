@@ -182,7 +182,7 @@ const candidates = {
     name: "Celina Sheng",
     speech: `Hi, my name is Celina Sheng, and I am running for VP Finance, VP Campus Outreach, or President. In the past year, I had the opportunity to be VP Communications. I wrote up Ada's Team's newsletters and posted events to our social media accounts. Through our Tech Star panel and advertising the diverse events forwarded to us, I took steps towards fostering an inclusive environment. I am running for a new executive position because I want to continue my community involvement while trying out new responsibilities. Additionally, I love that Ada's Team feels like a family, and I want our future execs to feel the same way. I would recommend anyone who wants to be more involved in the CS community to help out with any of Ada's Teams initiatives.`,
     photoSrc: "/candidatePhotos/csheng2.jpg",
-    preferences: ["VP Finance", "VP Campus Outreach"]
+    preferences: ["VP Finance", "VP Campus Outreach", "VP Admin"]
   },
   "Nadeen Mohamed": {
     email: "nadeen@ualberta.ca",
