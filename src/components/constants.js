@@ -294,6 +294,8 @@ const candidates = {
   },
 };
 
+const REELECT = false;
+
 const reelectedPositions = [];
 
 const reelectedCandidates = {
@@ -303,6 +305,7 @@ export {
   adasTeamEventOptions,
   positionDesc,
   candidates,
+  REELECT,
   reelectedCandidates,
   reelectedPositions,
 };
