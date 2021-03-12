@@ -11,14 +11,14 @@ import {
   Progress,
   Divider,
   Loader,
-  Dimmer,
+  Dimmer
 } from "semantic-ui-react";
 import firebase from "firebase/app";
 import "firebase/firestore";
 
 const VOTE_METHOD = {
   RADIO: "radio",
-  RATE: "rate",
+  RATE: "rate"
 };
 
 const VoteHeader = style.h1`
@@ -54,7 +54,7 @@ class Vote extends Component {
       redirect: false,
       loading: true,
       reelect: REELECT,
-      voteMethod: VOTE_METHOD.RATE,
+      voteMethod: VOTE_METHOD.RATE
     };
   }
 
@@ -79,12 +79,12 @@ class Vote extends Component {
             [currPosition]: {
               1: null,
               2: null,
-              3: null,
-            },
+              3: null
+            }
           })
         : (votes = {
             ...votes,
-            [currPosition]: "",
+            [currPosition]: ""
           });
     });
     this.setState({ votes, positions });
@@ -102,17 +102,17 @@ class Vote extends Component {
       ? {
           [position]: {
             ...votes[position],
-            [candidateRanking]: candidateName,
-          },
+            [candidateRanking]: candidateName
+          }
         }
       : {
-          [position]: candidateName,
+          [position]: candidateName
         };
     this.setState({
       votes: {
         ...votes,
-        ...currVote,
-      },
+        ...currVote
+      }
     });
   };
 
@@ -133,7 +133,7 @@ class Vote extends Component {
           reelect={reelect}
           voteMethod={voteMethod}
         />,
-        <DividerPadded key={"positionForCandidate" + i} />,
+        <DividerPadded key={"positionForCandidate" + i} />
       ]);
     }
   };
@@ -245,7 +245,7 @@ class Vote extends Component {
                   onClick={this.handleSubmit}
                 >
                   Submit
-                </SubmitButton>,
+                </SubmitButton>
               ]}
         </Grid.Column>
       </Grid>
