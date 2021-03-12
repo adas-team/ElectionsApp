@@ -25,7 +25,7 @@ class Candidate extends Component {
     super(props);
     this.state = {
       color: null,
-      rate: {},
+      rate: {}
     };
   }
 
@@ -37,10 +37,10 @@ class Candidate extends Component {
   handleRate = (e, { rating }) => {
     const { onSelect, candidateName } = this.props;
     const currRate = {
-      [candidateName]: rating,
+      [candidateName]: rating
     };
     this.setState({
-      rate: currRate,
+      rate: currRate
     });
     onSelect(currRate);
   };
@@ -73,18 +73,18 @@ class Candidate extends Component {
 
   render() {
     const { candidateName, currSelection, reelect, voteMethod } = this.props;
-    const name = candidateName.replace(/([A-Z])/g, " $1").trim();
     const candidateInfo = this.getCandidateDetails(
-      reelect ? candidateName : name
+      reelect ? candidateName : candidateName
     );
     const { photoSrc, preferences } = candidateInfo || {};
     const { color } = this.state;
+    console.log(this.props);
 
     return (
       <Card color={color}>
         <ImageResized src={photoSrc} />
         <Card.Content>
-          <Card.Header textAlign="center">{name}</Card.Header>
+          <Card.Header textAlign="center">{candidateName}</Card.Header>
           {!reelect ? (
             <Card.Meta>
               <Header>Preferences:</Header>
