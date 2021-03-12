@@ -44,7 +44,7 @@ class LoadEligibility extends Component {
       redirect: false,
       iconName: "circle notched",
       messageBgColor: null,
-      messageHeader: "One moment please",
+      messageHeader: "One moment",
       messageContent: "We are checking your eligibility to vote.",
       buttonName: null
     };
