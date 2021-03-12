@@ -1,13 +1,13 @@
 [
   {
     "President": {
-      "AmandaNguyen": {
+      "Amanda Nguyen": {
         "name": "Amanda Nguyen",
         "email": "amanda6@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "NadeenMohamed": {
+      "Nadeen Mohamed": {
         "name": "Nadeen Mohamed",
         "email": "nadeen@ualberta.ca",
         "speech": "",
@@ -19,19 +19,19 @@
       }
     },
     "Administration": {
-      "AlishbahFarooq": {
+      "Alishbah Farooq": {
         "name": "Alishbah Farooq",
         "email": "alishbah@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "DellaHumanita": {
+      "Della Humanita": {
         "name": "Della Humanita",
         "email": "humanita@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "RionaWiberg": {
+      "Riona Wiberg": {
         "name": "Riona Wiberg",
         "email": "riona@ualberta.ca",
         "speech": "",
@@ -43,19 +43,19 @@
       }
     },
     "Academic": {
-      "ElizabethBarron": {
+      "Elizabeth Kazin Barron": {
         "name": "Elizabeth Kazin Barron",
         "email": "ebarron@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "IsaiasBriones": {
+      "Isaias Briones": {
         "name": "Isaias Briones",
         "email": "briones@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "NadeenMohamed": {
+      "Nadeen Mohamed": {
         "name": "Nadeen Mohamed",
         "email": "nadeen@ualberta.ca",
         "speech": "",
@@ -67,25 +67,25 @@
       }
     },
     "Finance": {
-      "AlishbahFarooq": {
+      "Alishbah Farooq": {
         "name": "Alishbah Farooq",
         "email": "alishbah@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "CelinaSheng": {
+      "Celina Sheng": {
         "name": "Celina Sheng",
         "email": "csheng2@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "GraceMullane": {
+      "Grace Mullane": {
         "name": "Grace Mullane",
         "email": "mullane@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "IsaiasBriones": {
+      "Isaias Briones": {
         "name": "Isaias Briones",
         "email": "briones@ualberta.ca",
         "speech": "",
@@ -97,7 +97,7 @@
       }
     },
     "Digital-Media": {
-      "DellaHumanita": {
+      "Della Humanita": {
         "name": "Della Humanita",
         "email": "humanita@ualberta.ca",
         "speech": "",
@@ -109,7 +109,7 @@
         "speech": "",
         "numOfVotes": 0
       },
-      "HelenAquino": {
+      "Helen Aquino": {
         "name": "Helen Aquino",
         "email": "haquino@ualberta.ca",
         "speech": "",
@@ -121,25 +121,25 @@
       }
     },
     "Communications": {
-      "AlishbahFarooq": {
+      "Alishbah Farooq": {
         "name": "Alishbah Farooq",
         "email": "alishbah@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "AnnaSong": {
+      "Anna Song": {
         "name": "Anna Song",
         "email": "chaerin@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "GraceMullane": {
+      "Grace Mullane": {
         "name": "Grace Mullane",
         "email": "mullane@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "IsaiasBriones": {
+      "Isaias Briones": {
         "name": "Isaias Briones",
         "email": "briones@ualberta.ca",
         "speech": "",
@@ -151,43 +151,43 @@
       }
     },
     "Campus-Outreach": {
-      "AniketMishra": {
+      "Aniket Mishra": {
         "name": "Aniket Mishra",
         "email": "mishra2@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "AnnaSong": {
+      "Anna Song": {
         "name": "Anna Song",
         "email": "chaerin@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "CelinaSheng": {
+      "Celina Sheng": {
         "name": "Celina Sheng",
         "email": "csheng2@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "ElizabethBarron": {
+      "Elizabeth Kazin Barron": {
         "name": "Elizabeth Kazin Barron",
         "email": "ebarron@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "JustineVentura": {
+      "Justine Ventura": {
         "name": "Justine Ventura",
         "email": "linnrose@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "KatieLin": {
+      "Katie Lin": {
         "name": "Katie Lin",
         "email": "chiachen@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "RionaWiberg": {
+      "Riona Wiberg": {
         "name": "Riona Wiberg",
         "email": "riona@ualberta.ca",
         "speech": "",
@@ -199,25 +199,25 @@
       }
     },
     "Industry-Outreach": {
-      "AniketMishra": {
+      "Aniket Mishra": {
         "name": "Aniket Mishra",
         "email": "mishra2@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "JustineVentura": {
+      "Justine Ventura": {
         "name": "Justine Ventura",
         "email": "linnrose@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "KatieLin": {
+      "Katie Lin": {
         "name": "Katie Lin",
         "email": "chiachen@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "NadeenMohamed": {
+      "Nadeen Mohamed": {
         "name": "Nadeen Mohamed",
         "email": "nadeen@ualberta.ca",
         "speech": "",
@@ -229,14 +229,14 @@
       }
     },
     "Conference-Operations": {
-      "KatieLin": {
+      "Katie Lin": {
         "name": "Katie Lin",
         "email": "chiachen@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "LidiaAtaupillcoRamos": {
-        "name": "Lidia Ataupillco Ramos",
+      "Lidia Ataupillco": {
+        "name": "Lidia Ataupillco",
         "email": "ataupill@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
@@ -247,14 +247,14 @@
       }
     },
     "Conference-Relations": {
-      "AniketMishra": {
+      "Aniket Mishra": {
         "name": "Aniket Mishra",
         "email": "mishra2@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "LidiaAtaupillcoRamos": {
-        "name": "Lidia Ataupillco Ramos",
+      "Lidia Ataupillco": {
+        "name": "Lidia Ataupillco",
         "email": "ataupill@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
@@ -265,13 +265,13 @@
       }
     },
     "Conference-Finance": {
-      "AnnaSong": {
+      "Anna Song": {
         "name": "Anna Song",
         "email": "chaerin@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
-      "JustineVentura": {
+      "Justine Ventura": {
         "name": "Justine Ventura",
         "email": "linnrose@ualberta.ca",
         "speech": "",

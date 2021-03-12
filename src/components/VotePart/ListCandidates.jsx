@@ -9,7 +9,7 @@ class ListCandidates extends Component {
     super(props);
     this.state = {
       candidates: {},
-      currSelection: "",
+      currSelection: ""
     };
   }
 
