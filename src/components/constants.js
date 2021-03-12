@@ -259,6 +259,10 @@ const candidates = {
       "VP Conference - Finance",
       "VP Conference - Campus Relations"
     ]
+  },
+  Abstain: {
+    name: "Abstain",
+    photoSrc: "/AdaBotSleep.png"
   }
 };
 
