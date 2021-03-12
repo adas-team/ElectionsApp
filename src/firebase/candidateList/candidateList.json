@@ -157,12 +157,6 @@
         "speech": "",
         "numOfVotes": 0
       },
-      "Anna Song": {
-        "name": "Anna Song",
-        "email": "chaerin@ualberta.ca",
-        "speech": "",
-        "numOfVotes": 0
-      },
       "Celina Sheng": {
         "name": "Celina Sheng",
         "email": "csheng2@ualberta.ca",
@@ -256,6 +250,12 @@
       "Lidia Ataupillco": {
         "name": "Lidia Ataupillco",
         "email": "ataupill@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Anna Song": {
+        "name": "Anna Song",
+        "email": "chaerin@ualberta.ca",
         "speech": "",
         "numOfVotes": 0
       },
