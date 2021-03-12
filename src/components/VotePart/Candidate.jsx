@@ -78,7 +78,7 @@ class Candidate extends Component {
     );
     const { photoSrc, preferences } = candidateInfo || {};
     const { color } = this.state;
-    console.log(this.props);
+    const abstainCard = candidateName === "Abstain";
 
     return (
       <Card color={color}>
@@ -87,7 +87,11 @@ class Candidate extends Component {
           <Card.Header textAlign="center">{candidateName}</Card.Header>
           {!reelect ? (
             <Card.Meta>
-              <Header>Preferences:</Header>
+              <Header>
+                {abstainCard
+                  ? "I formally decline to vote for any candidates."
+                  : "Preferences:"}
+              </Header>
               <PreferencesContainer>
                 {preferences
                   ? preferences.map((position) => <li>{position}</li>)
