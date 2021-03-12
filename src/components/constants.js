@@ -2,63 +2,63 @@ const adasTeamEventOptions = [
   {
     key: "Crash Course/Workshop",
     text: "Crash Course/Workshop",
-    value: "Crash Course/Workshop",
+    value: "Crash Course/Workshop"
   },
   {
     key: "Ada's Base (Discord)",
     text: "Ada's Base (Discord)",
-    value: "Ada's Base (Discord)",
+    value: "Ada's Base (Discord)"
   },
   {
     key: "Ada’s Network (Slack)",
     text: "Ada’s Network (Slack)",
-    value: "Ada’s Network (Slack)",
+    value: "Ada’s Network (Slack)"
   },
   {
     key: "Ada’s Developers",
     text: "Ada’s Developers",
-    value: "Ada’s Developers",
+    value: "Ada’s Developers"
   },
   {
     key: "Tutoring/Office Hours",
     text: "Tutoring/Office Hours",
-    value: "Tutoring/Office Hours",
+    value: "Tutoring/Office Hours"
   },
   {
     key: "Coffee && Code",
     text: "Coffee && Code",
-    value: "Coffee && Code",
+    value: "Coffee && Code"
   },
   {
     key: "Conference",
     text: "Conference (such as GHC or CAN-CWiC)",
-    value: "Conference",
+    value: "Conference"
   },
   {
     key: "Ada’s Mentors",
     text: "Ada’s Mentors",
-    value: "Ada’s Mentors",
+    value: "Ada’s Mentors"
   },
   {
     key: "Ada’s Students",
     text: "Ada’s Students",
-    value: "Ada’s Students",
+    value: "Ada’s Students"
   },
   {
     key: "Ada’s Tutors",
     text: "Ada’s Tutors",
-    value: "Ada’s Tutors",
+    value: "Ada’s Tutors"
   },
   {
     key: "High School Outreach",
     text: "High School Outreach",
-    value: "High School Outreach",
+    value: "High School Outreach"
   },
   {
     key: "None, but I look forward to!",
     text: "None, but I look forward to!",
-    value: "None, but I look forward to!",
-  },
+    value: "None, but I look forward to!"
+  }
 ];
 
 const positionDesc = [
@@ -84,8 +84,8 @@ const positionDesc = [
     "Conference-Relations":
       "They would be responsible for determining what the Department would like to see from Ada's Team, collaborating with the Chair of the Department and any Faculty Advisors regarding the best way to put forth efforts, bringing any promotional materials from the University of Alberta to the conference to put in swag bags (e.g. postcards, pens, etc.), hosting University of Alberta events at the conference (e.g. panels, tech talks, research posters, etc.), and being the first point of contact for Faculty who want to send student representatives to the conference. Must be available from May to August.",
     "Conference-Finance":
-      "They would be responsible for applying for grants, talking to professors regarding fundraising for conferences, and handling reimbursements for students attending conferences. Must be available from May to August.",
-  },
+      "They would be responsible for applying for grants, talking to professors regarding fundraising for conferences, and handling reimbursements for students attending conferences. Must be available from May to August."
+  }
 ];
 
 const candidates = {
@@ -97,8 +97,8 @@ const candidates = {
     photoSrc: "/candidatePhotos/ataupill.jpeg",
     preferences: [
       "VP Conference - Operations",
-      "VP Conference - Campus Relations",
-    ],
+      "VP Conference - Campus Relations"
+    ]
   },
   "Amanda Nguyen": {
     email: "amanda6@ualberta.ca",
@@ -112,9 +112,7 @@ const candidates = {
     
     Like I said, I am not a natural leader but I have been a student that needed tutoring help. I have been an executive that wasn’t sure of where to even start. The right person to be president doesn’t have to be a natural leader but simply someone that is dedicated on learning and growing alongside Ada’s Team and the computing science community.`,
     photoSrc: "/candidatePhotos/amanda6.jpg",
-    preferences: [
-      "President",
-    ],
+    preferences: ["President"]
   },
   "Riona Wiberg": {
     email: "riona@ualberta.ca",
@@ -123,21 +121,14 @@ const candidates = {
 
     I have been involved with Ada's Team for the past two years and this past year had the pleasure of being our VP Campus Outreach. I have really loved my time as part of the executive team and am excited to have the opportunity to continue it and welcome new members to the Ada's Team family. I am really grateful for all the connections that I made through Ada's Team and I would love to be part of the executive team once again so I can help others get that same sense of community that I got from Ada's Team!`,
     photoSrc: "/candidatePhotos/riona.jpg",
-    preferences: [
-      "VP Admin",
-      "VP Campus Outreach",
-    ],
+    preferences: ["VP Admin", "VP Campus Outreach"]
   },
   "Isaias Briones": {
     email: "briones@ualberta.ca",
     name: "Isaias Briones",
     speech: `Hi my name is Isaias Briones. I am trying to a run as an executive for Ada's Team because I wish to be a part of the its community and its mission to help CS students in the university. I love coding and creating new things therefore I believe I can contribute in starting up a project that has great impact to many in the university.`,
     photoSrc: "/candidatePhotos/briones.jpeg",
-    preferences: [
-      "VP Academics",
-      "VP Finance",
-      "VP Communications"
-    ],
+    preferences: ["VP Academics", "VP Finance", "VP Communications"]
   },
   "Della Humanita": {
     email: "humanita@ualberta.ca",
@@ -148,10 +139,7 @@ const candidates = {
     
     I would appreciate your vote for me for either VP Digital Media or VP Admin. Ada’s Team has done a lot for me since my first year, and I will do my best to give back to the club that’s gotten me to where I am today.`,
     photoSrc: "/candidatePhotos/humanita.jpg",
-    preferences: [
-      "VP Digital Media",
-      "VP Admin",
-    ],
+    preferences: ["VP Digital Media", "VP Admin"]
   },
   "Helen Aquino": {
     email: "haquino@ualberta.ca",
@@ -164,9 +152,7 @@ const candidates = {
     
     Ada's Team has provided us with so many opportunities for professional development that I'm grateful for. To give back, I want to uphold their message. I want others to know about Ada's Team and the opportunities it provides so that other students can also realize their potential. Even before I got involved with this club, just having known about Ada's Team, and what they stand for, gave me confidence that I can succeed as a minority in tech; which is why it would mean a whole lot to me to be your next VP Digital Media.`,
     photoSrc: "/candidatePhotos/haquino.jpg",
-    preferences: [
-      "VP Digital Media",
-    ],
+    preferences: ["VP Digital Media"]
   },
   "Aniket Mishra": {
     email: "mishra2@ualberta.ca",
@@ -180,7 +166,7 @@ const candidates = {
       "VP Industry Outreach",
       "VP Campus Outreach",
       "VP Conference - Campus Relations"
-    ],
+    ]
   },
   "Elizabeth Kazin Barron": {
     email: "ebarron@ualberta.ca",
@@ -189,42 +175,28 @@ const candidates = {
 
     I’m also running for VP Academics because I value the academic supports Ada’s Team has offered through the study groups and tutoring, which helped me get through 204. As VP Academics I will continue facilitating and expanding tutoring and office hours to reach even more students throughout the department. Having had experience TAing CMPUT 174, I have an understanding of what new students to the department need in terms of support including more example problems, tutoring, and particularly while school is still online Ada’s Base office hours will be essential for providing academic support, building friendships and a comp sci community. In terms of advocacy to the department that’s a responsibility I would certainly take seriously and by working in collaboration with the rest of the Ada’s Team exec and with feedback from students like yourself I would be honored to represent your concerns to the department so we can all make the most of our learning experiences`,
     photoSrc: "/candidatePhotos/ebarron.jpg",
-    preferences: [
-      "VP Campus Outreach",
-      "VP Academics",
-    ],
+    preferences: ["VP Campus Outreach", "VP Academics"]
   },
   "Celina Sheng": {
     email: "csheng2@ualberta.ca",
     name: "Celina Sheng",
     speech: `Hi, my name is Celina Sheng, and I am running for VP Finance, VP Campus Outreach, or President. In the past year, I had the opportunity to be VP Communications. I wrote up Ada's Team's newsletters and posted events to our social media accounts. Through our Tech Star panel and advertising the diverse events forwarded to us, I took steps towards fostering an inclusive environment. I am running for a new executive position because I want to continue my community involvement while trying out new responsibilities. Additionally, I love that Ada's Team feels like a family, and I want our future execs to feel the same way. I would recommend anyone who wants to be more involved in the CS community to help out with any of Ada's Teams initiatives.`,
     photoSrc: "/candidatePhotos/csheng2.jpg",
-    preferences: [
-      "VP Finance",
-      "VP Campus Outreach",
-    ],
+    preferences: ["VP Finance", "VP Campus Outreach"]
   },
   "Nadeen Mohamed": {
     email: "nadeen@ualberta.ca",
     name: "Nadeen Mohamed",
     speech: `My name is Nadeen and I'm in my 3/4th year of CS. I love reading, doing hackathons, puzzle-solving, netflixing, and diurnal sopor (aka napping). I absolutely admire the drive, diversity, and productiveness of the current executive team that was able to establish three new initiatives and maintain a sense of community during the pandemic. I hope to join them to continue doing this amazing work, expand those initiatives, and keep the momentum going for the new school year and potentially for the move to the new CS building. This year, I was personally involved in each of those initiatives: as a project manager in Ada's Developers, a tutor for Ada's Students and Ada's Tutors, and co-director for Ada's Mentors. I was able to see the executive team in action, as well as learn from and contribute to Ada's Team's initiatives. I was also able to interact with so many members of the Ada's Team community and being a member has been and will continue to be such an educational and rewarding experience. If elected, I hope to keep doing all the work that makes Ada's Team the great club that it is as well as add my own ideas to the mix. I plan on having a relatively light course-load next year so I would love to be given the opportunity to devote a lot of time to the team. I want to do even more technical workshops, host some competitions to keep us on our toes, get more grants and professional opportunities for our members, and, most importantly, keep the current legacy of diversity, community, and cooperation.`,
     photoSrc: "/candidatePhotos/nadeen.png",
-    preferences: [
-      "President",
-      "VP Academics",
-      "VP Industry Outreach",
-    ],
+    preferences: ["President", "VP Academics", "VP Industry Outreach"]
   },
   "Alishbah Farooq": {
     email: "alishbah@ualberta.ca",
     name: "Alishbah Farooq",
     speech: `Hi everyone! My name is Alishbah Farooq and I'm running for VP Finance, VP Communications and VP Admin. First, a little bit about myself: I'm currently in my second year of undergrad as a Mathematics major and Computing Science minor, I'm an avid reader (specifically fiction books) and I think the Harry Potter books are better than the movies. I got involved with Ada's Team first by going to the Grace Hopper Celebration with them and then becoming a mentor for Ada's Mentors. My past experience relating to these positions include being Director of Internal Communications for my high school student council, a volunteer for the CHATTER program which helps children with autism or other diagnoses develop social and communication skills and being a counsellor for YMCA Summer Day Camps. As a math major I have plenty of background in numbers and I would love apply my knowledge in an actual position so I'm really excited to have the opportunity to be Ada's Team's VP Finance. Having been Director of Internal Communication I also know how to organize and plan meetings and record meeting minutes which is similar to the VP Admin and VP Communications position.I love the inclusive environment Ada's Team created for everyone and would love to get more involved which is why I'm applying for a position today. If you guys have any questions feel free to ask me and I look forward to having the opportunity to work with you guys! Thanks!`,
     photoSrc: "/candidatePhotos/alishbah.jpg",
-    preferences: [
-      "VP Finance",
-      "VP Communications",
-      "VP Admin",
-    ],
+    preferences: ["VP Finance", "VP Communications", "VP Admin"]
   },
   "Justine Ventura": {
     email: "linnrose@ualberta.ca",
@@ -236,8 +208,8 @@ const candidates = {
     preferences: [
       "VP Campus Outreach",
       "VP Industry Outreach",
-      "VP Conference - Finance",
-    ],
+      "VP Conference - Finance"
+    ]
   },
   "Grace Mullane": {
     email: "mullane@ualberta.ca",
@@ -246,11 +218,7 @@ const candidates = {
 
     Thank you. I hope you are keeping well.`,
     photoSrc: "/candidatePhotos/mullane.jpg",
-    preferences: [
-      "VP Digital Media",
-      "VP Communications",
-      "VP Finance",
-    ],
+    preferences: ["VP Digital Media", "VP Communications", "VP Finance"]
   },
   "Katie Lin": {
     email: "chiachen@ualberta.ca",
@@ -272,8 +240,8 @@ const candidates = {
     preferences: [
       "VP Industry Outreach",
       "VP Campus Outreach",
-      "VP Conference - Operations",
-    ],
+      "VP Conference - Operations"
+    ]
   },
   "Anna Song": {
     email: "chaerin@ualberta.ca",
@@ -289,17 +257,16 @@ const candidates = {
     preferences: [
       "VP Communications",
       "VP Conference - Finance",
-      "VP Conference - Campus Relations",
-    ],
-  },
+      "VP Conference - Campus Relations"
+    ]
+  }
 };
 
 const REELECT = false;
 
 const reelectedPositions = [];
 
-const reelectedCandidates = {
-};
+const reelectedCandidates = {};
 
 export {
   adasTeamEventOptions,
@@ -307,5 +274,5 @@ export {
   candidates,
   REELECT,
   reelectedCandidates,
-  reelectedPositions,
+  reelectedPositions
 };
