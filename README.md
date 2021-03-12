@@ -162,7 +162,7 @@ Ada's Team - [@adas_team](https://www.instagram.com/adas_team/) - adasteam@ualbe
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/adas_team/ElectionsApp.svg?style=for-the-badge
 [contributors-url]: https://github.com/adas-team/ElectionsApp/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=for-the-badge
 [forks-url]: https://github.com/adas-team/ElectionsApp/network/members
