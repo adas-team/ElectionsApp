@@ -37,7 +37,7 @@ class Header extends Component {
 
     return (
       <Menu size="massive" stackable inverted>
-        <Menu.Item href="https://adas-team.github.io/" target="_blank">
+        <Menu.Item href="https://adasteam.ca/" target="_blank">
           <img src={AdaBotHead} alt="Ada's Bot Head" />
         </Menu.Item>
 

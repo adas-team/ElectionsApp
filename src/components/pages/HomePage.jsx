@@ -32,7 +32,7 @@ const StyledSegment = style(Segment)`
 `;
 
 const GridContainer = style(Grid)`
-  height: 95%;
+  height: 100%;
   width: 100%;
   background-image: url(${AdaBotFromRight});
   background-position: left bottom;
@@ -46,11 +46,7 @@ const MobileMessage = style(Message)`
 
 const covidAcknowledgment = `During this pandemic, we hope you and your loved ones 
 are all safe, healthy, and you are taking great care of yourself mentally 
-and physically. We are priviledged to be living in a first-world country 
-that has the resources and capacity to mitigate the risks of COVID-19. 
-With combined effort, time, and patience, things will be back to normal 
-relatively soon. With that being said, we thank you for taking the time 
-to help us run as smoothly as possible during this sensitive time.`;
+and physically. We thank you for taking the time to help us run as smoothly as possible during this sensitive time.`;
 
 const beforeYouBegin = `Before you begin, the University of Alberta 
 acknowledges that we are located on Treaty 6 territory, and respects 
@@ -67,7 +63,7 @@ class HomePage extends Component {
     super();
     this.state = {
       visible: true,
-      mobileMessageVisible: false,
+      mobileMessageVisible: false
     };
   }
 
@@ -113,7 +109,7 @@ class HomePage extends Component {
               <h3 className="info">{checkOutCandidates}</h3>
             </TextContainer>
             <Link to="/validate">
-              <Button disabled={true} fluid color="blue" size="massive">
+              <Button disabled={false} fluid color="blue" size="massive">
                 Start
               </Button>
             </Link>
