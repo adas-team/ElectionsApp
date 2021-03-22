@@ -38,10 +38,10 @@
   <p align="center">
     Automating the election process every year.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/adas-team/ElectionsApp/wiki"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="adas-elections.netlify.app/">View Demo</a>
+    <a href="https://adas-elections.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/adas-team/ElectionsApp/issues">Report Bug</a>
     ·
