@@ -1,0 +1,67 @@
+[
+  {
+    "President": {
+      "Nadeen Mohamed": {
+        "name": "Nadeen Mohamed",
+        "email": "nadeen@ualberta.ca",
+        "photoSrc": "/candidatePhotos/nadeen.png"
+      }
+    },
+    "Administration": {
+      "Della Humanita": {
+        "name": "Della Humanita",
+        "email": "humanita@ualberta.ca",
+        "photoSrc": "/candidatePhotos/humanita.jpg"
+      }
+    },
+    "Academic": {
+      "Elizabeth Kazin Barron": {
+        "name": "Elizabeth Kazin Barron",
+        "email": "ebarron@ualberta.ca",
+        "photoSrc": "/candidatePhotos/ebarron.jpg"
+      }
+    },
+    "Finance": {
+      "Alishbah Farooq": {
+        "name": "Alishbah Farooq",
+        "email": "alishbah@ualberta.ca",
+        "photoSrc": "/candidatePhotos/alishbah.jpg"
+      }
+    },
+    "Digital Media": {
+      "Helen Aquino": {
+        "name": "Helen Aquino",
+        "email": "haquino@ualberta.ca",
+        "photoSrc": "/candidatePhotos/haquino.jpg"
+      }
+    },
+    "Communications": {
+      "Anna Song": {
+        "name": "Anna Song",
+        "email": "chaerin@ualberta.ca",
+        "photoSrc": "/candidatePhotos/chaerin.png"
+      }
+    },
+    "Campus Outreach": {
+      "Justine Ventura": {
+        "name": "Justine Ventura",
+        "email": "linnrose@ualberta.ca",
+        "photoSrc": "/candidatePhotos/linnrose.jpg"
+      }
+    },
+    "Industry Outreach": {
+      "Katie Lin": {
+        "name": "Katie Lin",
+        "email": "chiachen@ualberta.ca",
+        "photoSrc": "/candidatePhotos/chiachen.png"
+      }
+    },
+    "Conference Relations": {
+      "Aniket Mishra": {
+        "name": "Aniket Mishra",
+        "email": "mishra2@ualberta.ca",
+        "photoSrc": "/candidatePhotos/mishra2.jpg"
+      }
+    }
+  }
+]
