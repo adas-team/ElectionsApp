@@ -2,13 +2,10 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 
 const getCandidateList = async () => {
-  const snapshot = await firebase
-    .firestore()
-    .collection("candidateList")
-    .get();
+  const snapshot = await firebase.firestore().collection("candidateList").get();
 
   let candidates = {};
-  snapshot.forEach(function(doc) {
+  snapshot.forEach(function (doc) {
     const position = doc.id;
     const candidatesForPosition = doc.data();
     // for testing: console.log(position, " => ", candidatesForPosition);
@@ -23,4 +20,17 @@ const getPositions = async () => {
   return Object.keys(candidates);
 };
 
-export { getCandidateList, getPositions };
+const getWinners = async () => {
+  const snapshot = await firebase.firestore().collection("winners").get();
+
+  let winners = {};
+  snapshot.forEach(function (doc) {
+    const position = doc.id;
+    const winnerForPosition = doc.data();
+    winners = { ...winners, [position]: winnerForPosition };
+  });
+
+  return winners;
+};
+
+export { getCandidateList, getPositions, getWinners };

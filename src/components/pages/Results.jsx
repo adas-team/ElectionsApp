@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import style from "styled-components";
-import { getPositions, getCandidateList } from "../helper";
+import { getPositions, getCandidateList, getWinners } from "../helper";
 import { Card, Divider, Image, Placeholder } from "semantic-ui-react";
 import PlaceholderImg from "../../assets/Daniel.jpg";
 import firebase from "firebase/app";
@@ -27,11 +27,14 @@ const resultsPending =
 const resultsComputed =
   "Thank you all for coming out! This is our new executive team for 2021-22.";
 
+// Manual computation of winners
+const MANUAL = true;
+
 class Results extends Component {
   constructor() {
     super();
     this.state = {
-      loading: true,
+      loading: false,
       candidateList: {},
       winners: {}
     };
@@ -41,7 +44,9 @@ class Results extends Component {
     // Initialize results array with positions as keys
     const positions = await getPositions();
     const candidateList = await getCandidateList();
-    const winners = await this.computeWinners();
+    const winners = MANUAL
+      ? await this.getWinners()
+      : await this.computeWinners();
     this.setState({ results: positions, candidateList, winners });
   }
 
@@ -66,6 +71,10 @@ class Results extends Component {
   };
 
   getWinners = async () => {
+    if (MANUAL) {
+      return await getWinners();
+    }
+
     const snapshot = await firebase.firestore().collection("winners2020").get();
 
     let winners = {};
@@ -99,7 +108,14 @@ class Results extends Component {
     if (winners[position].length > 2) {
       return "Placeholder Winner";
     }
-    return winners[position]["winner"][0]["email"];
+    return Object.keys(winners[position]);
+  };
+
+  getWinnerPhoto = (position, winners) => {
+    const winnerName = Object.keys(winners[position]);
+    const photoSrc = winners[position][winnerName]["photoSrc"];
+
+    return <Image src={photoSrc} />;
   };
 
   renderPlaceholders = () => {
@@ -109,13 +125,13 @@ class Results extends Component {
         {Object.keys(winners)
           .reverse()
           .map((position) => (
-            <Card>
+            <Card key={position}>
               {loading ? (
                 <PlaceholderContainer>
                   <Placeholder.Image square />
                 </PlaceholderContainer>
               ) : (
-                <Image src={PlaceholderImg} />
+                this.getWinnerPhoto(position, winners)
               )}
 
               <Card.Content>
