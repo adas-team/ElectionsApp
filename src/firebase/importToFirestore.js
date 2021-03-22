@@ -2,16 +2,20 @@
 const fileSelected = {
   mail: {
     path: "./mailingList/filteredMailingList.json",
-    collectionKey: "filteredMailingList",
+    collectionKey: "filteredMailingList"
   },
   candidates: {
     path: "./candidateList/candidateList.json",
-    collectionKey: "candidateList",
+    collectionKey: "candidateList"
+  },
+  winners: {
+    path: "./candidateList/winnersList.json",
+    collectionKey: "winners"
   },
   reelection: {
     path: "./candidateList/reelectionList.json",
-    collectionKey: "reelectionList",
-  },
+    collectionKey: "reelectionList"
+  }
 };
 
 // Read command-line argument to determine which list to upload to Firebase
@@ -20,12 +24,13 @@ let file;
 if (
   fileType === "mail" ||
   fileType === "candidates" ||
-  fileType === "reelection"
+  fileType === "reelection" ||
+  fileType === "winners"
 ) {
   file = fileSelected[fileType];
 } else {
   console.log(
-    "ERROR: Invalid list type inputted.\nExpected input: node importToFirestore.js <mail/candidates/reelection>"
+    "ERROR: Invalid list type inputted.\nExpected input: node importToFirestore.js <mail/candidates/winners/reelection>"
   );
   return 1;
 }
@@ -37,7 +42,7 @@ const data = require(file.path);
 const collectionKey = file.collectionKey; //name of the collection
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://election-6f2a7.firebaseio.com",
+  databaseURL: "https://election-6f2a7.firebaseio.com"
 });
 const firestore = admin.firestore();
 const settings = { timestampsInSnapshots: true };
