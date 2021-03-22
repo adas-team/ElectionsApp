@@ -151,7 +151,7 @@ const candidates = {
     I have served as VP Design/similar roles for other student groups, where I managed social media platforms and created promotional content for events. I also have a strong design background that would be very beneficial to this position. As some of you may know, I am a designer for a number of Ada's Developers projects that have already allowed me to further contribute to this club's visual presence. 
     
     Ada's Team has provided us with so many opportunities for professional development that I'm grateful for. To give back, I want to uphold their message. I want others to know about Ada's Team and the opportunities it provides so that other students can also realize their potential. Even before I got involved with this club, just having known about Ada's Team, and what they stand for, gave me confidence that I can succeed as a minority in tech; which is why it would mean a whole lot to me to be your next VP Digital Media.`,
-    photoSrc: "/candidatePhotos/haquino.jpg",
+    photoSrc: "/candidatePhotos/haquino.png",
     preferences: ["VP Digital Media"]
   },
   "Aniket Mishra": {
