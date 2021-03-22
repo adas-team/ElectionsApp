@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 import style from "styled-components";
 import { getPositions, getCandidateList, getWinners } from "../helper";
 import { Card, Divider, Image, Placeholder } from "semantic-ui-react";
-import PlaceholderImg from "../../assets/Daniel.jpg";
 import firebase from "firebase/app";
 import "firebase/firestore";
 
