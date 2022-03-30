@@ -112,14 +112,18 @@ class Results extends Component {
   };
 
   getWinnerPhoto = (position, winners) => {
-    const winnerName = Object.keys(winners[position]);
-    const photoSrc = winners[position][winnerName]["photoSrc"];
+    if (Object.keys(winners).length > 0) {
+      const winnerName = Object.keys(winners[position]);
+      const photoSrc = winners[position][winnerName]["photoSrc"];
 
-    return <Image src={photoSrc} />;
+      return <Image src={photoSrc} />;
+    }
+
   };
 
   renderPlaceholders = () => {
     const { loading, winners } = this.state;
+    
     return (
       <Card.Group itemsPerRow={5} stackable>
         {Object.keys(winners)
@@ -160,12 +164,13 @@ class Results extends Component {
 
   render() {
     const { loading } = this.state;
+    console.log('STATE:', this.state);
     return (
       <Fragment>
         <ResultsHeader>Results</ResultsHeader>
-        <Subheader>{loading ? resultsPending : resultsComputed}</Subheader>
+        <Subheader>{ !(loading) ? resultsPending : resultsComputed}</Subheader>
         <Divider />
-        {this.renderPlaceholders()}
+        { Object.keys(this.state.winners) > 0 && this.renderPlaceholders() }
       </Fragment>
     );
   }
