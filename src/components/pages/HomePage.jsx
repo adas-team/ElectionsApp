@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import style from "styled-components";
 import { isMobile } from "react-device-detect";
+import { year } from "../constants";
 
 const TextContainer = style.div`
   text-align: center; 
@@ -97,7 +98,7 @@ class HomePage extends Component {
           {this.renderMobileMessage()}
           <StyledSegment>
             <Label as="a" color="blue" size="massive" ribbon>
-              2020
+              {year}
             </Label>
             <TextContainer>
               <h1 className="welcome">Welcome to Ada's Team Elections!</h1>

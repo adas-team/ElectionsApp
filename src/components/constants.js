@@ -1,3 +1,6 @@
+const year = new Date().getFullYear();
+const yearRange = `${year} - ${year+1}`;
+
 const adasTeamEventOptions = [
   {
     key: "Crash Course/Workshop",
@@ -234,5 +237,7 @@ export {
   candidates,
   REELECT,
   reelectedCandidates,
-  reelectedPositions
+  reelectedPositions,
+  year,
+  yearRange,
 };
