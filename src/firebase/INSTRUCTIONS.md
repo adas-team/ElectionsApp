@@ -1,8 +1,11 @@
 # Instructions
 
-- [Tutorial](#Tutorial)
-- [Update Mailing List](#Update-Mailing-List)
-- [Update Candidate List](#Update-Candidates-List)
+- [Instructions](#instructions)
+    - [Tutorial](#tutorial)
+    - [Update Mailing List](#update-mailing-list)
+      - [Steps](#steps)
+    - [Update Candidate List](#update-candidate-list)
+      - [Steps](#steps-1)
 
 ### Tutorial
 
@@ -36,7 +39,7 @@ This functionality was added following a tutorial I found online that has been l
      - The key will be downloaded. Add the content of that file to a file called `serviceAccountKey.json` in `src/firebase`.
    - An example file with dummy data can be found in `src/firebase/serviceAccountKey_Example.json`
 4. Open up your terminal and navigate to `src/firebase`
-   - run `node importToFirebase.js mail`
+   - run `node importToFirestore.js mail`
    - You should see a bunch of `Document <email> successfully written!` lines outputted.
 5. You've successfully updated the mailing list.
    - The changes can be seen online in the Firebase console in `Database > Cloud Firestore > filteredMailingList` collection.
