@@ -47,7 +47,7 @@ This functionality was added following a tutorial I found online that has been l
 
 1. Manually add the candidates to the `candidateList.json` file
 2. Navigate to `src/firebase` in your terminal
-   - run `node importToFirebase.js candidate`
+   - run `node importToFirestore.js candidates`
    - You should see a bunch of `Document <position> successfully written!` lines outputted.
-3. You've succesfully updated the mailing list.
+3. You've succesfully updated the candidate list.
    - The changes can be seen online in the Firebase console in `Database > Cloud Firestore > candidateList` collection.
