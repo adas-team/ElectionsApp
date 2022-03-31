@@ -17,7 +17,7 @@ const RadioButton = style(Form.Radio)`
 `;
 
 const ImageResized = style(Image)`
-  height: 300px;
+  height: 500px;
   width: 100%;
   object-fit: cover;
 `;
