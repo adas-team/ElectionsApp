@@ -164,7 +164,7 @@ class Results extends Component {
 
   render() {
     const { loading } = this.state;
-    console.log('STATE:', this.state);
+
     return (
       <Fragment>
         <ResultsHeader>Results</ResultsHeader>
