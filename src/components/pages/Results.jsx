@@ -4,6 +4,7 @@ import { getPositions, getCandidateList, getWinners } from "../helper";
 import { Card, Divider, Image, Placeholder } from "semantic-ui-react";
 import firebase from "firebase/app";
 import "firebase/firestore";
+import { yearRange } from "../constants";
 
 const ResultsHeader = style.h1`
   font-size: 80px !important;
@@ -21,10 +22,10 @@ const PlaceholderContainer = style(Placeholder)`
 `;
 
 const resultsPending =
-  "We're still counting. Come back soon to see the new executive team for 2021-21!";
+  `We're still counting. Come back soon to see the new executive team for ${yearRange}!`;
 
 const resultsComputed =
-  "Thank you all for coming out! This is our new executive team for 2021-22.";
+  `Thank you all for coming out! This is our new executive team for ${yearRange}.`;
 
 // Manual computation of winners
 const MANUAL = true;
@@ -64,7 +65,7 @@ class Results extends Component {
   addWinner = async (position, winner) => {
     await firebase
       .firestore()
-      .collection("winners2020")
+      .collection("winners")
       .doc(position)
       .set({ winner });
   };
@@ -74,7 +75,7 @@ class Results extends Component {
       return await getWinners();
     }
 
-    const snapshot = await firebase.firestore().collection("winners2020").get();
+    const snapshot = await firebase.firestore().collection("winners").get();
 
     let winners = {};
     snapshot.forEach(function (doc) {
@@ -111,14 +112,18 @@ class Results extends Component {
   };
 
   getWinnerPhoto = (position, winners) => {
-    const winnerName = Object.keys(winners[position]);
-    const photoSrc = winners[position][winnerName]["photoSrc"];
+    if (Object.keys(winners).length > 0) {
+      const winnerName = Object.keys(winners[position]);
+      const photoSrc = winners[position][winnerName]["photoSrc"];
 
-    return <Image src={photoSrc} />;
+      return <Image src={photoSrc} />;
+    }
+
   };
 
   renderPlaceholders = () => {
     const { loading, winners } = this.state;
+    
     return (
       <Card.Group itemsPerRow={5} stackable>
         {Object.keys(winners)
@@ -159,12 +164,13 @@ class Results extends Component {
 
   render() {
     const { loading } = this.state;
+
     return (
       <Fragment>
         <ResultsHeader>Results</ResultsHeader>
-        <Subheader>{loading ? resultsPending : resultsComputed}</Subheader>
+        <Subheader>{ !(loading) ? resultsPending : resultsComputed}</Subheader>
         <Divider />
-        {this.renderPlaceholders()}
+        { Object.keys(this.state.winners) > 0 && this.renderPlaceholders() }
       </Fragment>
     );
   }
