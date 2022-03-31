@@ -22,6 +22,11 @@ const CandidateSpeech = style.h3`
     font-weight: lighter;
 `;
 
+const CandidatePreferences = style.li`
+    font-size: 20px;
+    font-weight: lighter;
+`;
+
 const CandidatePage = () => {
   const showCandidates = REELECT ? reelectedCandidates : candidates;
 
@@ -51,6 +56,13 @@ const CandidatePage = () => {
                     <CandidateSpeech>
                       {candidates[currCandidate].speech}
                     </CandidateSpeech>
+                    <ul>
+                      {candidates[currCandidate].preferences.map((preference) => (
+                        <CandidatePreferences key={preference}>
+                          {preference}
+                        </CandidatePreferences>
+                      ))}
+                    </ul>
                   </Item.Content>
                   <Divider />
                 </Item>
