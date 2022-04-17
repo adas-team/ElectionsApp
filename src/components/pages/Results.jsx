@@ -163,14 +163,20 @@ class Results extends Component {
   };
 
   render() {
-    const { loading } = this.state;
+    const { winners } = this.state.winners;
 
     return (
       <Fragment>
         <ResultsHeader>Results</ResultsHeader>
-        <Subheader>{ !(loading) ? resultsPending : resultsComputed}</Subheader>
-        <Divider />
-        { Object.keys(this.state.winners) > 0 && this.renderPlaceholders() }
+        {winners === 0 ? (
+          <Subheader>{resultsPending}</Subheader> ) : (
+            <div>
+              <Subheader>{resultsComputed}</Subheader>
+              <Divider />
+              {this.renderPlaceholders()}
+            </div>
+          )
+        }
       </Fragment>
     );
   }
