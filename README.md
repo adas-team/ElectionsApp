@@ -84,8 +84,7 @@
 A web application to aid in Ada's Team annual election of the executive team.
 
 - Minimum Viable Product (MVP) is to automate the voting process and block any ineligible voters/votes.
-- Deployed Website: https://adaselectionsapp.herokuapp.com
-
+- Deployed Website: https://adas-elections.netlify.app/
 ### Built With
 
 - [React](https://reactjs.org/)
