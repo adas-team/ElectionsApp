@@ -78,8 +78,7 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](<img src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fuser-images.githubusercontent.com%2F23146829%2F77395696-c1e08f80-6d67-11ea-843e-10e8043b5f9e.png" alt="A screenshot of the election app's home page"/>)
+<img src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fuser-images.githubusercontent.com%2F23146829%2F77395696-c1e08f80-6d67-11ea-843e-10e8043b5f9e.png" alt="A screenshot of the election app's home page"/>
 
 A web application to aid in Ada's Team annual election of the executive team.
 
@@ -130,7 +129,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/adas-team/ElectionsApp/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
