@@ -1,0 +1,197 @@
+[
+  {
+    "President": {
+      "Nadeen Mohamed": {
+        "name": "Nadeen Mohamed",
+        "email": "nadeen@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Abstain": {
+        "name": "Abstain",
+        "numOfVotes": 0
+      }
+    },
+    "Administration": {
+      "Alishbah Farooq": {
+        "name": "Alishbah Farooq",
+        "email": "alishbah@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Nadeen Mohamed": {
+        "name": "Nadeen Mohamed",
+        "email": "nadeen@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Saba Gul": {
+        "name": "Saba Gul",
+        "email": "gul@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Abstain": {
+        "name": "Abstain",
+        "numOfVotes": 0
+      }
+    },
+    "Academic": {
+      "Khushi Shah": {
+        "name": "Khushi Shah",
+        "email": "khushi3@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Nadeen Mohamed": {
+        "name": "Nadeen Mohamed",
+        "email": "nadeen@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Abstain": {
+        "name": "Abstain",
+        "numOfVotes": 0
+      }
+    },
+    "Finance": {
+      "Alishbah Farooq": {
+        "name": "Alishbah Farooq",
+        "email": "alishbah@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      
+      "Abstain": {
+        "name": "Abstain",
+        "numOfVotes": 0
+      }
+    },
+    "Digital Media": {
+      "Helen Aquino": {
+        "name": "Helen Aquino",
+        "email": "haquino@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Abstain": {
+        "name": "Abstain",
+        "numOfVotes": 0
+      }
+    },
+    "Communications": {
+      "Hannah Tellambura": {
+        "name": "Hannah Tellambura",
+        "email": "hannahwa@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Khushi Shah": {
+        "name": "Khushi Shah",
+        "email": "khushi3@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Saba Gul": {
+        "name": "Saba Gul",
+        "email": "gul@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Abstain": {
+        "name": "Abstain",
+        "numOfVotes": 0
+      }
+    },
+    "Campus Outreach": {
+      "Justine Ventura": {
+        "name": "Justine Ventura",
+        "email": "linnrose@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Mariam Ayinde": {
+        "name": "Mariam Ayinde",
+        "email": "ayinde@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Abstain": {
+        "name": "Abstain",
+        "numOfVotes": 0
+      }
+    },
+    "Industry Outreach": {
+      "Ethan Lim": {
+        "name": "Ethan Lim",
+        "email": "edlim@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Hannah Tellambura": {
+        "name": "Hannah Tellambura",
+        "email": "hannahwa@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Justine Ventura": {
+        "name": "Justine Ventura",
+        "email": "linnrose@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Abstain": {
+        "name": "Abstain",
+        "numOfVotes": 0
+      }
+    },
+    "Conference Operations": {
+      "Justine Ventura": {
+        "name": "Justine Ventura",
+        "email": "linnrose@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Katie Lin": {
+        "name": "Katie Lin",
+        "email": "chiachen@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Mariam Ayinde": {
+        "name": "Mariam Ayinde",
+        "email": "ayinde@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Abstain": {
+        "name": "Abstain",
+        "numOfVotes": 0
+      }
+    },
+    "Conference Campus Relations": {
+      "Katie Lin": {
+        "name": "Katie Lin",
+        "email": "chiachen@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Abstain": {
+        "name": "Abstain",
+        "numOfVotes": 0
+      }
+    },
+    "Conference Finance": {
+      "Katie Lin": {
+        "name": "Katie Lin",
+        "email": "chiachen@ualberta.ca",
+        "speech": "",
+        "numOfVotes": 0
+      },
+      "Abstain": {
+        "name": "Abstain",
+        "numOfVotes": 0
+      }
+    }
+  }
+]
