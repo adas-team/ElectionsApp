@@ -139,10 +139,9 @@ class Vote extends Component {
 
 		// return valid;
 
-		const num_votes = 0;
+		let num_votes = 0;
 		Object.keys(votes).forEach(function (position) {
-			const currVote = votes[position];
-			num_votes += currVote.length;
+			if (votes[position]) num_votes += 1;
 		});
 
 		return num_votes >= 2;
@@ -190,8 +189,9 @@ class Vote extends Component {
 		const increment = firebase.firestore.FieldValue.increment(1);
 
 		await Object.keys(votes).forEach((position) => {
-			let vountCount = {};
 			const candidateName = votes[position];
+			if (!candidateName) return;
+			let vountCount = {};
 			const collectionName = reelect ? "reelectionList" : "candidateList";
 			vountCount[`${candidateName}.numOfVotes`] = increment;
 			firebase.firestore().collection(collectionName).doc(position).update(vountCount);
@@ -208,12 +208,10 @@ class Vote extends Component {
 
 	render() {
 		const validVote = this.validVote();
-		const { redirect, loading, votes } = this.state;
+		const { redirect, loading } = this.state;
 		if (redirect) {
 			return <VoteDone />;
 		}
-
-		console.log(votes);
 
 		return (
 			<Grid centered>

@@ -23,93 +23,80 @@ const ImageResized = style(Image)`
 `;
 
 class Candidate extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      color: null,
-      rate: {}
-    };
-  }
+	constructor(props) {
+		super(props);
+		this.state = {
+			color: null,
+			rate: {},
+		};
+	}
 
-  handleSelect = (e, { value }) => {
-    const { onSelect, candidateName } = this.props;
-    onSelect(candidateName);
-  };
+	handleSelect = (e, { value }) => {
+		const { onSelect, candidateName } = this.props;
+		onSelect(candidateName);
+	};
 
-  handleRate = (e, { rating }) => {
-    const { onSelect, candidateName } = this.props;
-    const currRate = {
-      [candidateName]: rating
-    };
-    this.setState({
-      rate: currRate
-    });
-    onSelect(currRate);
-  };
+	handleRate = (e, { rating }) => {
+		const { onSelect, candidateName } = this.props;
+		const currRate = {
+			[candidateName]: rating,
+		};
+		this.setState({
+			rate: currRate,
+		});
+		onSelect(currRate);
+	};
 
-  getCandidateDetails = (name) => {
-    const candidateInfo = candidates[name];
-    return candidateInfo;
-  };
+	getCandidateDetails = (name) => {
+		const candidateInfo = candidates[name];
+		return candidateInfo;
+	};
 
-  renderRadioMethod = (candidateName, currSelection) => {
-    return (
-      <RadioButton
-        name="radioGroup"
-        onChange={this.handleSelect}
-        checked={candidateName === currSelection}
-      />
-    );
-  };
+	renderRadioMethod = (candidateName, currSelection) => {
+		return (
+			<RadioButton
+				name="radioGroup"
+				onChange={this.handleSelect}
+				checked={candidateName === currSelection}
+			/>
+		);
+	};
 
-  renderRateMethod = () => {
-    return (
-      <Rating
-        icon="star"
-        onRate={this.handleRate}
-        maxRating={3}
-        size="massive"
-      />
-    );
-  };
+	renderRateMethod = () => {
+		return <Rating icon="star" onRate={this.handleRate} maxRating={3} size="massive" />;
+	};
 
-  render() {
-    const { candidateName, currSelection, reelect, voteMethod } = this.props;
-    const candidateInfo = this.getCandidateDetails(
-      reelect ? candidateName : candidateName
-    );
-    const { photoSrc, preferences } = candidateInfo || {};
-    const { color } = this.state;
-    const abstainCard = candidateName === "Abstain";
+	render() {
+		const { candidateName, currSelection, reelect, voteMethod } = this.props;
+		const candidateInfo = this.getCandidateDetails(reelect ? candidateName : candidateName);
+		const { photoSrc, preferences } = candidateInfo || {};
+		const { color } = this.state;
+		const abstainCard = candidateName === "Abstain";
 
-    return (
-      <Card color={color}>
-        <ImageResized src={photoSrc} />
-        <Card.Content>
-          <Card.Header textAlign="center">{candidateName}</Card.Header>
-          {!reelect ? (
-            <Card.Meta>
-              <Header>
-                {abstainCard
-                  ? "I formally decline to vote for any candidates."
-                  : "Preferences:"}
-              </Header>
-              <PreferencesContainer>
-                {preferences
-                  ? preferences.map((position) => <li>{position}</li>)
-                  : null}
-              </PreferencesContainer>
-            </Card.Meta>
-          ) : null}
-        </Card.Content>
-        <Card.Content extra textAlign="center">
-          {voteMethod === "rate"
-            ? this.renderRateMethod(candidateName, currSelection)
-            : this.renderRadioMethod(candidateName, currSelection)}
-        </Card.Content>
-      </Card>
-    );
-  }
+		return (
+			<Card color={color}>
+				<ImageResized src={photoSrc} />
+				<Card.Content>
+					<Card.Header textAlign="center">{candidateName}</Card.Header>
+					{!reelect ? (
+						<Card.Meta>
+							<Header>
+								{abstainCard ? "I formally decline to vote for any candidates." : "Preferences:"}
+							</Header>
+							<PreferencesContainer>
+								{preferences ? preferences.map((position, i) => <li key={i}>{position}</li>) : null}
+							</PreferencesContainer>
+						</Card.Meta>
+					) : null}
+				</Card.Content>
+				<Card.Content extra textAlign="center">
+					{voteMethod === "rate"
+						? this.renderRateMethod(candidateName, currSelection)
+						: this.renderRadioMethod(candidateName, currSelection)}
+				</Card.Content>
+			</Card>
+		);
+	}
 }
 
 export default Candidate;
