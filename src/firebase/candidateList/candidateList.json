@@ -1,13 +1,10 @@
 [
 	{
-<<<<<<< HEAD
-=======
 		"President": {},
 		"Administration": {},
 		"Academic": {},
 		"Finance": {},
 		"Digital Media": {},
->>>>>>> 56a57c4 (chore: update candidates)
 		"Communications": {
 			"Saakshi Joshi": {
 				"name": "Saakshi Joshi",
@@ -26,12 +23,9 @@
 				"numOfVotes": 0
 			}
 		},
-<<<<<<< HEAD
-=======
 		"Campus Outreach": {},
 		"Industry Outreach": {},
 		"Conference Operations": {},
->>>>>>> 56a57c4 (chore: update candidates)
 		"Conference Campus Relations": {
 			"Saakshi Joshi": {
 				"name": "Saakshi Joshi",
@@ -43,11 +37,7 @@
 				"name": "Abstain",
 				"numOfVotes": 0
 			}
-<<<<<<< HEAD
-		}
-=======
 		},
 		"Conference Finance": {}
->>>>>>> 56a57c4 (chore: update candidates)
 	}
 ]
