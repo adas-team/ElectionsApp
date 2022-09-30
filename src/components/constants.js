@@ -92,19 +92,12 @@ const positionDesc = [
 ];
 
 const candidates = {
-	"Courtenay Laing-Kobe": {
-		email: "laingkob@ualberta.ca",
-		name: "Courtenay Laing-Kobe",
-		speech: `Greetings fellow technology enthusiasts! My name is Courtenay and I'm entering my last year of Computer Science Specialization, also completing the Game Development Certificate. I want to be VP Communications for Ada’s Team because communication is key, not only within a workplace, but within any community. No one can benefit from workshops, panel discussions, or other events without knowing about them. However, communication is a two-way street! I want to hear your feedback: if half of us are stuck in a lab 5-8 on Tuesdays, maybe we avoid events in that time slot or make sure to have them recorded. If there’s topics people are interested in, maybe we put effort into getting an expert panel together. Besides the exciting connections Ada’s Team has to the industry, I also want to connect you all to one of our biggest resources- each other. Technology is giving us superpowers, but whether you’re a DC or Marvel fan, I think we can agree that even superheroes are better as a team. We might not save the world in the same way, but the positive changes we can make together will brighten the future. Thank you for considering me as your preferred candidate for VP Communications for 2022/23!`,
+	"Kunaal Gupta": {
+		email: "kunaal@ualberta.ca",
+		name: "Kunaal Gupta",
+		speech: `Hello everyone! I am Kunaal Gupta pursuing BSc Computing Science with a minor in business & I am running for VP Communication. As a full-stack software engineer I always aspires to collaborate with people from multidisciplinary background to develop & deliver sustainable technologies in an Agile environment while ensuring optimal functionality, quality, and reliability. I had also contested for VP communication in ISA last-year where I got about 100 votes out 400. Looking forward to connect with people in Ada's team. Vote me!!`,
 		photoSrc: "/candidatePhotos/courtenay.jpeg",
 		preferences: ["VP Communications"],
-	},
-	"Saakshi Joshi": {
-		email: "saakshi@ualberta.ca",
-		name: "Saakshi Joshi",
-		speech: `Hi! I'm Saakshi, and I'm running for VP Communications and VP Conference- campus relations because I’ve been very invested and interested in Ada’s team and what it does, and have wanted to be a member for a long time. I have experience similar to the positions I’m applying for, and will be able to do a good job in them. I’m very excited to potentially join Ada's team as a member, and hope you vote for me! Have a great day!`,
-		photoSrc: "/candidatePhotos/saakshi.jpeg",
-		preferences: ["VP Communications", "VP Conference - Campus Relations"],
 	},
 	Abstain: {
 		name: "Abstain",

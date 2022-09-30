@@ -132,6 +132,7 @@ class Vote extends Component {
 	validVote = () => {
 		const { votes } = this.state;
 
+		// TODO: revert this for full election
 		// let valid = Object.keys(votes).every(function (position) {
 		//   const currVote = votes[position];
 		//   return currVote.length > 1;
@@ -144,7 +145,7 @@ class Vote extends Component {
 			if (votes[position]) num_votes += 1;
 		});
 
-		return num_votes >= 2;
+		return num_votes >= 1;
 	};
 
 	handleSubmit = () => {
@@ -191,10 +192,10 @@ class Vote extends Component {
 		await Object.keys(votes).forEach((position) => {
 			const candidateName = votes[position];
 			if (!candidateName) return;
-			let vountCount = {};
+			let voteCount = {};
 			const collectionName = reelect ? "reelectionList" : "candidateList";
-			vountCount[`${candidateName}.numOfVotes`] = increment;
-			firebase.firestore().collection(collectionName).doc(position).update(vountCount);
+			voteCount[`${candidateName}.numOfVotes`] = increment;
+			firebase.firestore().collection(collectionName).doc(position).update(voteCount);
 		});
 	};
 

@@ -6,15 +6,9 @@
 		"Finance": {},
 		"Digital Media": {},
 		"Communications": {
-			"Saakshi Joshi": {
-				"name": "Saakshi Joshi",
-				"email": "saakshi@ualberta.ca",
-				"speech": "",
-				"numOfVotes": 0
-			},
-			"Courtenay Laing-Kobe": {
-				"name": "Courtenay Laing-Kobe",
-				"email": "laingkob@ualberta.ca",
+			"Kunaal Gupta": {
+				"name": "Kunaal Gupta",
+				"email": "kunaal@ualberta.ca",
 				"speech": "",
 				"numOfVotes": 0
 			},
@@ -26,18 +20,7 @@
 		"Campus Outreach": {},
 		"Industry Outreach": {},
 		"Conference Operations": {},
-		"Conference Campus Relations": {
-			"Saakshi Joshi": {
-				"name": "Saakshi Joshi",
-				"email": "saakshi@ualberta.ca",
-				"speech": "",
-				"numOfVotes": 0
-			},
-			"Abstain": {
-				"name": "Abstain",
-				"numOfVotes": 0
-			}
-		},
+		"Conference Campus Relations": {},
 		"Conference Finance": {}
 	}
 ]
