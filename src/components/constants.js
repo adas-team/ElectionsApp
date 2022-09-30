@@ -96,7 +96,7 @@ const candidates = {
 		email: "kunaal@ualberta.ca",
 		name: "Kunaal Gupta",
 		speech: `Hello everyone! I am Kunaal Gupta pursuing BSc Computing Science with a minor in business & I am running for VP Communication. As a full-stack software engineer I always aspires to collaborate with people from multidisciplinary background to develop & deliver sustainable technologies in an Agile environment while ensuring optimal functionality, quality, and reliability. I had also contested for VP communication in ISA last-year where I got about 100 votes out 400. Looking forward to connect with people in Ada's team. Vote me!!`,
-		photoSrc: "/candidatePhotos/courtenay.jpeg",
+		photoSrc: "/candidatePhotos/kunaal.png",
 		preferences: ["VP Communications"],
 	},
 	Abstain: {
