@@ -1,11 +1,11 @@
 # Instructions
 
 - [Instructions](#instructions)
-    - [Tutorial](#tutorial)
-    - [Update Mailing List](#update-mailing-list)
-      - [Steps](#steps)
-    - [Update Candidate List](#update-candidate-list)
-      - [Steps](#steps-1)
+  - [Tutorial](#tutorial)
+  - [Update Mailing List](#update-mailing-list)
+    - [Steps](#steps)
+  - [Update Candidate List](#update-candidate-list)
+    - [Steps](#steps-1)
 
 ### Tutorial
 
@@ -54,3 +54,14 @@ This functionality was added following a tutorial I found online that has been l
    - You should see a bunch of `Document <position> successfully written!` lines outputted.
 3. You've succesfully updated the candidate list.
    - The changes can be seen online in the Firebase console in `Database > Cloud Firestore > candidateList` collection.
+
+### Update Winners List
+
+#### Steps
+
+1. Manually add the candidates to the `winnersList.json` file
+2. Navigate to `src/firebase` in your terminal
+   - run `node importToFirestore.js winners`
+   - You should see a bunch of `Document <position> successfully written!` lines outputted.
+3. You've succesfully updated the winners list.
+   - The changes can be seen online in the Firebase console in `Database > Cloud Firestore > winners` collection.

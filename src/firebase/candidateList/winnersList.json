@@ -1,49 +1,54 @@
 [
-  {
-    "President": {
-      "Nadeen Mohamed": {
-        "photoSrc": "/candidatePhotos/nadeen.png"
-      }
-    },
-    "Administration": {
-      "Saba Gul": {
-        "photoSrc": "/candidatePhotos/gul.jpg"
-      }
-    },
-    "Academic": {
-      "Khushi Shah": {
-        "photoSrc": "/candidatePhotos/khushi3.jpg"
-      }
-    },
-    "Finance": {
-      "Alishbah Farooq": {
-        "photoSrc": "/candidatePhotos/alishbah.jpg"
-      }
-    },
-    "Digital Media": {
-      "Helen Aquino": {
-        "photoSrc": "/candidatePhotos/haquino.jpg"
-      }
-    },
-    "Campus Outreach": {
-      "Justine Ventura": {
-        "photoSrc": "/candidatePhotos/linnrose.jpg"
-      }
-    },
-    "Industry Outreach": {
-      "Hannah Tellambura": {
-        "photoSrc": "/candidatePhotos/hannahwa.jpg"
-      }
-    },
-    "Conference Finance": {
-      "Katie Lin": {
-        "photoSrc": "/candidatePhotos/chiachen.jpg"
-      }
-    },
-    "Conference Campus Operations": {
-      "Mariam Ayinde": {
-        "photoSrc": "/candidatePhotos/ayinde.jpg"
-      }
-    }
-  }
+	{
+		"President": {
+			"?": {
+				"photoSrc": "AdaBotSleep.png"
+			}
+		},
+		"Administration": {
+			"?": {
+				"photoSrc": "AdaBotSleep.png"
+			}
+		},
+		"Academic": {
+			"?": {
+				"photoSrc": "AdaBotSleep.png"
+			}
+		},
+		"Finance": {
+			"?": {
+				"photoSrc": "AdaBotSleep.png"
+			}
+		},
+		"Digital Media": {
+			"?": {
+				"photoSrc": "AdaBotSleep.png"
+			}
+		},
+		"Campus Outreach": {
+			"?": {
+				"photoSrc": "AdaBotSleep.png"
+			}
+		},
+		"Industry Outreach": {
+			"?": {
+				"photoSrc": "AdaBotSleep.png"
+			}
+		},
+		"Conference Relations": {
+			"?": {
+				"photoSrc": "AdaBotSleep.png"
+			}
+		},
+		"Conference Finance": {
+			"?": {
+				"photoSrc": "AdaBotSleep.png"
+			}
+		},
+		"Conference Campus Operations": {
+			"?": {
+				"photoSrc": "AdaBotSleep.png"
+			}
+		}
+	}
 ]
