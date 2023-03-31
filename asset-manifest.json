@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/ElectionsApp/static/css/main.7f904051.chunk.css",
+    "main.js": "/ElectionsApp/static/js/main.f2fc35a5.chunk.js",
+    "main.js.map": "/ElectionsApp/static/js/main.f2fc35a5.chunk.js.map",
+    "runtime-main.js": "/ElectionsApp/static/js/runtime-main.be20450f.js",
+    "runtime-main.js.map": "/ElectionsApp/static/js/runtime-main.be20450f.js.map",
+    "static/css/2.4e7f2eb4.chunk.css": "/ElectionsApp/static/css/2.4e7f2eb4.chunk.css",
+    "static/js/2.9fd9e81b.chunk.js": "/ElectionsApp/static/js/2.9fd9e81b.chunk.js",
+    "static/js/2.9fd9e81b.chunk.js.map": "/ElectionsApp/static/js/2.9fd9e81b.chunk.js.map",
+    "index.html": "/ElectionsApp/index.html",
+    "precache-manifest.07eed2042eafae498c2bec820977aae7.js": "/ElectionsApp/precache-manifest.07eed2042eafae498c2bec820977aae7.js",
+    "service-worker.js": "/ElectionsApp/service-worker.js",
+    "static/css/2.4e7f2eb4.chunk.css.map": "/ElectionsApp/static/css/2.4e7f2eb4.chunk.css.map",
+    "static/css/main.7f904051.chunk.css.map": "/ElectionsApp/static/css/main.7f904051.chunk.css.map",
+    "static/js/2.9fd9e81b.chunk.js.LICENSE.txt": "/ElectionsApp/static/js/2.9fd9e81b.chunk.js.LICENSE.txt",
+    "static/media/AdaBotFromRight.png": "/ElectionsApp/static/media/AdaBotFromRight.e2b8ff96.png",
+    "static/media/AdaBotHead.png": "/ElectionsApp/static/media/AdaBotHead.8cfadb42.png",
+    "static/media/AdaBotSleep.png": "/ElectionsApp/static/media/AdaBotSleep.872f17d3.png",
+    "static/media/AdaBotStanding.png": "/ElectionsApp/static/media/AdaBotStanding.812879e6.png",
+    "static/media/semantic.min.css": "/ElectionsApp/static/media/outline-icons.ef60a4f6.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.be20450f.js",
+    "static/css/2.4e7f2eb4.chunk.css",
+    "static/js/2.9fd9e81b.chunk.js",
+    "static/css/main.7f904051.chunk.css",
+    "static/js/main.f2fc35a5.chunk.js"
+  ]
+}
