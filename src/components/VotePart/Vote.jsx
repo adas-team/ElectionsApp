@@ -132,20 +132,12 @@ class Vote extends Component {
 	validVote = () => {
 		const { votes } = this.state;
 
-		// TODO: revert this for full election
-		// let valid = Object.keys(votes).every(function (position) {
-		//   const currVote = votes[position];
-		//   return currVote.length > 1;
-		// });
-
-		// return valid;
-
-		let num_votes = 0;
-		Object.keys(votes).forEach(function (position) {
-			if (votes[position]) num_votes += 1;
+		let valid = Object.keys(votes).every(function (position) {
+			const currVote = votes[position];
+			return currVote.length > 1;
 		});
 
-		return num_votes >= 1;
+		return valid;
 	};
 
 	handleSubmit = () => {
@@ -177,10 +169,20 @@ class Vote extends Component {
 					const { votes } = this.state;
 					const voterWithVotes = { ...voter, votes };
 					const voterKey = Object.keys(snapshot.val())[0];
+
 					firebase
 						.database()
-						.ref("voters/" + voterKey)
-						.set(voterWithVotes);
+						.ref("voters/" + voterKey + "/votes")
+						.once("value", (snapshot) => {
+							const hasVotedBefore = snapshot.numChildren();
+							if (hasVotedBefore) {
+								// If they have voted before, decrement all their old votes
+							}
+							firebase
+								.database()
+								.ref("voters/" + voterKey)
+								.set(voterWithVotes);
+						});
 				}
 			});
 	};
