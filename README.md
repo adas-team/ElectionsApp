@@ -156,7 +156,7 @@ These instructions allow you to upload the candidate and voter information to th
 
    d. Deploy the project
 
-   - Use `public` as the publishing directory
+   - Use `build` as the publishing directory
    - If it asks for a site, use adas-team-elections.netlify.app
 
    ```sh
