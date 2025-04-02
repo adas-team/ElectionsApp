@@ -267,6 +267,21 @@
 				"name": "Abstain",
 				"numOfVotes": 0
 			}
+		},
+		"Amendment to Constitution - Expanding Membership Criteria Beyond Mailing List; Clarifications to Elections Rules": {
+			"Yes":{
+				"name": "Yes, I support amending the constitution",
+				"email": "adasteam@ualberta.ca",
+				"speech": "Yes",
+				"numOfVotes": 0
+			},
+
+			"No":{
+				"name": "No, I do not support amending the constitution",
+				"email": "adasteam@ualberta.ca",
+				"speech": "No",
+				"numOfVotes": 0
+			}
 		}
 	}
 ]

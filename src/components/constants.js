@@ -87,6 +87,14 @@ const positionDesc = [
 ];
 
 const candidates = {
+	"Amendment to Constitution - Apr 2, 2025":{
+	name: "Amendment to Constitution - Change of Membership Criteria + Election Rule Clarifications",
+	email: "adasteam@ualberta.ca",
+	speech: "Since the founding of Ada's Team, membership criteria should evolve to include a wider range of students that are involved with the group. As of now, the member criteria is (i) being a UAlberta student; (ii) having been on the mailing list for >= 2 weeks; and (iii) attended an event within the current school year. This amendment will redefine membership and expand to other categories of participation, without requiring a newsletter subscription (as our events are marketed on multiple channels). This amendment also includes clarifications to elections rules. Full amendement details: https://docs.google.com/document/d/1iHfO9ubGDuLAbdDWE096XJvUI_v_AnSl0KtTSj9K3lA/edit?usp=sharing",
+	photoSrc: "AdaBotSleep.png" ,
+	preferences: ["Amendment to Constitution - Change of Membership Criteria + Election Rule Clarifications"]
+	},
+
 	"Sargundeep Singh":{
 	name: "Sargundeep Singh",
 	email: "sargunde@ualberta.ca",
