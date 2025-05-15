@@ -1,292 +1,50 @@
 [
 	{
-		"President": {
-			"Sargundeep Singh":{
-				"name": "Sargundeep Singh",
-				"email": "sargunde@ualberta.ca",
-				"speech": "Hi, I'm Sargundeep Singh, a 2nd yr Computer Science Undergrad with a Minor in Business, and I stand before you today as a candidate for the positions of President/Vice President of Administration. This time, I speak not just as a second-year student, but as someone who has served and grown in the role of Vice President of Administration over the past year-learning, leading, and thriving alongside all of you. Reflecting on this past year, I can proudly say that I immersed myself fully in the role. From officiating meetings to spearheading initiatives, I have worked tirelessly to uphold and embody the values of this team. Yes, I made mistakes, but I also learned from them a lot; Those lessons have strengthened me, and made me a better person and leader. My journey this past year has only deepened my commitment to fostering inclusivity, collaboration, and curiosity within our team. I have experienced firsthand the incredible potential we unlock when we come together-each of us contributing our unique strengths, ideas, and passions to create something truly extraordinary. If elected once again, I pledge to build on the foundations we've laid together. I will continue to advocate for each and every one of you, ensuring that your voices are not just heard but valued. I will strive to lead with empathy, determination, and the same relentless drive that has brought me to this point. But leadership is never a solo endeavor. I need your support, your ideas, and your energy to push the boundaries of what we can achieve together. This campaign is not about me as an individual- it’s about the values we share and the legacy we aim to create as a team. So, I urge you to stand with me once more, not just for who I am but for what this team represents. Let’s continue this journey together and write the next chapter of this lovely group. Thank you for your trust, your encouragement, and the opportunity to stand before you once again.",
-				"numOfVotes": 0
-			},
-		
-			"Caly Zheng":{
-				"name": "Caly Zheng",
-				"email": "cjzheng@ualberta.ca",
-				"speech": "Hi Everyone! I’m Caly, I’m a 3rd year in CS, and I’m excited to be running to be your President and seeking re-election as VP Academic. This past year, I accomplished many things as an Exec with Ada’s Team. I started a mentorship program, where we had 25 mentees and 21 mentors in our inaugural semester. I used my personal network to connect with 7 mentors who were industry professionals as well as uAlberta Alumni. Through this program, we helped students build connections and grow their careers through a semester-long mentorship. This past semester, I have also been particularly committed to fostering an inclusive and welcoming community. Ada’s base has been open this winter semester for an average of 5 hours a day, supervised by me, other execs, or room sitters. It has become a safe space for students to connect, study, or just chill and have fun, and I hope to continue building up this community next year. At a time where diversity, equity and inclusion is being threatened in the world, I think it's more important than ever to have representatives that genuinely understand the struggles faced by women, lgbtqia+, people with disabilities, and other underrepresented minorities in the field of tech. As your President, I will continue being a vocal advocate for these marginalized communities within the Department, the Faculty, and the CS student body. I will keep utilizing my connections to help build opportunities for students through the mentorship program, Coffee and Codes, and conferences. And most importantly, I remain dedicated to fighting for the future of our place in tech! I hope that you will join me in the fight as well.",
-				"numOfVotes": 0
-			},
-			"Abstain": {
-				"name": "Abstain",
-				"numOfVotes": 0
-			}
-		},
-		"Administration": {
-			"Sargundeep Singh":{
-				"name": "Sargundeep Singh",
-				"email": "sargunde@ualberta.ca",
-				"speech": "Hi, I'm Sargundeep Singh, a 2nd yr Computer Science Undergrad with a Minor in Business, and I stand before you today as a candidate for the positions of President/Vice President of Administration. This time, I speak not just as a second-year student, but as someone who has served and grown in the role of Vice President of Administration over the past year-learning, leading, and thriving alongside all of you. Reflecting on this past year, I can proudly say that I immersed myself fully in the role. From officiating meetings to spearheading initiatives, I have worked tirelessly to uphold and embody the values of this team. Yes, I made mistakes, but I also learned from them a lot; Those lessons have strengthened me, and made me a better person and leader. My journey this past year has only deepened my commitment to fostering inclusivity, collaboration, and curiosity within our team. I have experienced firsthand the incredible potential we unlock when we come together-each of us contributing our unique strengths, ideas, and passions to create something truly extraordinary. If elected once again, I pledge to build on the foundations we've laid together. I will continue to advocate for each and every one of you, ensuring that your voices are not just heard but valued. I will strive to lead with empathy, determination, and the same relentless drive that has brought me to this point. But leadership is never a solo endeavor. I need your support, your ideas, and your energy to push the boundaries of what we can achieve together. This campaign is not about me as an individual- it’s about the values we share and the legacy we aim to create as a team. So, I urge you to stand with me once more, not just for who I am but for what this team represents. Let’s continue this journey together and write the next chapter of this lovely group. Thank you for your trust, your encouragement, and the opportunity to stand before you once again.",
-				"numOfVotes": 0
-			},
-			"Mark Maligalig":{
-				"name": "Mark Maligalig",
-				"email": "maligali@ualberta.ca",
-				"speech": "Hi everyone, For those of you who don’t know me, my name is Mark Maligalig, and I go by he/they pronouns. I’m a queer, non-binary Filipino. I’m in 5th year computer science and working in a co-op. I am running to be your next VP Admin and VP Finance. It was a pleasure serving as your President for a second term. This position continues to be the most rewarding and challenging part of my student life. Seeing the impact of our conferences, events, programs, and network makes me proud to be part of this diverse and wonderful community! Hearing feedback and reading your testimonials from our conferences and events makes this effort so worth it, the countless hours spent dedicated to ensuring everything runs smoothly. That being said, as next year marks my final year of studies, I want to pass the presidency torch on to someone else. I believe that remaining a part of Ada’s Team as a VP Admin or VP Finance will allow me to more effectively pass on knowledge to the next president and future teams. As someone who has organized and assisted every single team initiative from my first day as President, I have the skills to help the next team move more efficiently, producing better outcomes for our community. This is not limited to numbers on a page; this would translate to more events, more industry connections, larger budgets, and funding more people sent to amazing conferences. I believe we also need to acknowledge the current attacks brought on initiatives focused on Equity, Diversity, and Inclusion (EDI). In these difficult times, I want to assure you that I have been and will remain committed to the fight for our rights. As someone who has been in the CS Department EDI Committee since 2022, I want to use my position to speak out for underrepresented groups, including women, queer and trans people, and BIPOC folks. Let's work together to continue our journey, let's keep making an impact in the community, and let's stay united for a better future! Please vote for me as your next VP Admin and Finance.",
-				"numOfVotes": 0
-			},
-
-			"Kashish Gupta":{
-				"name": "Kashish Gupta",
-				"email": "kgupta5@ualberta.ca",
-				"speech": "My name is Kashish Gupta, and I’m excited to be running for Vice President of Finance, Vice President of Academic, and Vice President of Admin for Ada’s Team. When I first got involved with Ada’s Team, I was drawn to the sense of community and support that it provides for underrepresented voices in tech. Over the past year, I’ve attended CAN-CWiC 2024, coffee socials, and other events, where I’ve seen firsthand how Ada’s Team creates a space where students can grow, connect, and feel like they belong. That’s something I deeply value—and something I want to help strengthen. Beyond Ada’s Team, I’ve been involved in hackathons, research, mentorship, and leadership roles in clubs like NeurAlbertaTech and Science Mentorship. These experiences have taught me how to manage resources, organize events, and support students in meaningful ways. I believe these skills align well with the roles I’m running for: As VP Finance, I want to make sure we have the funding to bring in more hands-on workshops, speaker sessions, and networking events that directly benefit our members. As VP Academic, I want to expand mentorship and academic support, creating more structured opportunities for students to learn and collaborate. As VP Admin, I want to help improve how we plan and communicate, ensuring that everyone feels involved and heard. At the end of the day, I’m running because I truly care about this community. I want to help build on what’s already great and make Ada’s Team even more accessible, impactful, and supportive for all of us. I’d love the opportunity to contribute, and I hope to earn your support.Thank you!",
-				"numOfVotes": 0
-			},
-
-			"Kashish Gupta":{
-				"name": "Kashish Gupta",
-				"email": "kgupta5@ualberta.ca",
-				"speech": "My name is Kashish Gupta, and I’m excited to be running for Vice President of Finance, Vice President of Academic, and Vice President of Admin for Ada’s Team. When I first got involved with Ada’s Team, I was drawn to the sense of community and support that it provides for underrepresented voices in tech. Over the past year, I’ve attended CAN-CWiC 2024, coffee socials, and other events, where I’ve seen firsthand how Ada’s Team creates a space where students can grow, connect, and feel like they belong. That’s something I deeply value—and something I want to help strengthen. Beyond Ada’s Team, I’ve been involved in hackathons, research, mentorship, and leadership roles in clubs like NeurAlbertaTech and Science Mentorship. These experiences have taught me how to manage resources, organize events, and support students in meaningful ways. I believe these skills align well with the roles I’m running for: As VP Finance, I want to make sure we have the funding to bring in more hands-on workshops, speaker sessions, and networking events that directly benefit our members. As VP Academic, I want to expand mentorship and academic support, creating more structured opportunities for students to learn and collaborate. As VP Admin, I want to help improve how we plan and communicate, ensuring that everyone feels involved and heard. At the end of the day, I’m running because I truly care about this community. I want to help build on what’s already great and make Ada’s Team even more accessible, impactful, and supportive for all of us. I’d love the opportunity to contribute, and I hope to earn your support.Thank you!",
-				"numOfVotes": 0
-			},
-
-			"Melrita Cyriac":{
-				"name": "Melrita Cyriac",
-				"email": "melritac@ualberta.ca",
-				"speech": "Hey everyone! My name is Melrita, and I’m a third-year Computing Science major. I’m super excited to be running for VP Communications and VP Admin this election cycle! Ada’s Team has been such a great space for gender-diverse folks in STEM, and I love how it brings people together, providing opportunities, mentorship, and a sense of community. As someone who’s really passionate about empowering underrepresented groups in tech, I’ve spent a lot of time volunteering and working to create spaces where more people, especially those from gender-diverse backgrounds, feel like they belong in CS. I want to take that passion further by making sure Ada’s Team continues to grow and that our initiatives are accessible to everyone, regardless of their major or background. I consider myself both organized and creative, which I think makes me a great fit for either role. As VP Communications, I would focus on making sure our members always know what’s happening, whether that’s through engaging emails, event promotions, or clear updates about opportunities. I also want to make it easier for new members to get involved and feel like they’re truly part of the community. As VP Admin, I would help keep things running smoothly behind the scenes, planning meetings, keeping track of important discussions, and making sure our exec team stays connected. I would also love to help organize things in a way that makes our initiatives more approachable and open to a wider audience. At the end of the day, I want to help Ada’s Team be as welcoming, organized, and impactful as possible. Whether it’s through communication or internal structure, I would love the chance to contribute to this amazing community. I would be honored to serve as VP Communications, VP Admin and I hope to have your support! Thanks so much!",
-				"numOfVotes": 0
-			},
-
-			"Abstain": {
-				"name": "Abstain",
-				"numOfVotes": 0
-			}
-		},
-		"Academic": {
-
-			"Aara Likun Vanatia":{
-				"name": "Aara Likun Vanatia",
-				"email": "vanatia@ualberta.ca",
-				"speech": "Hi everyone, I’m Aara, and I’m excited to be running for VP Industry Outreach, VP Academic, and VP Campus Outreach with Ada’s Team. Ada’s Team is built on the idea of creating a strong, inclusive, and supportive community for women and gender-diverse individuals in tech. The group has already given so many of us mentorship, guidance, and a sense of belonging. I want to build on that by creating more opportunities for us to grow, connect, and succeed in the tech industry and beyond. Of the three roles, I’m especially passionate about VP Industry Outreach. As a second-year student now heading into my third year, I’ve realized how important it is to connect with professionals who can offer advice, inspiration, and real-world insights. If elected, one of my main goals would be to introduce Industry Mixers, informal events where we can meet professionals in a relaxed setting, ask questions, and learn from their experiences. Another initiative I’d love to launch is Campus Treks. This would involve organizing visits to companies, where Ada’s Team members can tour their offices, meet with employees, and get a firsthand look at what it’s like to work in the industry. These experiences will allow us to build meaningful networks and gain a deeper understanding of what life after university really looks like, making us feel more confident and ready for our next steps. Along with VP Industry Outreach, I’m also running for VP Academic because I strongly believe it’s important that we provide solid academic support for all members. Ensuring that everyone has access to the resources, mentorship, and guidance they need to succeed will be a top priority for me. As for VP Campus Outreach, my goal is to increase Ada’s Team’s visibility on campus and engage more students in our community. There are so many people out there who could benefit from what we offer, and I’m excited to bring them into the fold. I’m really excited about the opportunity to contribute to Ada’s Team in all these areas, and no matter which role I take on, my goal is to support and uplift this community. I would be honored to serve as your VP, and I hope to earn your vote.Thank you!",
-				"numOfVotes": 0
-			},
-			"Selena Chainani":{
-				"name": "Selena Chainani",
-				"email": "chainani@ualberta.ca",
-				"speech": "Hello everyone! My name is Selena Chainani, and I’m running for VP Academics, VP Communications, and VP Digital Media. Ada’s Team’s mission is about making computer science more inclusive—ensuring that opportunities exist for everyone, no matter their background. As a non-binary person, I know firsthand how important it is to have a space that supports and uplifts all voices, and I want to help contribute to this group – one that definitely seeks to do so. Computer science and STEM, by extension, is so insanely divisive on the basis of gender and background, even to this day. Ada’s Base has been such a lovely place to be in, with such lovely people, and engaging with others from such diverse backgrounds has been truly joyous. I want to help share that joy that I’ve felt over the past few months with others who may also feel alienated and alone in their endeavors. I want to help with setting up events and opportunities that can help others discover their potentials and advance their education and careers. There are so many cool things this club already does that I really want to be a part of and help with! I am the most interested in being VP Academic, primarily because I want to ensure that every student can access tutoring and guidance. I’m currently a student tutor, and I want to help improve the current tutoring and mentorship program, since I think it’s a necessary, wonderful resource for students that can be made to be so much more than it is. I’m passionate about advocating for students, and I definitely want to make sure their struggles are heard at the department level so we can push for changes that can improve every student’s experience, and help them do their best. University is already hard enough to deal with without the added stress of the system being against you. For VP Communications and Digital Media, I’d love to help Ada’s Team grow by keeping our members engaged and informed. Whether it’s through maintaining the website, making posters, running social media, helping make cute merch, or crafting emails, I’ll attempt to make sure our message reaches the right people. I’ll also work to create clear, accessible advertising for our events so that more students can find and join our community. I really enjoy writing and making art, I've done so for years, and I definitely want to do this for a good cause! Ada’s Team’s core values are ones that are close to my heart. And I am so incredibly passionate about wanting to help Ada’s Team continue to be a welcoming, inclusive, and impactful space for all. Even if I don’t end up getting a position, I do hope I can help out around the club and work with you all! Thank you so much for listening to me ramble.",
-				"numOfVotes": 0
-			},
-
-			"Kashish Gupta":{
-				"name": "Kashish Gupta",
-				"email": "kgupta5@ualberta.ca",
-				"speech": "My name is Kashish Gupta, and I’m excited to be running for Vice President of Finance, Vice President of Academic, and Vice President of Admin for Ada’s Team. When I first got involved with Ada’s Team, I was drawn to the sense of community and support that it provides for underrepresented voices in tech. Over the past year, I’ve attended CAN-CWiC 2024, coffee socials, and other events, where I’ve seen firsthand how Ada’s Team creates a space where students can grow, connect, and feel like they belong. That’s something I deeply value—and something I want to help strengthen. Beyond Ada’s Team, I’ve been involved in hackathons, research, mentorship, and leadership roles in clubs like NeurAlbertaTech and Science Mentorship. These experiences have taught me how to manage resources, organize events, and support students in meaningful ways. I believe these skills align well with the roles I’m running for: As VP Finance, I want to make sure we have the funding to bring in more hands-on workshops, speaker sessions, and networking events that directly benefit our members. As VP Academic, I want to expand mentorship and academic support, creating more structured opportunities for students to learn and collaborate. As VP Admin, I want to help improve how we plan and communicate, ensuring that everyone feels involved and heard. At the end of the day, I’m running because I truly care about this community. I want to help build on what’s already great and make Ada’s Team even more accessible, impactful, and supportive for all of us. I’d love the opportunity to contribute, and I hope to earn your support.Thank you!",
-				"numOfVotes": 0
-			},
-
-			"Caly Zheng":{
-				"name": "Caly Zheng",
-				"email": "cjzheng@ualberta.ca",
-				"speech": "Hi Everyone! I’m Caly, I’m a 3rd year in CS, and I’m excited to be running to be your President and seeking re-election as VP Academic. This past year, I accomplished many things as an Exec with Ada’s Team. I started a mentorship program, where we had 25 mentees and 21 mentors in our inaugural semester. I used my personal network to connect with 7 mentors who were industry professionals as well as uAlberta Alumni. Through this program, we helped students build connections and grow their careers through a semester-long mentorship. This past semester, I have also been particularly committed to fostering an inclusive and welcoming community. Ada’s base has been open this winter semester for an average of 5 hours a day, supervised by me, other execs, or room sitters. It has become a safe space for students to connect, study, or just chill and have fun, and I hope to continue building up this community next year. At a time where diversity, equity and inclusion is being threatened in the world, I think it's more important than ever to have representatives that genuinely understand the struggles faced by women, lgbtqia+, people with disabilities, and other underrepresented minorities in the field of tech. As your President, I will continue being a vocal advocate for these marginalized communities within the Department, the Faculty, and the CS student body. I will keep utilizing my connections to help build opportunities for students through the mentorship program, Coffee and Codes, and conferences. And most importantly, I remain dedicated to fighting for the future of our place in tech! I hope that you will join me in the fight as well.",
-				"numOfVotes": 0
-			},
-			
-			"Abstain": {
-				"name": "Abstain",
-				"numOfVotes": 0
-			}
-		},
 		"Finance": {
-			"Mark Maligalig":{
-				"name": "Mark Maligalig",
-				"email": "aasolank@ualberta.ca",
-				"speech": "Hi everyone, For those of you who don’t know me, my name is Mark Maligalig, and I go by he/they pronouns. I’m a queer, non-binary Filipino. I’m in 5th year computer science and working in a co-op. I am running to be your next VP Admin and VP Finance. It was a pleasure serving as your President for a second term. This position continues to be the most rewarding and challenging part of my student life. Seeing the impact of our conferences, events, programs, and network makes me proud to be part of this diverse and wonderful community! Hearing feedback and reading your testimonials from our conferences and events makes this effort so worth it, the countless hours spent dedicated to ensuring everything runs smoothly. That being said, as next year marks my final year of studies, I want to pass the presidency torch on to someone else. I believe that remaining a part of Ada’s Team as a VP Admin or VP Finance will allow me to more effectively pass on knowledge to the next president and future teams. As someone who has organized and assisted every single team initiative from my first day as President, I have the skills to help the next team move more efficiently, producing better outcomes for our community. This is not limited to numbers on a page; this would translate to more events, more industry connections, larger budgets, and funding more people sent to amazing conferences. I believe we also need to acknowledge the current attacks brought on initiatives focused on Equity, Diversity, and Inclusion (EDI). In these difficult times, I want to assure you that I have been and will remain committed to the fight for our rights. As someone who has been in the CS Department EDI Committee since 2022, I want to use my position to speak out for underrepresented groups, including women, queer and trans people, and BIPOC folks. Let's work together to continue our journey, let's keep making an impact in the community, and let's stay united for a better future! Please vote for me as your next VP Admin and Finance.",
-				"numOfVotes": 0
-			},
-
-			"Kashish Gupta":{
-				"name": "Kashish Gupta",
-				"email": "kgupta5@ualberta.ca",
-				"speech": "My name is Kashish Gupta, and I’m excited to be running for Vice President of Finance, Vice President of Academic, and Vice President of Admin for Ada’s Team. When I first got involved with Ada’s Team, I was drawn to the sense of community and support that it provides for underrepresented voices in tech. Over the past year, I’ve attended CAN-CWiC 2024, coffee socials, and other events, where I’ve seen firsthand how Ada’s Team creates a space where students can grow, connect, and feel like they belong. That’s something I deeply value—and something I want to help strengthen. Beyond Ada’s Team, I’ve been involved in hackathons, research, mentorship, and leadership roles in clubs like NeurAlbertaTech and Science Mentorship. These experiences have taught me how to manage resources, organize events, and support students in meaningful ways. I believe these skills align well with the roles I’m running for: As VP Finance, I want to make sure we have the funding to bring in more hands-on workshops, speaker sessions, and networking events that directly benefit our members. As VP Academic, I want to expand mentorship and academic support, creating more structured opportunities for students to learn and collaborate. As VP Admin, I want to help improve how we plan and communicate, ensuring that everyone feels involved and heard. At the end of the day, I’m running because I truly care about this community. I want to help build on what’s already great and make Ada’s Team even more accessible, impactful, and supportive for all of us. I’d love the opportunity to contribute, and I hope to earn your support.Thank you!",
-				"numOfVotes": 0
-			},
-			
-			"Abstain": {
-				"name": "Abstain",
-				"numOfVotes": 0
-			}
-		},
-		"Digital Media": {
-			"Selena Chainani":{
-				"name": "Selena Chainani",
-				"email": "chainani@ualberta.ca",
-				"speech": "Hello everyone! My name is Selena Chainani, and I’m running for VP Academics, VP Communications, and VP Digital Media. Ada’s Team’s mission is about making computer science more inclusive—ensuring that opportunities exist for everyone, no matter their background. As a non-binary person, I know firsthand how important it is to have a space that supports and uplifts all voices, and I want to help contribute to this group – one that definitely seeks to do so. Computer science and STEM, by extension, is so insanely divisive on the basis of gender and background, even to this day. Ada’s Base has been such a lovely place to be in, with such lovely people, and engaging with others from such diverse backgrounds has been truly joyous. I want to help share that joy that I’ve felt over the past few months with others who may also feel alienated and alone in their endeavors. I want to help with setting up events and opportunities that can help others discover their potentials and advance their education and careers. There are so many cool things this club already does that I really want to be a part of and help with! I am the most interested in being VP Academic, primarily because I want to ensure that every student can access tutoring and guidance. I’m currently a student tutor, and I want to help improve the current tutoring and mentorship program, since I think it’s a necessary, wonderful resource for students that can be made to be so much more than it is. I’m passionate about advocating for students, and I definitely want to make sure their struggles are heard at the department level so we can push for changes that can improve every student’s experience, and help them do their best. University is already hard enough to deal with without the added stress of the system being against you. For VP Communications and Digital Media, I’d love to help Ada’s Team grow by keeping our members engaged and informed. Whether it’s through maintaining the website, making posters, running social media, helping make cute merch, or crafting emails, I’ll attempt to make sure our message reaches the right people. I’ll also work to create clear, accessible advertising for our events so that more students can find and join our community. I really enjoy writing and making art, I've done so for years, and I definitely want to do this for a good cause! Ada’s Team’s core values are ones that are close to my heart. And I am so incredibly passionate about wanting to help Ada’s Team continue to be a welcoming, inclusive, and impactful space for all. Even if I don’t end up getting a position, I do hope I can help out around the club and work with you all! Thank you so much for listening to me ramble.",
-				"numOfVotes": 0
-			},
-			
-			"Abstain": {
-				"name": "Abstain",
-				"numOfVotes": 0
-			}
-		},
-		"Communications": {
-			"Jashanveer Singh Arora":{
-				"name": "Jashanveer Singh Arora",
-				"email": "jashanv3@ualberta.ca",
-				"speech": "Greetings everyone, My name is Jashanveer Singh Arora, and I’m excited to run for the position of VP Digital Media / VP Communications / VP Industry Outreach at Ada’s Team. I first learned about Ada’s Team through conversations with seniors, and after exploring its initiatives, I was truly inspired by its commitment to fostering inclusivity and innovation in tech. With my background in leadership, digital media, and outreach, I believe I can contribute meaningfully to this role. At the University of Alberta, I serve as the President of the Bhangra Club, where I oversee event organization, social media management, and community engagement. Balancing administrative duties with creative responsibilities has strengthened my ability to plan, promote, and execute events effectively—skills that directly align with this role. From coordinating performances to managing outreach and promotions, I have gained hands-on experience in building strong connections and increasing visibility, which I hope to bring to Ada’s Team. Beyond leadership, my technical skills in website management, social media, and digital outreach, along with my experience in Python, C, and web technologies, equip me for this position. As VP Digital Media, I will ensure our website, blog, and social platforms are engaging and up to date. As VP Communications, I will maintain clear communication with members through emails and event promotions. As VP Industry Outreach, I will actively connect with companies and professionals to bring valuable opportunities to our community. Ada’s Team has built an incredible platform, and I am eager to contribute to its growth. Thank you for this opportunity, and I look forward to working together to make a lasting impact!",
-				"numOfVotes": 0
-			},
-		
-			"Selena Chainani":{
-				"name": "Selena Chainani",
-				"email": "chainani@ualberta.ca",
-				"speech": "Hello everyone! My name is Selena Chainani, and I’m running for VP Academics, VP Communications, and VP Digital Media. Ada’s Team’s mission is about making computer science more inclusive—ensuring that opportunities exist for everyone, no matter their background. As a non-binary person, I know firsthand how important it is to have a space that supports and uplifts all voices, and I want to help contribute to this group – one that definitely seeks to do so. Computer science and STEM, by extension, is so insanely divisive on the basis of gender and background, even to this day. Ada’s Base has been such a lovely place to be in, with such lovely people, and engaging with others from such diverse backgrounds has been truly joyous. I want to help share that joy that I’ve felt over the past few months with others who may also feel alienated and alone in their endeavors. I want to help with setting up events and opportunities that can help others discover their potentials and advance their education and careers. There are so many cool things this club already does that I really want to be a part of and help with! I am the most interested in being VP Academic, primarily because I want to ensure that every student can access tutoring and guidance. I’m currently a student tutor, and I want to help improve the current tutoring and mentorship program, since I think it’s a necessary, wonderful resource for students that can be made to be so much more than it is. I’m passionate about advocating for students, and I definitely want to make sure their struggles are heard at the department level so we can push for changes that can improve every student’s experience, and help them do their best. University is already hard enough to deal with without the added stress of the system being against you. For VP Communications and Digital Media, I’d love to help Ada’s Team grow by keeping our members engaged and informed. Whether it’s through maintaining the website, making posters, running social media, helping make cute merch, or crafting emails, I’ll attempt to make sure our message reaches the right people. I’ll also work to create clear, accessible advertising for our events so that more students can find and join our community. I really enjoy writing and making art, I've done so for years, and I definitely want to do this for a good cause! Ada’s Team’s core values are ones that are close to my heart. And I am so incredibly passionate about wanting to help Ada’s Team continue to be a welcoming, inclusive, and impactful space for all. Even if I don’t end up getting a position, I do hope I can help out around the club and work with you all! Thank you so much for listening to me ramble.",
-				"numOfVotes": 0
-			},
-			"Angela Solanki":{
-				"name": "Angela Solanki",
-				"email": "aasolank@ualberta.ca",
-				"speech": "Hi everyone, my name is Angela and i'll be running for VP Industry Outreach and VP Communications.",
-				"numOfVotes": 0
-			},
-
-			"Melrita Cyriac":{
-				"name": "Melrita Cyriac",
-				"email": "melritac@ualberta.ca",
-				"speech": "Hey everyone! My name is Melrita, and I’m a third-year Computing Science major. I’m super excited to be running for VP Communications and VP Admin this election cycle! Ada’s Team has been such a great space for gender-diverse folks in STEM, and I love how it brings people together, providing opportunities, mentorship, and a sense of community. As someone who’s really passionate about empowering underrepresented groups in tech, I’ve spent a lot of time volunteering and working to create spaces where more people, especially those from gender-diverse backgrounds, feel like they belong in CS. I want to take that passion further by making sure Ada’s Team continues to grow and that our initiatives are accessible to everyone, regardless of their major or background. I consider myself both organized and creative, which I think makes me a great fit for either role. As VP Communications, I would focus on making sure our members always know what’s happening, whether that’s through engaging emails, event promotions, or clear updates about opportunities. I also want to make it easier for new members to get involved and feel like they’re truly part of the community. As VP Admin, I would help keep things running smoothly behind the scenes, planning meetings, keeping track of important discussions, and making sure our exec team stays connected. I would also love to help organize things in a way that makes our initiatives more approachable and open to a wider audience. At the end of the day, I want to help Ada’s Team be as welcoming, organized, and impactful as possible. Whether it’s through communication or internal structure, I would love the chance to contribute to this amazing community. I would be honored to serve as VP Communications, VP Admin and I hope to have your support! Thanks so much!",
-				"numOfVotes": 0
-			},
-			
-			"Abstain": {
-				"name": "Abstain",
-				"numOfVotes": 0
-			}
-
-				
-		},
-		"Campus Outreach": {
-			"MacKenzie Luong":{
-				"name": "MacKenzie Luong",
-				"email": "mackenz3@ualberta.ca",
-				"speech": "Hi everyone! I’m MacKenzie and I’m currently your VP Communications in Ada’s Team! To give some background, I’m going into my Fourth Year in CS. That being said, I’m looking to be elected as your next VP Campus Outreach! Over my two years at Ada’s Team, I’ve seen how the community has been fostering since the pandemic cut club activities short and I’ve been at the forefront of revitalizing fun and intriguing events that are given in a safe and welcoming community! As a queer woman of colour, I’ve really felt safe in Ada’s Team through their events, opportunities, and open co-working space where you may have seen me chill and work in! This past year we’ve had some notable events, such as the Kick-Off, Halloween Event, and the Cookie Decorating event! I’m also the main organizer for the Goodbye CSC event that’s happening next week and you all should come! As your VP Campus Outreach I aim to continue these social events and continue to collaborate with undergraduate student groups, such as UACS and CompE, graduate student groups, such as the Turing Society, and University Programs such as WiSEST! By doing so, I hope this gives opportunities for the undergraduate and graduate students to bond and develop mentorship like support. I’m also looking to host some events next year, such as collaborating with photographers to help students get professional headshots taken and other holiday events! If any of these events seem interesting, please elect me for VP Campus Outreach!",
-				"numOfVotes": 0
-			},
-			"Aara Likun Vanatia":{
+			"Aara Likun Vanatia": {
 				"name": "Aara Likun Vanatia",
 				"email": "vanatia@ualberta.ca",
-				"speech": "Hi everyone, I’m Aara, and I’m excited to be running for VP Industry Outreach, VP Academic, and VP Campus Outreach with Ada’s Team. Ada’s Team is built on the idea of creating a strong, inclusive, and supportive community for women and gender-diverse individuals in tech. The group has already given so many of us mentorship, guidance, and a sense of belonging. I want to build on that by creating more opportunities for us to grow, connect, and succeed in the tech industry and beyond. Of the three roles, I’m especially passionate about VP Industry Outreach. As a second-year student now heading into my third year, I’ve realized how important it is to connect with professionals who can offer advice, inspiration, and real-world insights. If elected, one of my main goals would be to introduce Industry Mixers, informal events where we can meet professionals in a relaxed setting, ask questions, and learn from their experiences. Another initiative I’d love to launch is Campus Treks. This would involve organizing visits to companies, where Ada’s Team members can tour their offices, meet with employees, and get a firsthand look at what it’s like to work in the industry. These experiences will allow us to build meaningful networks and gain a deeper understanding of what life after university really looks like, making us feel more confident and ready for our next steps. Along with VP Industry Outreach, I’m also running for VP Academic because I strongly believe it’s important that we provide solid academic support for all members. Ensuring that everyone has access to the resources, mentorship, and guidance they need to succeed will be a top priority for me. As for VP Campus Outreach, my goal is to increase Ada’s Team’s visibility on campus and engage more students in our community. There are so many people out there who could benefit from what we offer, and I’m excited to bring them into the fold. I’m really excited about the opportunity to contribute to Ada’s Team in all these areas, and no matter which role I take on, my goal is to support and uplift this community. I would be honored to serve as your VP, and I hope to earn your vote.Thank you!",
+				"speech": "Hi everyone, my name is Aara Vanatia, and I’m running for VP Finance. I want to start by expressing my deep gratitude for the amazing experiences I’ve had with the Ada's Team, particularly during CAN-CWIC 2024. I’ve learned so much from the incredible people I’ve met, and I’m committed to giving back to a community that works tirelessly to create opportunities for women and gender-diverse individuals. As a woman of color, I know how incredibly difficult it is to feel like you belong, and I am genuinely inspired by the mission of the group and the incredible executives who carry forward its legacy. Their dedication fuels my passion to contribute to this mission in any way that I can. As VP Finance, I would take on the responsibility of managing reimbursements for authorized purchases and tracking all cash flow—both incoming and outgoing—ensuring everything is in line with our annual budget. I would work with the Executive Committee to set and approve a clear budget that aligns with our group's objectives. I’d also present a retrospective budget at the Annual General Meeting (AGM) to keep everyone informed about our financial progress. Moreover, I would actively seek and apply for grants to support our operations and ensure our finances are sustainable. I would love to give back to the community that continues to help me grow and be part of its mission. I would be truly honored if you could vote for me. Thank you!",
+				"numOfVotes": 0
+			},
+
+			"Aayushi Shah": {
+				"name": "Aayushi Shah",
+				"email": "asshah1@ualberta.ca",
+				"speech": "Ada’s Team has always been one of those groups I’ve admired from day one—genuine, welcoming, and super active in building community in computing science. Over the past year, I’ve attended events like Coffee && Code and Campus Kickoff, and every time I walked away feeling more connected and excited to be part of this field. It honestly made such a difference, and now I’m ready to be on the other side—to help create those moments for others. I want to give back to the community that’s helped shape my journey and do my part to bring students together. As a woman and a minority in computing science, I know how powerful it is to see someone who shares your experience—and I want to be that person for others. I want to show students that they belong here, that they can do this, and that there’s space for everyone in tech. I also bring a mix of experiences and skills that I think would be really valuable to the team. I’m in my final year, so I’ve seen a lot and I’d love to be a resource for anyone—whether they’re just starting out or trying to figure out internships, classes, or anything in between. I have solid industry experience, a strong academic record, and I’ve always been the go-to person among my friends when it comes to advice, mentorship, or even just hyping them up before a big exam. I’ve got a background in finance too, with strong math skills and an eye for detail, which means I’m great with numbers, planning, and budgeting. I’m also super comfortable with public speaking and love bringing energy into everything I do—whether that’s hosting events, supporting behind the scenes, or just making people feel welcome. At the end of the day, I want to be someone who helps build that sense of community, helps others grow, and makes their journey through CS just a little bit easier, more fun, and more connected.",
+				"numOfVotes": 0
+			},
+
+			"Damon Grant": {
+				"name": "Damon Grant",
+				"email": "dcgrant@ualberta.ca",
+				"speech": "Hi everyone! I’m Damon and I am a 4th year CS major. You may have seen me hanging out or napping in Ada’s room at some point, I am there a lot of the time. I have been actively involved in Ada’s Team as a member for nearly 2 years now and I am looking to be elected as your next VP finance. To put it simply, Ada’s team has done a lot for me and has been one of the main contributors to making my university experience as enjoyable as it has been. I am very grateful to all of those who I have met through the club and I am thrilled to finally have this opportunity to join the executives and devote my attention to the financial responsibilities of the club. I really enjoy the environment that Ada’s Team promotes and I would like to contribute to fostering this safe and inclusive space for all. As someone who just started working in the CS industry, it is very jarring to me how little women, and diversity there is in the office and I understand how important conveying the goal of Ada’s is, that being that the field of STEM is, and should be for all groups. I would love to be able to assist Ada’s and if you think that I am the right person for this position of VP finance then please elect me! Thank you!",
+				"numOfVotes": 0
+			},
+
+			"Jonathan Yong Ming Pu": {
+				"name": "Jonathan Yong Ming Pu",
+				"email": "yongmin1@ualberta.ca",
+				"speech": "Hi Everyone! My name is Jonathan. Now I know I might feel like I kind of came out of nowhere to run for VP Finance, and you're probably wondering who the heck is this guy, so I'll give a brief introduction of myself. I'm a second year CS student in the Software Practice Option. Fun fact about me, I like fried chicken, specifically, Jollibee. I know this has nothing to do with CS or finance, but hey, at least now you know something about me now. I got to admit, I'm not really good at speeches like this, cause, obviously, I'm a CS student, but let me tell you what I'm good at. I have experience in various leadership positions, especially in student club settings. My most recent leadership experience was being a part of the student body of my previous university, where I was in charge of human resource and logistics. I was responsible for administering information management and all student-organized events that took place under the student body. I helped streamline communication, played a key role in organizing logistics, and assisted in budget management for multiple events. I know 'finance' can sound dry to some people, therefore, I plan to make finance simple, clear, and efficient for everyone. Whether it's helping someone get reimbursed or explaining where the team's funds are going, I want to be the person that brings transparency, accountability and a bit of calm to the team. As a strong believer for diversity in STEM, I think it's important that leadership reflects a range of backgrounds, voices, and ideas. Being part of Ada's Team would not only mean bringing financial structure, but also contributing to a space where everyone feels represented and supported. I am eager to bring my skills of collaboration, teamwork, and enthusiasm to advance that mission further. Hence, I see myself as a great addition to Ada's Team. So, if you're looking for someone who's reliable, and maybe gets a little too excited about spreadsheets, I would really appreciate your support. Thank you.",
+				"numOfVotes": 0
+			},
+			
+			"Pari Jain": {
+				"name": "Pari Jain",
+				"email": "pari1@ualberta.ca",
+				"speech": "Hi everyone, I hope all of you are doing well, and if not I hope this speech makes it a tiny bit better. My name is Pari, and I’m running for VP Finance because I genuinely care about Ada’s Team and believe I can contribute meaningfully through both experience and passion. I currently serve as the Director of Finance for Women Empowering Women, where I’ve had hands-on experience managing budgets, reimbursements, and financial planning — all of which directly align with the responsibilities of VP Finance at Ada's Team. I’ve worked closely with teams to set budgets, track expenses, and ensure financial transparency. In addition, I was the Minister of Technology at the Alberta Youth Parliament Student Group, where I managed our social platforms, but also jumped in to support the finance team whenever needed — helping out with grant applications, fundraisers, and budgeting decisions. I’ve also volunteered at the Campus Food Bank, where I helped manage donations, purchase food items responsibly, and make sure we were using funds efficiently. These experiences taught me how important it is to be detail-oriented, accountable, and proactive when handling money — especially when it's supporting a student-run initiative. If elected, I’ll bring that same level of responsibility and energy to Ada’s Team. I’m excited about the opportunity to support the exec team, help apply for grants, keep finances organized and transparent, and make sure we’re set up for a successful year. Thank you for lending me your ears everyone, I hope you all have a great day ahead!",
+				"numOfVotes": 0
+			},
+
+			"Percy Nguyen": {
+				"name": "Percy Nguyen",
+				"email": "ngoccha1@ualberta.ca",
+				"speech": "Hi everyone! I’m Percy, and I’m running to be your next VP Finance! Now, I know the JD says “write cheques, track cash flow, do the budget report”... but to me, it’s more than that. It’s about being accountable, and making sure every amazing idea this team dreams up has the fund to back it. I’ve been through the budgeting trenches before - as VP in other organizations, I handled funding, comms, HR, curriculum… everything short of doing magic tricks at meetings. That’s where I really sharpened my accounting skills and learned how to communicate with clarity - especially when it comes to money Before that, I led a 30-people curriculum team to build education programs for children with no access to school. There were no seniors, barely any handover - but we kept going, kept learning, and maybe bugged everyone a little too much for feedback. I also pitched in with logistics and comms because we were shorthanded… and honestly, I couldn’t stand to see the project flop. Also, as Head of my high school’s Student Council’s Environment Committee, I learned how to navigate red tape, get approvals, and write solid grant applications, which I know will be super useful here. More about me - my friends call me a broken teapot because they spill tea to me, and I’ll without fail, forget it the next day - so if you need someone discreet with receipts? That’s me 😌 If elected, I’ll make finance transparent, organized, and maybe even a little fun for us. Thanks for listening - and I’d love your support!",
 				"numOfVotes": 0
 			},
 			
 			"Abstain": {
 				"name": "Abstain",
-				"numOfVotes": 0
-			}
-		},
-		"Industry Outreach": {
-			"Jashanveer Singh Arora":{
-				"name": "Jashanveer Singh Arora",
-				"email": "jashanv3@ualberta.ca",
-				"speech": "Greetings everyone, My name is Jashanveer Singh Arora, and I’m excited to run for the position of VP Digital Media / VP Communications / VP Industry Outreach at Ada’s Team. I first learned about Ada’s Team through conversations with seniors, and after exploring its initiatives, I was truly inspired by its commitment to fostering inclusivity and innovation in tech. With my background in leadership, digital media, and outreach, I believe I can contribute meaningfully to this role. At the University of Alberta, I serve as the President of the Bhangra Club, where I oversee event organization, social media management, and community engagement. Balancing administrative duties with creative responsibilities has strengthened my ability to plan, promote, and execute events effectively—skills that directly align with this role. From coordinating performances to managing outreach and promotions, I have gained hands-on experience in building strong connections and increasing visibility, which I hope to bring to Ada’s Team. Beyond leadership, my technical skills in website management, social media, and digital outreach, along with my experience in Python, C, and web technologies, equip me for this position. As VP Digital Media, I will ensure our website, blog, and social platforms are engaging and up to date. As VP Communications, I will maintain clear communication with members through emails and event promotions. As VP Industry Outreach, I will actively connect with companies and professionals to bring valuable opportunities to our community. Ada’s Team has built an incredible platform, and I am eager to contribute to its growth. Thank you for this opportunity, and I look forward to working together to make a lasting impact!",
-				"numOfVotes": 0
-			},
-
-			"Angela Solanki":{
-				"name": "Angela Solanki",
-				"email": "aasolank@ualberta.ca",
-				"speech": "Hi everyone, my name is Angela and i'll be running for VP Industry Outreach and VP Communications.",
-				"numOfVotes": 0
-			},
-
-			"Aara Likun Vanatia":{
-				"name": "Aara Likun Vanatia",
-				"email": "vanatia@ualberta.ca",
-				"speech": "Hi everyone, I’m Aara, and I’m excited to be running for VP Industry Outreach, VP Academic, and VP Campus Outreach with Ada’s Team. Ada’s Team is built on the idea of creating a strong, inclusive, and supportive community for women and gender-diverse individuals in tech. The group has already given so many of us mentorship, guidance, and a sense of belonging. I want to build on that by creating more opportunities for us to grow, connect, and succeed in the tech industry and beyond. Of the three roles, I’m especially passionate about VP Industry Outreach. As a second-year student now heading into my third year, I’ve realized how important it is to connect with professionals who can offer advice, inspiration, and real-world insights. If elected, one of my main goals would be to introduce Industry Mixers, informal events where we can meet professionals in a relaxed setting, ask questions, and learn from their experiences. Another initiative I’d love to launch is Campus Treks. This would involve organizing visits to companies, where Ada’s Team members can tour their offices, meet with employees, and get a firsthand look at what it’s like to work in the industry. These experiences will allow us to build meaningful networks and gain a deeper understanding of what life after university really looks like, making us feel more confident and ready for our next steps. Along with VP Industry Outreach, I’m also running for VP Academic because I strongly believe it’s important that we provide solid academic support for all members. Ensuring that everyone has access to the resources, mentorship, and guidance they need to succeed will be a top priority for me. As for VP Campus Outreach, my goal is to increase Ada’s Team’s visibility on campus and engage more students in our community. There are so many people out there who could benefit from what we offer, and I’m excited to bring them into the fold. I’m really excited about the opportunity to contribute to Ada’s Team in all these areas, and no matter which role I take on, my goal is to support and uplift this community. I would be honored to serve as your VP, and I hope to earn your vote.Thank you!",
-				"numOfVotes": 0
-			},
-			"Abstain": {
-				"name": "Abstain",
-				"numOfVotes": 0
-			}
-		},
-		"Conference Operations": {
-			"Anhad Singh Sarna":{
-				"name": "Anhad Singh Sarna",
-				"email": "assarna@ualberta.ca",
-				"speech": "My name is Anhad, and I’m running to be your VP Conference Representative for Ada’s team. Now, I know a lot of us are balancing school, work, projects, and trying to figure out what’s next. That’s why I want to make sure that our voices are heard, valued, and represented properly. I’m someone who believes in clear communication, taking initiative, and making sure no one gets left behind. Whether it’s organizing meetings, collecting feedback, or making sure our concerns are brought forward I’ll be the person who shows up—prepared, respectful, and ready to advocate for us. If you vote for me, you’re choosing someone who’s approachable, responsible, and genuinely wants the best for our team. Thanks for your time, and I hope I can earn your support.",
-				"numOfVotes": 0
-			},
-			"Ravinder Kaur":{
-				"name": "Ravinder Kaur",
-				"email": "rk6@ualberta.ca",
-				"speech": "My name is Ravinder Kaur, and I’m excited to be running for VP Conference – Operations and Relations! I love organizing and planning things, whether it's events, work, or even my own vacations. I always plan my trips from start to finish—booking flights, accommodations, and making a full itinerary. It’s something I truly enjoy, and I believe this skill will help me handle the logistics for our conferences smoothly. In my past role as a Summer Camp Instructor at Green Scholars Alberta, I managed groups of students, coordinated activities, and worked closely with other staff members to ensure everything ran smoothly. This experience taught me how to handle logistics, adapt to last-minute changes, and keep everything well-organized—skills that are essential for the Operations role. For the Relations side, I have experience working with faculty and organizing events. As the Internal Coordinator for WiCyS UAlberta, I strengthen communication within the team, manage social media engagement, and create promotional content. I also worked as an Assistant Director with TeamUP Science, where I organized a Computer Science workshop, developed the curriculum, and coordinated with guest speakers. These experiences have given me the ability to connect with different people, build relationships, and ensure everything runs smoothly. At the end of the day, I care about making these conferences successful and enjoyable for everyone. I want to help Ada’s Team by making sure the logistics are seamless and that we maintain a strong connection with the faculty.",
-				"numOfVotes": 0
-			},
-
-			"Samia Rahman":{
-				"name": "Samia Rahman",
-				"email": "samia5@ualberta.ca",
-				"speech": "Hello, my name is Samia! I'm an incoming 4th year student at the UofA. I'm excited to run as an exec for Ada's team because I bring in a strong foundation in leadership, technical expertise, collaboration and management.",
-				"numOfVotes": 0
-			},
-			"Abstain": {
-				"name": "Abstain",
-				"numOfVotes": 0
-			}
-		},
-		"Conference Campus Relations": {
-			"Anhad Singh Sarna":{
-				"name": "Anhad Singh Sarna",
-				"email": "assarna@ualberta.ca",
-				"speech": "My name is Anhad, and I’m running to be your VP Conference Representative for Ada’s team. Now, I know a lot of us are balancing school, work, projects, and trying to figure out what’s next. That’s why I want to make sure that our voices are heard, valued, and represented properly. I’m someone who believes in clear communication, taking initiative, and making sure no one gets left behind. Whether it’s organizing meetings, collecting feedback, or making sure our concerns are brought forward I’ll be the person who shows up—prepared, respectful, and ready to advocate for us. If you vote for me, you’re choosing someone who’s approachable, responsible, and genuinely wants the best for our team. Thanks for your time, and I hope I can earn your support.",
-				"numOfVotes": 0
-			},
-			"Ravinder Kaur":{
-				"name": "Ravinder Kaur",
-				"email": "rk6@ualberta.ca",
-				"speech": "My name is Ravinder Kaur, and I’m excited to be running for VP Conference – Operations and Relations! I love organizing and planning things, whether it's events, work, or even my own vacations. I always plan my trips from start to finish—booking flights, accommodations, and making a full itinerary. It’s something I truly enjoy, and I believe this skill will help me handle the logistics for our conferences smoothly. In my past role as a Summer Camp Instructor at Green Scholars Alberta, I managed groups of students, coordinated activities, and worked closely with other staff members to ensure everything ran smoothly. This experience taught me how to handle logistics, adapt to last-minute changes, and keep everything well-organized—skills that are essential for the Operations role. For the Relations side, I have experience working with faculty and organizing events. As the Internal Coordinator for WiCyS UAlberta, I strengthen communication within the team, manage social media engagement, and create promotional content. I also worked as an Assistant Director with TeamUP Science, where I organized a Computer Science workshop, developed the curriculum, and coordinated with guest speakers. These experiences have given me the ability to connect with different people, build relationships, and ensure everything runs smoothly. At the end of the day, I care about making these conferences successful and enjoyable for everyone. I want to help Ada’s Team by making sure the logistics are seamless and that we maintain a strong connection with the faculty.",
-				"numOfVotes": 0
-			},
-
-			"Samia Rahman":{
-				"name": "Samia Rahman",
-				"email": "samia5@ualberta.ca",
-				"speech": "Hello, my name is Samia! I'm an incoming 4th year student at the UofA. I'm excited to run as an exec for Ada's team because I bring in a strong foundation in leadership, technical expertise, collaboration and management.",
-				"numOfVotes": 0
-			},
-			"Abstain": {
-				"name": "Abstain",
-				"numOfVotes": 0
-			}
-		},
-		"Conference Finance": {
-			"Anhad Singh Sarna":{
-				"name": "Anhad Singh Sarna",
-				"email": "assarna@ualberta.ca",
-				"speech": "My name is Anhad, and I’m running to be your VP Conference Representative for Ada’s team. Now, I know a lot of us are balancing school, work, projects, and trying to figure out what’s next. That’s why I want to make sure that our voices are heard, valued, and represented properly. I’m someone who believes in clear communication, taking initiative, and making sure no one gets left behind. Whether it’s organizing meetings, collecting feedback, or making sure our concerns are brought forward I’ll be the person who shows up—prepared, respectful, and ready to advocate for us. If you vote for me, you’re choosing someone who’s approachable, responsible, and genuinely wants the best for our team. Thanks for your time, and I hope I can earn your support.",
-				"numOfVotes": 0
-			},
-
-			"Samia Rahman":{
-				"name": "Samia Rahman",
-				"email": "samia5@ualberta.ca",
-				"speech": "Hello, my name is Samia! I'm an incoming 4th year student at the UofA. I'm excited to run as an exec for Ada's team because I bring in a strong foundation in leadership, technical expertise, collaboration and management.",
-				"numOfVotes": 0
-			},
-			"Abstain": {
-				"name": "Abstain",
-				"numOfVotes": 0
-			}
-		},
-		"Amendment to Constitution - Expanding Membership Criteria Beyond Mailing List; Clarifications to Elections Rules": {
-			"Yes, I support amending the constitution":{
-				"name": "Yes, I support amending the constitution",
-				"email": "adasteam@ualberta.ca",
-				"speech": "Yes",
-				"numOfVotes": 0
-			},
-
-			"No, I do not support amending the constitution":{
-				"name": "No, I do not support amending the constitution",
-				"email": "adasteam@ualberta.ca",
-				"speech": "No",
 				"numOfVotes": 0
 			}
 		}

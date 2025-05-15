@@ -41,21 +41,52 @@ class ListCandidates extends Component {
     }
 
     if (currCandidates) {
-      return Object.keys(currCandidates)
-        .sort()
-        .reverse()
-        .map((candidateName) => (
+      const entries = Object.entries(currCandidates);
+    
+      // Separate "Abstain" from other candidates
+      const nonAbstainEntries = entries.filter(
+        ([, candidateObj]) => candidateObj.name !== "Abstain"
+      );
+      const abstainEntry = entries.find(
+        ([, candidateObj]) => candidateObj.name === "Abstain"
+      );
+    
+      // Sort the non-Abstain candidates by key (alphabetical)
+      const sortedCandidates = nonAbstainEntries.sort();
+    
+      // Map to components
+      const candidateComponents = sortedCandidates.map(([candidateName]) => (
+        <Candidate
+          position={position}
+          key={candidateName}
+          candidateName={candidateName}
+          currSelection={currSelection}
+          onSelect={this.onSelect}
+          reelect={reelect}
+          voteMethod={voteMethod}
+        />
+      ));
+    
+      // Add Abstain candidate at the end if it exists
+      if (abstainEntry) {
+        const [abstainName] = abstainEntry;
+        candidateComponents.push(
           <Candidate
             position={position}
-            key={candidateName}
-            candidateName={candidateName}
+            key={abstainName}
+            candidateName={abstainName}
             currSelection={currSelection}
             onSelect={this.onSelect}
             reelect={reelect}
             voteMethod={voteMethod}
           />
-        ));
+        );
+      }
+    
+      return candidateComponents;
     }
+    
+    
   };
 
   render() {

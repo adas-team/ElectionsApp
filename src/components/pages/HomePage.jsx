@@ -45,13 +45,9 @@ const MobileMessage = style(Message)`
   margin-left: 20px !important;
 `;
 
-const covidAcknowledgment = `During this pandemic, we hope you and your loved ones 
-are all safe, healthy, and you are taking great care of yourself mentally 
-and physically. We thank you for taking the time to help us run as smoothly as possible during this sensitive time.`;
-
 const beforeYouBegin = `Before you begin, the University of Alberta 
 acknowledges that we are located on Treaty 6 territory, and respects 
-the histories, languages, and cultures of First Nations, Metis, Inuit, 
+the histories, languages, and cultures of First Nations, Métis, Inuit, 
 and all First Peoples of Canada, whose presence continues to enrich 
 our vibrant community.
 `;
@@ -105,7 +101,6 @@ class HomePage extends Component {
               <h2 className="subheader">
                 We appreciate you all coming out to participate!
               </h2>
-              <h3 className="info">{covidAcknowledgment}</h3>
               <h3 className="info">{beforeYouBegin}</h3>
               <h3 className="info">{checkOutCandidates}</h3>
             </TextContainer>
