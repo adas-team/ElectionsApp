@@ -87,6 +87,14 @@ const positionDesc = [
 ];
 
 const candidates = {
+	"Amendment to Constitution - Apr 1, 2026":{
+		name: "Amendment to Constitution - Change of Mission Statement & New VP Publicity Exec Position",
+		email: "adasteam@ualberta.ca",
+		speech: "Amendments (changes) to the group's constitution have been proposed. Highlights include a change of our mission statement and a new VP Publicity executive role. This will be open to vote in our election. View the full proposal: https://docs.google.com/document/d/13qAM49OC36oHzMVknxDV6KASpn1yhsj-V4a4JN5BCfo/edit?usp=sharing",
+		photoSrc: "AdaBotSleep.png" ,
+		preferences: ["Amendment to Constitution - Change of Mission Statement & New VP Publicity Exec Position"]
+	},
+
 	"Aara Likun Vanatia": {
 		name: "Aara Likun Vanatia",
 		email: "vanatia@ualberta.ca",
