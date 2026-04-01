@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.1.2",
     "firebase": "^7.24.0",
     "firebase-admin": "^8.13.0",
+    "netlify-cli": "^24.9.0",
     "react": "^16.14.0",
     "react-device-detect": "^1.15.0",
     "react-dom": "^16.14.0",
@@ -19,10 +20,10 @@
     "styled-components": "^5.2.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+    "test": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts test",
+    "eject": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
