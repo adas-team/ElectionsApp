@@ -138,9 +138,18 @@ class ValidateVoterPage extends Component {
 			<Header size="huge">
 				<Header.Content>Enter your info to vote!</Header.Content>
 				<Header.Subheader>
-					In order to cast a valid vote in the Ada's Team executive election, you need to be
-					subscribed to the mailing's list and have attended an Ada's Team event or activity. Please
-					enter your information below and we'll determine your eligibility to vote.
+					In order to cast a valid vote in the Ada's Team executive election, you need to meet the following eligibility criteria.
+					You're eligible to vote for elections if you:
+					<ol>
+						<li>are a current student at the University of Alberta within the current Academic Year; and</li>
+						<li>are registered as a member of our <a href="https://campus.hellorubric.com/?tab=memberships&s=11719">Rubric organization</a>; and</li>
+						<li>have completed <b>at least one</b> of the following in the current Academic Year:</li>
+						<ol type="a">
+							<li>Attended at least 2 events hosted by Ada's Team</li>
+							<li>Volunteered with Ada's Team (e.g. tutor, mentor)</li>
+							<li>Participated in an Ada's Team initiative (e.g. conference, mentorship)</li>
+						</ol>
+					</ol>
 				</Header.Subheader>
 			</Header>
 		);
@@ -164,7 +173,7 @@ class ValidateVoterPage extends Component {
 				<Form.Dropdown
 					multiple
 					selection
-					label="Please select the Ada's Team event(s) that you attended"
+					label="Please select the Ada's Team event(s)/initiative(s) that you participated in"
 					options={adasTeamEventOptions}
 					placeholder="Please select options from the dropdown"
 					onChange={this.handleDropdownChange}
