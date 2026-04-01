@@ -32,7 +32,7 @@ const VALID_FAIL_CONFIG = {
   messageBgColor: "red",
   messageHeader: "Uh oh - you're not eligible!",
   messageContent:
-    "It's either because you're not on the mailing list or you haven't attended an Ada's Team event. If you're interested, you can stay tune to check out the results. Otherwise, thanks for coming!",
+    "It's either because you're not a Rubric member or you haven't completed the other eligibility criteria. If you're interested, you can stay tune to check out the results. Otherwise, thanks for coming!",
   buttonContent: "Go to Results"
 };
 
