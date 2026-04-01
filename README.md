@@ -108,6 +108,8 @@ This is an example of how to list things you need to use the software and how to
   npm install npm@latest -g
   ```
 
+- *Update (April 1, 2026):* For future elections, please note that using latest Node.js version might not work. My workaround was to use `nvm install 15` before beginning installation.
+
 ### Installation
 
 1. Clone the repo
