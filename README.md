@@ -108,10 +108,10 @@ This is an example of how to list things you need to use the software and how to
   npm install npm@latest -g
   ```
 
-- *Update (April 1, 2026):* For future elections, please note that using the latest Node.js version might not work. My workaround was to use [nvm](https://github.com/nvm-sh/nvm) and run the following before beginning installation:
+- *Update (April 1, 2026):* For future elections, please note that using the latest Node.js version might not work. My workaround was to use [nvm](https://github.com/nvm-sh/nvm) and use an older Node.js version before beginning installation:
   ```sh
-  nvm install 15
-  nvm use 15
+  nvm install 20 # as of writing, v20 works well and with netlify-cli
+  nvm use 20
   ```
 
 ### Installation
