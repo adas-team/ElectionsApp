@@ -2,34 +2,15 @@ const year = new Date().getFullYear();
 const yearRange = `${year} - ${year + 1}`;
 
 const adasTeamEventOptions = [
+
 	{
-		key: "Crash Course/Workshop",
-		text: "Crash Course/Workshop",
-		value: "Crash Course/Workshop",
-	},
-	{
-		key: "Ada's Base (Discord)",
-		text: "Ada's Base (Discord)",
-		value: "Ada's Base (Discord)",
-	},
-	{
-		key: "Ada's Developers",
-		text: "Ada's Developers",
-		value: "Ada's Developers",
-	},
-	{
-		key: "Tutoring/Office Hours",
-		text: "Tutoring/Office Hours",
-		value: "Tutoring/Office Hours",
-	},
-	{
-		key: "Coffee && Code",
-		text: "Coffee && Code",
-		value: "Coffee && Code",
+		key: "Events (Socials, Coffee && Code)",
+		text: "Events (Socials, Coffee && Code)",
+		value: "Events (Socials, Coffee && Code)",
 	},
 	{
 		key: "Conference",
-		text: "Conference (such as GHC or CAN-CWiC)",
+		text: "Conference (such as GHC, CAN-CWiC, QT)",
 		value: "Conference",
 	},
 	{
@@ -38,20 +19,16 @@ const adasTeamEventOptions = [
 		value: "Ada's Mentors",
 	},
 	{
-		key: "Ada's Students",
-		text: "Ada's Students",
-		value: "Ada's Students",
+		key: "Ada's Students (Tutors and Roomsitters)",
+		text: "Ada's Students (Tutors and Roomsitters)",
+		value: "Ada's Students (Tutors and Roomsitters)",
 	},
 	{
-		key: "Ada's Tutors",
-		text: "Ada's Tutors",
-		value: "Ada's Tutors",
+		key: "General Volunteers",
+		text: "General Volunteers",
+		value: "General Volunteers",
 	},
-	{
-		key: "High School Outreach",
-		text: "High School Outreach",
-		value: "High School Outreach",
-	},
+	
 	{
 		key: "None, but I look forward to!",
 		text: "None, but I look forward to!",
