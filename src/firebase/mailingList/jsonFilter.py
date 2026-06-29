@@ -1,20 +1,16 @@
 import json, csv
 from datetime import datetime
 
-bufferPeriod = 14 # number of days required to be subscribed
-now = datetime.now()
 mailingList= {}
 filteredData = [mailingList]
 
-def validSubscribePeriod(optin_string):
-    optin_date = datetime.strptime(optin_string, '%Y-%m-%d %H:%M:%S')
-    return (now - optin_date).days >= bufferPeriod
-
 print(
-    """- Go to: https://us18.admin.mailchimp.com/lists/members/
-- Select "Export contacts"
-- It will download a zip file that has multiple csv files. The one of interest is prefixed `subscribed_members_export`.
+    """- Go to: https://portal.hellorubric.com/memberships_list
+- Download the member list files as specified in INSTRUCTIONS.md
+- It will download a csv file that will be of interest.
 - Copy that file's location and paste it below.
+- If you need to download more than one csv file, repeat this process for the other csv files.
+- Note: This python script does not filter people who have joined within a specific timeframe. Please check and filter the csv file manually using the `Purchased` column.
     """
 )
 
@@ -35,15 +31,13 @@ with open(csvFilePath, encoding='utf-8') as f:
     for entry in source_data:
         currentMember = dict()
         for (key, value) in entry.items():
-            if key in ('Email Address', 'First Name', 'Last Name', 'OPTIN_TIME'):
+            if key in ('Membership Email Address', 'Full Name'):
                 currentMember[key] = value
-        if validSubscribePeriod(currentMember["OPTIN_TIME"]):
-            # Verify that the opt-in time is before the grace period
-            print(currentMember["Email Address"])
-            mailingList[currentMember["Email Address"]] = {
-                "Email": currentMember["Email Address"],
-                "Nickname": currentMember["First Name"] + " " + currentMember["Last Name"],
-            }
+        print(currentMember["Membership Email Address"])
+        mailingList[currentMember["Membership Email Address"]] = {
+            "Email": currentMember["Membership Email Address"],
+            "Nickname": currentMember["Full Name"],
+        }
     
 
 with open(r'./filteredMailingList.json','w') as jsonFile:
