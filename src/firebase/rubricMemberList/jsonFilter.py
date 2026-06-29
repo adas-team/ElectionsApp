@@ -1,8 +1,8 @@
 import json, csv
 from datetime import datetime
 
-mailingList= {}
-filteredData = [mailingList]
+rubricMemberList= {}
+filteredData = [rubricMemberList]
 
 print(
     """- Go to: https://portal.hellorubric.com/memberships_list
@@ -34,13 +34,13 @@ with open(csvFilePath, encoding='utf-8') as f:
             if key in ('Membership Email Address', 'Full Name'):
                 currentMember[key] = value
         print(currentMember["Membership Email Address"])
-        mailingList[currentMember["Membership Email Address"]] = {
+        rubricMemberList[currentMember["Membership Email Address"]] = {
             "Email": currentMember["Membership Email Address"],
             "Nickname": currentMember["Full Name"],
         }
     
 
-with open(r'./filteredMailingList.json','w') as jsonFile:
+with open(r'./filteredRubricMemberList.json','w') as jsonFile:
     json.dump(filteredData, jsonFile)
 
-print("\n\nSubscribed contacts successfully updated to ./filteredMailingList.json")
+print("\n\nSubscribed contacts successfully updated to ./filteredRubricMemberList.json")

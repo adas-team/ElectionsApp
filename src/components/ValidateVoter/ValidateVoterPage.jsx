@@ -57,9 +57,9 @@ class ValidateVoterPage extends Component {
 	validateAndAddVoter = (voter) => {
 		// (Step 1) Retrieve mailing list from cloud firestore and check email
 		const { email } = voter;
-		const mailingListRef = firebase.firestore().collection("filteredMailingList").doc(email);
+		const rubricMemberListRef = firebase.firestore().collection("filteredRubricMemberList").doc(email);
 
-		mailingListRef
+		rubricMemberListRef
 			.get()
 			.then((docData) => {
 				if (docData.exists) {

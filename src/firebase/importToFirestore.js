@@ -1,8 +1,8 @@
 // Path to list and name of collection on Firebase
 const fileSelected = {
 	mail: { // Now refers to Rubric members
-		path: "./mailingList/filteredMailingList.json",
-		collectionKey: "filteredMailingList",
+		path: "./rubricMemberList/filteredRubricMemberList.json",
+		collectionKey: "filteredRubricMemberList",
 	},
 	candidates: {
 		path: "./candidateList/candidateList.json",
