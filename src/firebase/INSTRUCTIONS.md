@@ -44,9 +44,9 @@ This functionality was added following a tutorial I found online that has been l
       - One for the "Expired" members, filtering the `Membership Type` column for the previous school year
       - Example: In a May 2026 by-election, you would download the "Active" members (`Membership Type` = "Ada's Team Member 26/27") and download "Expired" members that have `Membership Type` = "Ada's Team Member 25/26" (for previous school year).
 3. Filter the CSV into a JSON that only contains the name and email.
-   - Be sure to be in the `src/firebase/mailingList` directory.
+   - Be sure to be in the `src/firebase/rubricMemberList` directory.
    - Run `python3 jsonFilter.py`
-   - The outputted file will be called `filteredMailingList.json`
+   - The outputted file will be called `filteredRubricMemberList.json`
    - Note: The Election Committee decides when the cut-off for valid membership is, so **make sure you have filtered the csv file to only include members that have registered in the specified timeframe**. You can use the `Purchased` column to filter out members who have joined past the deadline.
 4. Add `serviceAccountKey.json` to `src/firebase`.
    - This file contains confidential information that allows you to write to the database. **Under no circumstances should this be publicly available**. It is added to the `.gitignore` file for that reason, so be sure to never push it.
@@ -60,12 +60,12 @@ This functionality was added following a tutorial I found online that has been l
    - An example file with dummy data can be found in `src/firebase/serviceAccountKey_Example.json`
 5. Delete existing voters in the Firebase console
    - As per constitution [changes](#important-notes-regarding-voter-eligibility), members must renew their Rubric membership with our group every year - hence the need to delete previous voters.
-   - Delete the voters in the Firebase console in `Database > Cloud Firestore > filteredMailingList` collection.
+   - Delete the voters in the Firebase console in `Database > Cloud Firestore > filteredRubricMemberList` collection.
 6. Open up your terminal and navigate to `src/firebase`
    - run `node importToFirestore.js mail`
    - You should see a bunch of `Document <email> successfully written!` lines outputted.
 7. You've successfully updated the member list.
-   - The changes can be seen online in the Firebase console in `Database > Cloud Firestore > filteredMailingList` collection.
+   - The changes can be seen online in the Firebase console in `Database > Cloud Firestore > filteredRubricMemberList` collection.
 
 ### Update Candidate List
 
