@@ -15,20 +15,40 @@ This functionality was added following a tutorial I found online that has been l
 
 <hr>
 
-### Update Mailing List
+### Update Rubric Members
+
+#### Important notes regarding Voter Eligibility
+> **Important:** 
+> - As the 2025-2026 Constitution changed voting elibility criteria, one of the changes includes eligible voters need to be registered as a Rubric member for the current Academic Year (or previous Academic Year if in a by-election). 
+> - Rubric Members must re-join on an annual basis. 
+> - We no longer use the mailing list as part of our voter eligiblity. 
+> - **Any references to "mailing list" are legacy and now refer to Rubric Members.**
+
+> **Important:** The 2025-2026 Constitution also introduced additional voting criteria - eligible voters need to have completed <b>at least one</b> of the following in the current Academic Year:
+> <ol type="a">
+> <li>Attended at least 2 events hosted by Ada's Team</li>
+> <li>Volunteered with Ada's Team (e.g. tutor, mentor)</li>
+> <li>Participated in an Ada's Team initiative (e.g. conference, mentorship)</li>
+> <br>
+> Please note that the Elections App does not validate for this as of writing - the only validation done is if they're a Rubric member. Voters declare if they have completed one of the above but ballots should be validated by the CRO and a DRO, after the voting is complete and before counting votes.
 
 #### Steps
 
-1. Export mailing list from Ada's Team MailChimp mailing list.
-   - <a href="https://us18.admin.mailchimp.com/lists/members/"> Ada's Team MailChimp contacts</a>
-   - Select "Export contacts"
-   - Note: It will be a zip file that has multiple csv files. The one of interest is prefixed `subscribed_members_export`. Copy that file's location.
-2. Filter the CSV into a JSON that only contains the name and email.
+1. Export member list from Ada's Team Rubric account.
+   - <a href="https://portal.hellorubric.com/memberships_list"> Ada's Team Rubric Members</a>
+   - Select the purple download button above the table.
+2. Ensure you have filtered the correct set of members before downloading. Perform steps 3-7 for each csv file you download.
+   - For the regular/annual election: Above the table of members, ensure that "Active" members are selected. In the `Membership Type` column, you should see `Ada's Team Member <current school year>`. You will download one file.
+   - For a Spring/Summer By-Election: You will download two files.
+      - One for the "Active" members
+      - One for the "Expired" members, filtering the `Membership Type` column for the previous school year
+      - Example: In a May 2026 by-election, you would download the "Active" members (`Membership Type` = "Ada's Team Member 26/27") and download "Expired" members that have `Membership Type` = "Ada's Team Member 25/26" (for previous school year).
+3. Filter the CSV into a JSON that only contains the name and email.
    - Be sure to be in the `src/firebase/mailingList` directory.
    - Run `python3 jsonFilter.py`
    - The outputted file will be called `filteredMailingList.json`
-   - Note: As per constitution criteria, this should only include members who joined 2 weeks before the election date. The script filters out anyone who joined after 14 days, so **make sure to run it on election day, or otherwise change the `bufferPeriod` in `jsonFilter.py`**
-3. Add `serviceAccountKey.json` to `src/firebase`.
+   - Note: The Election Committee decides when the cut-off for valid membership is, so **make sure you have filtered the csv file to only include members that have registered in the specified timeframe**. You can use the `Purchased` column to filter out members who have joined past the deadline.
+4. Add `serviceAccountKey.json` to `src/firebase`.
    - This file contains confidential information that allows you to write to the database. **Under no circumstances should this be publicly available**. It is added to the `.gitignore` file for that reason, so be sure to never push it.
    - To get the file:
      - Navigate to the Firebase console
@@ -38,10 +58,13 @@ This functionality was added following a tutorial I found online that has been l
      - Click on "Generate new private key" > "Generate key"
      - The key will be downloaded. Add the content of that file to a file called `serviceAccountKey.json` in `src/firebase`.
    - An example file with dummy data can be found in `src/firebase/serviceAccountKey_Example.json`
-4. Open up your terminal and navigate to `src/firebase`
+5. Delete existing voters in the Firebase console
+   - As per constitution [changes](#important-notes-regarding-voter-eligibility), members must renew their Rubric membership with our group every year - hence the need to delete previous voters.
+   - Delete the voters in the Firebase console in `Database > Cloud Firestore > filteredMailingList` collection.
+6. Open up your terminal and navigate to `src/firebase`
    - run `node importToFirestore.js mail`
    - You should see a bunch of `Document <email> successfully written!` lines outputted.
-5. You've successfully updated the mailing list.
+7. You've successfully updated the member list.
    - The changes can be seen online in the Firebase console in `Database > Cloud Firestore > filteredMailingList` collection.
 
 ### Update Candidate List
