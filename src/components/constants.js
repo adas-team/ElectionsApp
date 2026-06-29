@@ -50,6 +50,8 @@ const positionDesc = [
 			"They would be responsible for maintaining the website, blog, social media, and Ada's Base whiteboard/bulletin board. They would also collaborate with VP Communications in making posters and advertising for events. ",
 		Communications:
 			"They would be responsible for tracking membership (i.e. tracking active members that are on the mailing list and have attended an event in the current Academic Year), sending out and crafting weekly/monthly emails about opportunities to members, collaborating with VP Digital Media in making posters and advertising for events, and reading and replying to emails. ",
+		"Publicity":
+			"They would be responsible for managing and growing the group's presence on social media platforms, creating engaging content, and promoting events and initiatives. They would work closely with VP Digital Media and VP Communications to ensure cohesive messaging across all platforms.",
 		"Campus-Outreach":
 			"They would be responsible for acting as a liaison between Ada's Team and other student groups on campus with similar goals or missions, leading contact for Student Group Services (SGS) and BearsDen, being the main point of contact for internal university events such as Science Orientation, Clubs Fair, and WISEST CHOICES conferences, and working with VP Industry Outreach to organize and plan events with the rest of the Outreach Team. ",
 		"Industry-Outreach":
