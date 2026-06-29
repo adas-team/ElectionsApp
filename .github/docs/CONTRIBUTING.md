@@ -46,6 +46,6 @@ After you've made your changes to `database.rules.json`:
 - To add entries
 - To delete entries
 - How to verify on Firebase console
-- To update mailing list -- reference INSTRUCTIONS.md in `src/firebase/mailingList`
+- To update voter list -- reference INSTRUCTIONS.md in `src/firebase/rubricMemberList`
 - We don't have login/signup authentication at this time and allow users to write directly into the database. This was defined in the `database.rules.json` file.
 - For firebase, it is already have the firebase config file. If you wanna use it, put "import Firebase, { FirebaseContext } from './components/Firebase';" in your target js file.
